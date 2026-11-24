@@ -67,6 +67,41 @@ access instructions. No weights or GPU are needed for counts-only reproduction.
 The promoted package remains a release candidate; see its validation status and
 permissions checklist before publication.
 
+### Direct support-consistent evaluation
+
+The audit's counts-only replay already reports both accounting policies. Its
+optional matching wrapper retains the original evaluator followed by count
+correction. To score a prediction CSV directly with the supplied patched
+implementation, run from the repository root in the recorded matching runtime:
+
+```bash
+PYTHONPATH="$PWD/analysis/silence_audit/vendor/dcase2024" python -B - <<'PYTHON'
+from pathlib import Path
+from src.utils.evaluation_support_consistent import evaluate
+
+output = Path("results/support-consistent01")
+output.mkdir(parents=True, exist_ok=False)
+evaluate(
+    "/path/to/predictions.csv",
+    "/path/to/reference_root",
+    team_name="local",
+    dataset="VAL",
+    savepath=str(output),
+)
+PYTHON
+```
+
+The prediction header must be `Audiofilename,Starttime,Endtime`. The reference
+root contains subset directories with CSVs containing `Starttime`, `Endtime` and a
+`Q`-label column, with at least five POS support events per recording. Retain
+annotation order and the five-shot support policy. The function writes a report into
+the new output directory. Use the function interface above; the vendored file's
+`__main__` block is a legacy demo.
+
+The [patch file](analysis/silence_audit/patches/support-consistent-empty-output.patch)
+is available for compatible external checkouts. Keep the audit's original
+vendored evaluator intact: its replay checks depend on those source hashes.
+
 ## Weights and reproducibility
 
 A release manifest still needs to identify the checkpoints for these experiments.
