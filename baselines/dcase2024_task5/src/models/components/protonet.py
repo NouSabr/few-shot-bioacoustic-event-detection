@@ -6,8 +6,6 @@ import logging
 from pathlib import Path
 import re
 
-# from embedding_propagation import EmbeddingPropagation
-
 
 def conv_block(in_channels, out_channels):
 
@@ -90,7 +88,6 @@ class BasicBlock(nn.Module):
         self.num_batches_tracked += 1
 
         residual = x
-        # import ipdb; ipdb.set_trace()
         out = self.conv1(x)
         out = self.bn1(out)
         out = self.relu(out)
@@ -147,38 +144,70 @@ class ResNet(nn.Module):
             block_size=dropblock_size,
             features=features,
         )
-        # if avg_pool:
-        #     self.avgpool = nn.AvgPool2d(5, stride=1)
         self.keep_prob = keep_prob
         self.features = features
         self.keep_avg_pool = avg_pool
-        # self.dropout = nn.Dropout(p=1 - self.keep_prob, inplace=False)
         self.drop_rate = drop_rate
         self.pool_avg = nn.AdaptiveAvgPool2d(
             (
                 features.time_max_pool_dim,
                 int(features.embedding_dim / (features.time_max_pool_dim * 64)),
             )
-        )  # try max pooling
+        )
         self.pool_max = nn.AdaptiveMaxPool2d(
             (
                 features.time_max_pool_dim,
                 int(features.embedding_dim / (features.time_max_pool_dim * 64)),
             )
-        )  # try max pooling
-        # self.ep = EmbeddingPropagation()
+        )
 
-        # dim = int(features.embedding_dim/(4*64)) * 4 * 64
+        self.use_cife = getattr(features, "use_cife", False)
 
-        # self.mapping = nn.Sequential(
-        #     nn.Linear(dim, dim*2),
-        #     nn.ReLU(),
-        #     nn.Dropout(self.linear_drop_rate),
-        #     nn.Linear(dim*2, dim*2),
-        #     nn.ReLU(),
-        #     nn.Dropout(self.linear_drop_rate),
-        #     nn.Linear(dim*2, dim),
-        # )
+        if self.use_cife:
+            from .audio_cife import AudioCIFE
+
+            cife_channels = getattr(features, "cife_channels", 128)
+            cife_d_model = getattr(features, "cife_d_model", 128)
+            cife_nhead = getattr(features, "cife_nhead", 8)
+            cife_num_encoder_layers = getattr(features, "cife_num_encoder_layers", 2)
+            cife_num_decoder_layers = getattr(features, "cife_num_decoder_layers", 2)
+            cife_dim_feedforward = getattr(features, "cife_dim_feedforward", 256)
+            cife_dropout = getattr(features, "cife_dropout", 0.1)
+            self.cife_alpha = getattr(features, "cife_alpha", 0.3)
+            self.cife_spatial_pool = getattr(features, "cife_spatial_pool", False)
+            cife_pool_size = tuple(getattr(features, "cife_pool_size", (4, 4)))
+
+            # Pool spatially to reduce attention memory; restore the size afterward.
+            if self.cife_spatial_pool:
+                self.cife_pool = nn.AdaptiveAvgPool2d(cife_pool_size)
+                self.cife_unpool = None
+            else:
+                self.cife_pool = None
+                self.cife_unpool = None
+
+            self.cife_module = AudioCIFE(
+                channels=cife_channels,
+                d_model=cife_d_model,
+                nhead=cife_nhead,
+                num_encoder_layers=cife_num_encoder_layers,
+                num_decoder_layers=cife_num_decoder_layers,
+                dim_feedforward=cife_dim_feedforward,
+                dropout=cife_dropout,
+                activation="relu",
+                use_checkpoint=getattr(features, "cife_use_checkpoint", False),
+            )
+
+            print(
+                f"✓ CIFE enabled: alpha={self.cife_alpha}, nhead={cife_nhead}, "
+                f"checkpoint={getattr(features, 'cife_use_checkpoint', False)}, "
+                f"spatial_pool={self.cife_spatial_pool}"
+            )
+        else:
+            self.cife_module = None
+            self.cife_alpha = 0.0
+            self.cife_spatial_pool = False
+            self.cife_pool = None
+            self.cife_unpool = None
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
@@ -249,20 +278,41 @@ class ResNet(nn.Module):
     def forward(self, x):
         (num_samples, seq_len, mel_bins) = x.shape
 
-        # for p in self.layer1.parameters():
-        #     p.requires_grad = False
-        # self.layer1.eval()
         x = x.view(-1, 1, seq_len, mel_bins)
 
         x = self.layer1(x)
-        x = self.layer2(x)
-        x = self.layer3(x)
+        x2 = self.layer2(x)
+
+        if self.use_cife and self.cife_module is not None:
+            try:
+                # Enhance the layer-2 map before layer 3; source and target are the same.
+                if self.cife_pool is not None:
+                    original_spatial_size = x2.shape[-2:]
+                    x2_pooled = self.cife_pool(x2)
+                    x3_enhancement = self.cife_module(x2_pooled, x2_pooled)
+                    x3_enhancement = F.interpolate(
+                        x3_enhancement,
+                        size=original_spatial_size,
+                        mode="bilinear",
+                        align_corners=False,
+                    )
+                else:
+                    x3_enhancement = self.cife_module(x2, x2)
+
+                # Keep the original feature map as the residual path.
+                x3_input = x2 + self.cife_alpha * x3_enhancement
+
+                x = self.layer3(x3_input)
+            except Exception as e:
+                print(f"Warning: CIFE processing failed: {e}. Using original path.")
+                x = self.layer3(x2)
+        else:
+            x = self.layer3(x2)
         if self.features.layer_4:
             x = self.layer4(x)
         x = self.pool_avg(x)
 
         x = x.view(x.size(0), -1)
-        # x = self.mapping(x)
         return x
 
 
