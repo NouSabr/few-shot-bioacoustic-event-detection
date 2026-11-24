@@ -1,0 +1,73 @@
+Single-recording silencing counterfactual
+==========================================
+
+`tools/run_silencing_counterfactual.py` removes all predicted events for each
+validation recording in turn while holding the selected detection threshold,
+post-processing, and every other recording fixed. It measures changes in the
+recording's subset and in the benchmark's harmonic and arithmetic aggregates.
+
+The command consumes the portable `manifest.json` written by the sweep collector.
+Runs without a complete selected prediction artifact, including a `log_only`
+run, are written to `skipped_runs.csv` and are not silently reconstructed from
+printed counts.
+
+Evaluator variants
+------------------
+
+`released` runs the repository evaluator unchanged. That implementation removes
+the five support events for a recording with predictions, but counts all POS
+events when the recording has no prediction rows.
+
+`corrected` uses the same event matches for files with predictions, then
+re-aggregates counts while consistently excluding the five support events from
+files with no predictions. Running both variants separates the released
+missing-file behavior from the cross-recording count-pooling effect.
+
+Usage
+-----
+
+From `baselines/dcase2024_task5`:
+
+```bash
+python tools/run_silencing_counterfactual.py \
+  --manifest analysis/sweep_archive/manifest.json \
+  --reference-dir /path/to/Development_Set/Validation_Set \
+  --output analysis/silencing
+```
+
+Both evaluator variants run by default. Restrict the analysis when debugging:
+
+```bash
+python tools/run_silencing_counterfactual.py \
+  --manifest analysis/sweep_archive/manifest.json \
+  --reference-dir /path/to/Development_Set/Validation_Set \
+  --output analysis/silencing_baseline_1234 \
+  --configuration baseline \
+  --seed 1234 \
+  --variant corrected
+```
+
+Use `--overwrite` to replace existing result tables. Use `--strict` to exit
+nonzero if any selected collector run is incomplete or fails score validation.
+
+Outputs
+-------
+
+- `silencing_interventions.csv`: one row per run, target recording, and evaluator
+  variant, including aggregate precision/recall/F changes. All reported score
+  columns use the 0--100 scale.
+- `silencing_subset_effects.csv`: one row per affected subset, including pooled
+  counts and the exact analytical silence-gain condition.
+- `silencing_summary.csv`: prevalence and largest official-score gain per run.
+- `skipped_runs.csv`: log-only, missing, or score-mismatched runs.
+- `analysis_manifest.json`: input checksums, completed runs, output dimensions,
+  and code provenance.
+
+Interpretation
+--------------
+
+This is an oracle diagnostic. The recording is selected using the evaluator
+outcome; the experiment does not claim that a deployable detector knows when to
+abstain. The primary question is whether the benchmark can reward an empty output
+for a recording even though that recording's own detection performance becomes
+zero.

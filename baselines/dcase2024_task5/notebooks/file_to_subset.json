@@ -1,0 +1,170 @@
+{
+ "BUK1_20181011_001004.wav": {
+  "n_pos_events": 36,
+  "subset": "PB"
+ },
+ "BUK1_20181013_023504.wav": {
+  "n_pos_events": 29,
+  "subset": "PB"
+ },
+ "BUK4_20160925_231604.wav": {
+  "n_pos_events": 42,
+  "subset": "PB24"
+ },
+ "BUK4_20161011_000804.wav": {
+  "n_pos_events": 52,
+  "subset": "PB"
+ },
+ "BUK4_20161031_232104a.wav": {
+  "n_pos_events": 182,
+  "subset": "PB24"
+ },
+ "BUK4_20171022_004304a.wav": {
+  "n_pos_events": 22,
+  "subset": "PB"
+ },
+ "BUK5_20161101_002104a.wav": {
+  "n_pos_events": 93,
+  "subset": "PB"
+ },
+ "BUK5_20180921_015906a.wav": {
+  "n_pos_events": 28,
+  "subset": "PB"
+ },
+ "BUK5_20181007_011905.wav": {
+  "n_pos_events": 71,
+  "subset": "PB24"
+ },
+ "ME1.wav": {
+  "n_pos_events": 16,
+  "subset": "ME"
+ },
+ "ME2.wav": {
+  "n_pos_events": 46,
+  "subset": "ME"
+ },
+ "R4_cleaned recording_13-10-17.wav": {
+  "n_pos_events": 24,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_16-10-17.wav": {
+  "n_pos_events": 35,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_17-10-17.wav": {
+  "n_pos_events": 41,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_TEL_19-10-17.wav": {
+  "n_pos_events": 59,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_TEL_20-10-17.wav": {
+  "n_pos_events": 69,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_TEL_23-10-17.wav": {
+  "n_pos_events": 89,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_TEL_24-10-17.wav": {
+  "n_pos_events": 104,
+  "subset": "HB"
+ },
+ "R4_cleaned recording_TEL_25-10-17.wav": {
+  "n_pos_events": 104,
+  "subset": "HB"
+ },
+ "RD_01.wav": {
+  "n_pos_events": 96,
+  "subset": "RD"
+ },
+ "RD_02.wav": {
+  "n_pos_events": 503,
+  "subset": "RD"
+ },
+ "RD_03.wav": {
+  "n_pos_events": 10,
+  "subset": "RD"
+ },
+ "RD_04.wav": {
+  "n_pos_events": 231,
+  "subset": "RD"
+ },
+ "RD_05.wav": {
+  "n_pos_events": 166,
+  "subset": "RD"
+ },
+ "RD_06.wav": {
+  "n_pos_events": 366,
+  "subset": "RD"
+ },
+ "file_423_487.wav": {
+  "n_pos_events": 62,
+  "subset": "HB"
+ },
+ "file_97_113.wav": {
+  "n_pos_events": 125,
+  "subset": "HB"
+ },
+ "pw1.wav": {
+  "n_pos_events": 34,
+  "subset": "PW"
+ },
+ "pw10.wav": {
+  "n_pos_events": 53,
+  "subset": "PW"
+ },
+ "pw11.wav": {
+  "n_pos_events": 44,
+  "subset": "PW"
+ },
+ "pw12.wav": {
+  "n_pos_events": 47,
+  "subset": "PW"
+ },
+ "pw13.wav": {
+  "n_pos_events": 45,
+  "subset": "PW"
+ },
+ "pw14.wav": {
+  "n_pos_events": 55,
+  "subset": "PW"
+ },
+ "pw15.wav": {
+  "n_pos_events": 46,
+  "subset": "PW"
+ },
+ "pw2.wav": {
+  "n_pos_events": 41,
+  "subset": "PW"
+ },
+ "pw3.wav": {
+  "n_pos_events": 50,
+  "subset": "PW"
+ },
+ "pw4.wav": {
+  "n_pos_events": 49,
+  "subset": "PW"
+ },
+ "pw5.wav": {
+  "n_pos_events": 36,
+  "subset": "PW"
+ },
+ "pw6.wav": {
+  "n_pos_events": 46,
+  "subset": "PW"
+ },
+ "pw7.wav": {
+  "n_pos_events": 46,
+  "subset": "PW"
+ },
+ "pw8.wav": {
+  "n_pos_events": 55,
+  "subset": "PW"
+ },
+ "pw9.wav": {
+  "n_pos_events": 58,
+  "subset": "PW"
+ }
+}
