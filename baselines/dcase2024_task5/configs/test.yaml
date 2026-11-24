@@ -30,7 +30,7 @@ name: "eval"
 exp_name: "default"
 
 # passing checkpoint path is necessary
-ckpt_path:  null 
+ckpt_path: "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline/2026-01-20_20-51-57/checkpoints/last.ckpt"  
 
 set:
   features: false
@@ -38,10 +38,11 @@ set:
   eval: false
 
 path:
-  root_dir: /import/c4dm-datasets/jinhua-tmp2May/DCASE_Task5
+  root_dir: /media/helios/Data/Uni/Masters/Dataset
   train_dir: ${path.root_dir}/Development_Set/Training_Set
   eval_dir: ${path.root_dir}/Development_Set/Validation_Set
-  test_dir: null
+  test_dir: ${path.root_dir}/Test_Set
+  # test_dir: null
   extra_train_dir: null
   mask_dir: null
 
@@ -68,6 +69,25 @@ features:
   layer_4: false
   test_seglen_len_lim: 30
   test_hoplen_fenmu: 3
+  
+  # ==================== CIFE Configuration ====================
+  # Cross-modal Interactive Feature Enhancement (CIFE) Module
+  # Enable/disable CIFE enhancement for improved feature representation
+  use_cife: true  # Set to true to enable CIFE (default: false for backward compatibility)
+  
+  # CIFE Architecture Parameters
+  cife_channels: 128              # Channel dimension (must match layer2 output: 128)
+  cife_d_model: 128               # Transformer embedding dimension (must equal cife_channels)
+  cife_nhead: 8                   # Number of attention heads (must divide d_model evenly)
+  cife_num_encoder_layers: 2      # Number of Transformer encoder layers (1-4 recommended)
+  cife_num_decoder_layers: 2      # Number of Transformer decoder layers (1-4 recommended)
+  cife_dim_feedforward: 256       # FFN hidden dimension (typically 2-4x d_model)
+  cife_dropout: 0.1               # Dropout probability in Transformer (0.0-0.3 recommended)
+  cife_alpha: 0.3                 # Residual connection scaling factor (0.1-0.5 recommended)
+  
+  cife_spatial_pool: true        # Pool features before CIFE to reduce Transformer sequence length
+  cife_pool_size: [2, 8]          # Target spatial size used when cife_spatial_pool is enabled
+  # ===========================================================
 
 train_param:
   sr: 22050
@@ -89,8 +109,15 @@ train_param:
   padd_tail: false
 
 eval_param:
+  seg_len: 0.200
+  hop_seg: 0.05
   samples_neg: 150
   iterations: 3
   query_batch_size: 8
   negative_set_batch_size: 16
   threshold: 0.9
+  negative_estimate: rms #freq_mask <-- This requires the mask_dir which is not available. Causes the adaptive segment length to fail
+  
+  # Smart lazy-loading for negative-mining support sets
+  # Only loads segments that will be sampled (deterministic with fixed seed)
+  use_smart_lazy_loading: true  # Set to false to use original eager-loading

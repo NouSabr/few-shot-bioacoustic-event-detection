@@ -54,9 +54,17 @@ seed: 1234
 
 disable_cudnn: False
 
-# default name for the experiment, determines logging folder path
-# (you can overwrite this name in experiment configs)
-name: "baseline"
+# Run-directory group. configs/log_dir/default.yaml puts the run at
+#   logs/experiments/runs/${name}/<date>_<time>
+# so everything sharing a `name` piles into one folder, separated only by the
+# launch timestamp. That is unusable for a multi-seed sweep: 24 runs become 24
+# anonymous timestamps under one directory and you cannot tell which is which.
+#
+# The seed is interpolated in so that replicates never share a folder even when
+# train.py is launched by hand. run_ablation_experiments.py overrides `name`
+# with <config>_seed<seed>, which is the form to prefer -- it also separates the
+# configurations, so `ls logs/experiments/runs/` reads as the ablation table.
+name: "hdf5_seed${seed}"
 
 exp_name: "test"
 
@@ -67,11 +75,11 @@ set:
 
 path:
   # From the log directory
-  root_dir: /import/c4dm-datasets/jinhua-tmp2May/DCASE_Task5
+  root_dir: /media/helios/Data/Uni/Masters/Dataset
   train_dir: ${path.root_dir}/Development_Set/Training_Set
   eval_dir: ${path.root_dir}/Development_Set/Validation_Set
-  # test_dir: ${path.root_dir}/Test_Set
-  test_dir: null
+  test_dir: ${path.root_dir}/Test_Set
+  # test_dir: null
   extra_train_dir: null
   mask_dir: null
 
@@ -93,6 +101,25 @@ features:
   layer_4: false
   test_seglen_len_lim: 30
   test_hoplen_fenmu: 3
+  
+  # ==================== CIFE Configuration ====================
+  # Cross-modal Interactive Feature Enhancement (CIFE) Module
+  # Enable/disable CIFE enhancement for improved feature representation
+  use_cife: true  # Set to true to enable CIFE (default: false for backward compatibility)
+  
+  # CIFE Architecture Parameters
+  cife_channels: 128              # Channel dimension (must match layer2 output: 128)
+  cife_d_model: 128               # Transformer embedding dimension (must equal cife_channels)
+  cife_nhead: 4                   # Number of attention heads (must divide d_model evenly)
+  cife_num_encoder_layers: 2    # Number of Transformer encoder layers (1-4 recommended)
+  cife_num_decoder_layers: 2      # Number of Transformer decoder layers (1-4 recommended)
+  cife_dim_feedforward: 256       # FFN hidden dimension (typically 2-4x d_model)
+  cife_dropout: 0.1               # Dropout probability in Transformer (0.0-0.3 recommended)
+  cife_alpha: 0.3                 # Residual connection scaling factor (0.1-0.5 recommended)
+
+  cife_spatial_pool: true        # Pool features before CIFE to reduce Transformer sequence length
+  cife_pool_size: [2, 16]          # Target spatial size used when cife_spatial_pool is enabled
+  # ===========================================================
 
 train_param:
   exp_name: ${exp_name}
@@ -109,11 +136,142 @@ train_param:
   use_validation_first_5: false  # NOTE: DON'T ENABLE TRANSDUCTIVE LEARNING IN THE CHALLENGE
   negative_train_contrast: true
   load_weight_from: null
+  # load_weight_from: "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/learning_rate_mod/2026-02-07_21-26-32/checkpoints/last.ckpt"
   negative_seg_search: false
   merging_segment: false
   remove_long_segment: false
   padd_tail: false
+  max_cache_size: 50  # Number of audio files to cache
+  
+  # ==================== Frequency Masking ====================
+  # Enable/disable frequency masking augmentation
+  use_freq_masking: false           # Set to true to enable (default: false for backward compatibility)
 
+  # Masking mode selection. The five strategies are independent -- selecting one
+  # ignores the other strategies' parameters entirely.
+  #   'random'       Phase 1  uniformly random bands over the whole axis (SpecAugment)
+  #   'slot_uniform' control  the slot sampler with P(b) uniform
+  #   'energy'       Phase 2  away from the slots where the CLASS is loud
+  #   'activation'   Phase 3  towards the slots the encoder uses for the CLASS
+  #   'afri'                  fixed area inside/outside the class AFRI range
+  #
+  # 'slot_uniform' is the control for the three guided strategies, not a
+  # replacement for 'random'. 'random' places bands freely, so it differs from
+  # the guided strategies in the placement rule as well as the guidance, and that
+  # difference is not neutral (edge bins are masked 0.025 vs 0.30 mid-spectrum).
+  # Comparing a guided strategy against 'slot_uniform' isolates the guidance.
+  freq_mask_mode: 'random'
+
+  # Common masking parameters (all modes)
+  freq_mask_n_bands: 2              # Number of frequency bands to mask per spectrogram
+  freq_mask_prob: 0.5               # Probability of applying masking (0.0-1.0)
+  freq_mask_max_width: 16           # Maximum width of masked band in mel bins.
+                                    # Also the slot width: n_slots = ceil(n_mels / this).
+                                    # NB at 24 the last slot is only 8 bins wide.
+  freq_mask_seed: 1234              # Base seed for the masking RNG, kept separate from the
+                                    # global seed so masking is independent of data sampling.
+                                    # Specialised per dataloader worker and epoch when
+                                    # num_workers > 0; at num_workers=0 it is one stream.
+
+  # Phase 2: energy-guided masking
+  freq_mask_energy_weight: 1.0      # Guidance strength (0.0-1.0).
+                                    # 0.0 = uniform slots, 1.0 = pure energy guidance
+                                    # (at 1.0 the class's loudest slot is NEVER masked).
+                                    #
+                                    # There is no energy EMA. The profile is per class and
+                                    # precomputed from the same first afri_n_samples positive
+                                    # segments AFRI uses, because spectrogram energy is a
+                                    # property of the DATA and nothing about it changes during
+                                    # training. The former freq_mask_energy_ema_alpha key is
+                                    # gone: one global running EMA converged to a mixture over
+                                    # the k_way interleaved classes rather than any one class's
+                                    # profile, leaving ~22% of segments with their informative
+                                    # band masked. See docs/dynamic_freq_masking/09_WIRING_VERIFICATION.md
+
+  # Phase 3: activation-guided masking
+  freq_mask_importance_weight: 1.0  # Guidance strength (0.0-1.0).
+                                    # 0.0 = uniform slots, 1.0 = pure importance guidance.
+  freq_mask_importance_ema_alpha: 0.9  # Momentum for the PER-CLASS activation EMA.
+                                       # Convention: ema = alpha*OLD + (1-alpha)*new
+                                       # Higher = more stable; slow to shift as the encoder learns.
+                                       # Importance is the ONLY masking signal tracked online,
+                                       # because it is the only one that changes during training.
+                                       # Updated in training_step where the class labels are
+                                       # known -- a forward hook alone is label-blind and could
+                                       # only produce one global profile shared by every class.
+
+  # Interpretation:
+  # Phase 1 (random): Randomly masks frequency bands. SpecAugment.
+  #   - No spectral information; the augmentation reference point
+  #   - Free start positions, so edge bins are masked far less than centre bins
+  #
+  # Control (slot_uniform): The slot sampler with every slot equally likely
+  #   - The all-else-equal baseline for the three guided strategies below
+  #
+  # The three guided strategies are all PER CLASS, and all derive their signal
+  # from the same first afri_n_samples positive segments of each class, so the
+  # progression varies only the signal:
+  #
+  # Phase 2 (energy): mean spectrogram energy of those segments
+  #   - Spares the slots where the class is loud, likely the informative ones
+  #   - Precomputed and cached; energy is data, so there is nothing to track
+  #
+  # Phase 3 (activation): encoder activation magnitude for that class
+  #   - Masks the slots the encoder relies on, to spread its frequency usage
+  #   - Tracked online, because this is the one signal that changes as the
+  #     encoder learns
+  #
+  # AFRI (afri): positive-minus-negative contrast on those segments
+  #   - Masks a fixed area strictly inside (direct) or outside (inverse) the
+  #     identified range. Not a slot lottery -- see the AFRI section below.
+  #
+  # Example configurations:
+  # 1. Phase 1, SpecAugment baseline:
+  #    use_freq_masking: true
+  #    freq_mask_mode: 'random'
+  #
+  # 2. Uniform-slot control:
+  #    use_freq_masking: true
+  #    freq_mask_mode: 'slot_uniform'
+  #
+  # 3. Phase 2 energy-guided:
+  #    use_freq_masking: true
+  #    freq_mask_mode: 'energy'
+  #    freq_mask_energy_weight: 1.0
+  #
+  # 4. Phase 3 activation-guided:
+  #    use_freq_masking: true
+  #    freq_mask_mode: 'activation'
+  #    freq_mask_importance_weight: 1.0
+  #    freq_mask_importance_ema_alpha: 0.9
+  #
+  # 5. AFRI direct / inverse:
+  #    use_freq_masking: true
+  #    freq_mask_mode: 'afri'
+  #    use_afri: true
+  #    afri_mode: 'direct'   # or 'inverse'
+
+  # ==================== AFRI Configuration ====================
+  # Automatic Frequency Range Identification.
+  # Identifies a per-class frequency range (auto_minbin..auto_maxbin) from the
+  # first 5 POS segments and the NEGs between them, cached to disk.
+  # Only consumed when freq_mask_mode: 'afri'.
+  use_afri: true           # Enable/disable AFRI profile computation
+  afri_mode: 'direct'      # 'direct' masks INSIDE the range, 'inverse' OUTSIDE it
+
+  # Masked area per call, in mel bins. Capped per class to
+  #   M = min(area_budget, range_width, n_mels - range_width)
+  # so direct and inverse mask an identical number of bins for a given class and
+  # form an exactly paired comparison. The default 44 is calibrated to the union
+  # area the slot-based phases actually mask at n_bands=4, max_width=24,
+  # prob=0.8 -- see docs/dynamic_freq_masking/08_AFRI_INTEGRATION.md.
+  freq_mask_afri_area_budget: 44
+
+  # AFRI Caching (speeds up subsequent runs from 2+ hours to <1 second)
+  afri_cache_enabled: true               # Enable profile caching (default: true)
+  afri_cache_dir: null                   # Custom cache directory (default: {train_dir}/.afri_cache)
+  afri_force_recompute: false            # Force recomputation even if cache exists (default: false)
+  # ===========================================================
 eval_param:
   seg_len: 0.200
   hop_seg: 0.05
@@ -122,4 +280,4 @@ eval_param:
   query_batch_size: 8
   negative_set_batch_size: 16
   threshold: 0.9
-  negative_estimate: freq_mask
+  negative_estimate: rms #freq_mask <-- This requires the mask_dir which is not available. Causes the adaptive segment length to fail

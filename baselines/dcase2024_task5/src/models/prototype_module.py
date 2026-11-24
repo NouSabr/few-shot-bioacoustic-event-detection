@@ -1,13 +1,10 @@
 import sys
 
 sys.path.append("/vol/research/dcase2022/project/t5_open_source/DCASE_2022_Task_5")
-from email.mime import audio
-from re import L
 from typing import Any, List
 
 import numpy as np
 import pandas as pd
-from sqlalchemy import over
 import torch
 from pytorch_lightning import LightningModule
 from torchmetrics import MaxMetric
@@ -21,6 +18,7 @@ import torch.nn.functional as F
 
 from src.datamodules.components.batch_sampler import *
 from src.datamodules.components.Datagenerator import *
+from src.datamodules.components.streaming_segment_dataset import StreamingSegmentDataset
 from src.models.components.simple_dense_net import SimpleDenseNet
 import pickle
 
@@ -83,6 +81,47 @@ class PrototypeModule(LightningModule):
         self.negative_result = {}
 
         self.onset_offset = {}
+        
+        # ==================== Phase 3: Frequency Importance Tracker ====================
+        self.use_activation_masking = (
+            train.get('use_freq_masking', False) and
+            train.get('freq_mask_mode') == 'activation'
+        )
+        
+        if self.use_activation_masking:
+            from src.utils.frequency_importance_tracker import FrequencyImportanceTracker
+
+            # Momentum convention: ema = alpha*OLD + (1-alpha)*new, so higher is
+            # more stable. Importance is the only masking signal tracked online,
+            # because it is the only one that changes as the encoder learns.
+            importance_ema_alpha = train.get('freq_mask_importance_ema_alpha', 0.9)
+
+            self.freq_importance_tracker = FrequencyImportanceTracker(
+                n_mels=features.n_mels,
+                ema_alpha=importance_ema_alpha,
+            )
+
+            # The hook only CAPTURES layer2 activations; attribution to classes
+            # happens in step(), where the episode's class names are known. A
+            # hook alone is label-blind and could only produce one global
+            # profile shared by every class.
+            self.freq_importance_tracker.attach(self.net)
+
+            print(f"✓ Phase 3 Activation-guided masking enabled (per class):")
+            print(f"  - importance_ema_alpha: {importance_ema_alpha} (momentum convention)")
+        else:
+            self.freq_importance_tracker = None
+        # ===============================================================================
+
+    def transfer_batch_to_device(self, batch, device, dataloader_idx):
+        # During testing, the batch contains large tensors (X_pos, X_neg, X_query)
+        # that can be thousands of segments long. Moving them all to GPU at once
+        # causes a CUDA OOM error. Instead, evaluate_prototypes handles GPU transfer
+        # internally in small batches via .cuda() calls, so we skip the transfer here.
+        # During training and validation the default behaviour is preserved.
+        if self.trainer.testing:
+            return batch
+        return super().transfer_batch_to_device(batch, device, dataloader_idx)
 
     def forward(self, x: torch.Tensor):
         # with torch.no_grad():
@@ -105,89 +144,199 @@ class PrototypeModule(LightningModule):
             x, y, class_name = batch
         x_out = self.forward(x)
 
+        # Attribute the activations the hook just captured to this episode's
+        # classes. class_name has one entry per POSITIVE row; when negatives are
+        # concatenated the batch is [positives; negatives], so passing it
+        # unchanged uses the positive rows only -- importance should describe
+        # where the encoder attends for a class's actual events, not its
+        # background. Only during training, so validation cannot shift the
+        # masking signal.
+        if (self.freq_importance_tracker is not None and self.training
+                and class_name is not None):
+            self.freq_importance_tracker.update_from_last(class_name)
+
         if self.hparams.train.negative_train_contrast:
             from src.utils.loss import prototypical_loss_filter_negative as loss_fn
         else:
             from src.utils.loss import prototypical_loss as loss_fn
 
         tr_loss, tr_acc, tr_supcon = loss_fn(x_out, y, self.hparams.train.n_shot)
-        return tr_loss, tr_acc, tr_supcon
+        
+        # Return embeddings, labels, and class_name for visualization
+        return tr_loss, tr_acc, tr_supcon, x_out, y, class_name
 
     def training_step(self, batch: Any, batch_idx: int):
-        tr_loss, tr_acc, tr_supcon = self.step(batch, batch_idx)
+        tr_loss, tr_acc, tr_supcon, embeddings, labels, class_name = self.step(batch, batch_idx)
+        
+        # Memory monitoring (every 100 batches to minimize overhead)
+        if batch_idx % 100 == 0 and torch.cuda.is_available():
+            allocated_gb = torch.cuda.memory_allocated() / 1024**3
+            reserved_gb = torch.cuda.memory_reserved() / 1024**3
+            self.log("memory/allocated_gb", allocated_gb, prog_bar=False)
+            self.log("memory/reserved_gb", reserved_gb, prog_bar=False)
+        
+        # ==================== Phase 3: Log Importance Statistics ====================
+        if self.freq_importance_tracker is not None and batch_idx % 1000 == 0:
+            stats = self.freq_importance_tracker.get_stats()
+            self.log("freq_mask/importance_mean", stats['mean'], prog_bar=False)
+            self.log("freq_mask/importance_std", stats['std'], prog_bar=False)
+            self.log("freq_mask/importance_min", stats['min'], prog_bar=False)
+            self.log("freq_mask/importance_max", stats['max'], prog_bar=False)
+            self.log("freq_mask/update_count", stats['total_updates'], prog_bar=False)
+            # How many classes have a profile at all, and how peaked it is.
+            # A flat profile cannot steer masking however many classes are
+            # tracked, so mean_spread is the metric that says whether Phase 3
+            # is doing anything.
+            self.log("freq_mask/classes_tracked",
+                     float(stats['n_classes_tracked']), prog_bar=False)
+            self.log("freq_mask/importance_spread",
+                     stats['mean_spread'], prog_bar=False)
+        # ============================================================================
+        
         cur_lr = self.trainer.optimizers[0].param_groups[0]["lr"]
         self.log("lr", cur_lr, prog_bar=True, on_step=True, on_epoch=True)
         self.log("train/loss", tr_loss, on_step=True, on_epoch=True, prog_bar=True)
         self.log("train/acc", tr_acc, on_step=False, on_epoch=True, prog_bar=True)
         # self.log("train/supcon", tr_supcon, on_step=False, on_epoch=True, prog_bar=True)
-        return {"loss": tr_loss + tr_supcon, "acc": tr_acc}
+        
+        # Return embeddings, labels, and class_name for visualization callback
+        return {
+            "loss": tr_loss + tr_supcon,
+            "acc": tr_acc,
+            "embeddings": embeddings.detach().cpu(),  # Reuse computed embeddings
+            "labels": labels.detach().cpu(),          # Pass labels for pos/neg identification
+            "class_name": class_name                  # Pass class name for visualization
+        }
 
     def validation_step(self, batch: Any, batch_idx: int):
-        val_loss, val_acc, val_supcon = self.step(batch, batch_idx)
+        val_loss, val_acc, val_supcon, embeddings, labels, class_name = self.step(batch, batch_idx)
         self.log("val/loss", val_loss, on_step=True, on_epoch=True, prog_bar=True)
         self.log("val/acc", val_acc, on_step=False, on_epoch=True, prog_bar=True)
         # self.log("val/supcon", val_supcon, on_step=False, on_epoch=True, prog_bar=True)
-        return {"val_loss": val_loss + val_supcon, "val_acc": val_acc}
+        
+        # Return embeddings, labels, and class_name for validation visualizations
+        return {
+            "val_loss": val_loss + val_supcon,
+            "val_acc": val_acc,
+            "embeddings": embeddings.detach().cpu(),
+            "labels": labels.detach().cpu(),
+            "class_name": class_name
+        }
+
+    def _load_streaming_datasets(self, batch):
+        """
+        Create StreamingSegmentDataset instances from query metadata.
+        
+        Reference: docs/memory_optimization/03_IMPLEMENTATION_PLAN.md
+        
+        Args:
+            batch: Tuple containing (data_tuple, strt_index_query, audio_path, seg_len, h5_handles)
+        
+        Returns:
+            Tuple of (X_pos, X_neg, query_dataset, X_pos_neg, X_neg_neg, query_dataset_neg, ...)
+        """
+        data_tuple, strt_index_query, audio_path, seg_len, h5_handles = batch
+        (
+            X_pos,
+            X_neg,
+            query_info,
+            X_pos_neg,
+            X_neg_neg,
+            query_info_neg,
+            hop_seg,
+            hop_seg_neg,
+            max_len,
+            neg_min_length,
+            iteration_positions,      
+            iteration_positions_neg, 
+        ) = data_tuple
+        
+        # Create streaming datasets for query segments
+        query_dataset = StreamingSegmentDataset(h5_handles, query_info, seg_len)
+        query_dataset_neg = StreamingSegmentDataset(h5_handles, query_info_neg, seg_len)
+        
+        return (
+            X_pos,
+            X_neg,
+            query_dataset,
+            X_pos_neg,
+            X_neg_neg,
+            query_dataset_neg,
+            hop_seg,
+            hop_seg_neg,
+            max_len,
+            neg_min_length,
+            strt_index_query,
+            audio_path,
+            h5_handles,
+            iteration_positions,      
+            iteration_positions_neg,  
+        )
 
     def test_step(self, batch: Any, batch_idx: int):
-        ###############################PREPROCESS DATA###########################################
-        def transform(a, b, c):
-            # a,b,c = self.feature_scale_eval(a), self.feature_scale_eval(b), self.feature_scale_eval(c)
-            return a[0, ...], b[0, ...], c[0, ...]
-
+        """
+        Test step with streaming query segments.
+        
+        """
+        # Load streaming datasets from metadata
         (
-            (
-                X_pos,
-                X_neg,
-                X_query,
-                X_pos_neg,
-                X_neg_neg,
-                X_query_neg,
-                hop_seg,
-                hop_seg_neg,
-                max_len,
-                neg_min_length,
-            ),
+            X_pos,
+            X_neg,
+            query_dataset,
+            X_pos_neg,
+            X_neg_neg,
+            query_dataset_neg,
+            hop_seg,
+            hop_seg_neg,
+            max_len,
+            neg_min_length,
             strt_index_query,
-            audio_name,
-            seg_len,
-        ) = batch
-        X_pos, X_neg, X_query = transform(X_pos, X_neg, X_query)
-        X_pos_neg, X_neg_neg, X_query_neg = transform(X_pos_neg, X_neg_neg, X_query_neg)
-        hop_seg, hop_seg_neg, strt_index_query, max_len, neg_min_length, seg_len = (
-            hop_seg[0, ...].item(),
-            hop_seg_neg[0, ...].item(),
-            strt_index_query[0, ...].item(),
-            max_len[0, ...].item(),
-            neg_min_length[0, ...].item(),
-            seg_len[0, ...].item(),
-        )
-        ##########################################################################################
-        # onset, offset = self.evaluate_prototypes(X_pos, X_neg, X_query, hop_seg, strt_index_query, mask)
-        # onset_neg, offset_neg = self.evaluate_prototypes(X_pos_neg, X_neg_neg, X_query_neg, hop_seg_neg, strt_index_query, mask)
+            audio_path,
+            h5_handles,
+            iteration_positions,      
+            iteration_positions_neg,  
+        ) = self._load_streaming_datasets(batch)
+        
+        # Extract scalar values from tensors
+        hop_seg = hop_seg[0, ...].item()
+        hop_seg_neg = hop_seg_neg[0, ...].item()
+        strt_index_query = strt_index_query[0, ...].item()
+        max_len = max_len[0, ...].item()
+        neg_min_length = neg_min_length[0, ...].item()
+        seg_len = query_dataset.seg_len  # Get from dataset
+        
+        # Convert support segments to tensors (already eager-loaded)
+        X_pos = torch.from_numpy(X_pos[0, ...]).to(self.device)
+        X_neg = torch.from_numpy(X_neg[0, ...]).to(self.device)
+        X_pos_neg = torch.from_numpy(X_pos_neg[0, ...]).to(self.device)
+        X_neg_neg = torch.from_numpy(X_neg_neg[0, ...]).to(self.device)
+        
+        # Evaluate with streaming query datasets
         padding_len = seg_len // 2
         onset_offset = self.evaluate_prototypes(
-            X_pos, X_neg, X_query, hop_seg, strt_index_query, audio_name[0]
+            X_pos, X_neg, query_dataset, hop_seg, strt_index_query, audio_path[0],
+            iteration_positions=iteration_positions  
         )
 
         if self.hparams.train.negative_seg_search:
             onset_offset_neg = self.evaluate_prototypes(
                 X_pos_neg,
                 X_neg_neg,
-                X_query_neg,
+                query_dataset_neg,
                 hop_seg_neg,
                 strt_index_query,
-                audio_name[0],
+                audio_path[0],
+                iteration_positions=iteration_positions_neg  
             )
 
-        audio_name = os.path.basename(audio_name[0])
+        audio_name = os.path.basename(audio_path[0])
 
         for k in onset_offset.keys():
             if k not in self.onset_offset.keys():
                 self.onset_offset[k] = {}
-                self.onset_offset[k]["name_arr"] = np.array([])
-                self.onset_offset[k]["onset_arr"] = np.array([])
-                self.onset_offset[k]["offset_arr"] = np.array([])
+                self.onset_offset[k]["name_arr"] = []
+                self.onset_offset[k]["onset_arr"] = []
+                self.onset_offset[k]["offset_arr"] = []
 
             if self.hparams.train.negative_seg_search:
                 neg_onset_offset = []
@@ -238,17 +387,17 @@ class PrototypeModule(LightningModule):
 
             name = np.repeat(audio_name, len(onset_offset[k][0]))
 
-            self.onset_offset[k]["name_arr"] = np.append(
-                self.onset_offset[k]["name_arr"], name
-            )
-            self.onset_offset[k]["onset_arr"] = np.append(
-                self.onset_offset[k]["onset_arr"], onset_offset[k][0]
-            )
-            self.onset_offset[k]["offset_arr"] = np.append(
-                self.onset_offset[k]["offset_arr"], onset_offset[k][1]
-            )
+            self.onset_offset[k]["name_arr"].extend(np.atleast_1d(name).tolist())
+            self.onset_offset[k]["onset_arr"].extend(np.atleast_1d(onset_offset[k][0]).tolist())
+            self.onset_offset[k]["offset_arr"].extend(np.atleast_1d(onset_offset[k][1]).tolist())
 
-        import time; time.sleep(0.1)  # TODO: remove it if CPU resource is not bottleneck
+        # Cleanup HDF5 handles after all processing completes
+        # Reference: HDF5 Handle Lifecycle Analysis - Section E, Fix 1
+        for h5_handle in h5_handles:
+            if hasattr(h5_handle, 'file'):
+                h5_handle.file.close()
+
+        torch.cuda.empty_cache()
         return {}
 
     def convert_single_file(self, file_path, save_path):
@@ -376,11 +525,18 @@ class PrototypeModule(LightningModule):
             # self.post_process_new_test(alpha=k)
         print("Best Result: ")
         print(best_result)
+        # Repeated on stderr so it survives run_full_sweep.sh, which sends a
+        # run's stdout to the sweep log and keeps only stderr on the terminal
+        # (a four-hour progress bar on stdout can otherwise throttle training
+        # behind the terminal's renderer). Visibility only -- every number here
+        # is self.log()-ed below, written to <alpha>/Eval_raw.csv, and printed
+        # to the log, so the record does not depend on this line.
+        print(f"Best Result: {best_result}", file=sys.stderr, flush=True)
         for k in best_result:
             self.log(str(k), best_result[k])
         # New evaluation method
-        self.convert_eval_val()
-        self.calculate_psds()
+        # self.convert_eval_val()
+        # self.calculate_psds()
 
     def on_epoch_end(self):
         # reset metrics at the end of every epoch
@@ -908,154 +1064,203 @@ class PrototypeModule(LightningModule):
         )  # concatenate on the channel dimension
 
     def evaluate_prototypes(
-        self, X_pos, X_neg, X_query, hop_seg, strt_index_query=None, audio_name=None
+        self,
+        X_pos,
+        X_neg,
+        X_query,
+        hop_seg,
+        strt_index_query=None,
+        audio_name=None,
+        mask=None,
+        iteration_positions=None,
     ):
-        X_pos = torch.tensor(X_pos)
-        Y_pos = torch.LongTensor(np.zeros(X_pos.shape[0]))
-        X_neg = torch.tensor(X_neg)
-        Y_neg = torch.LongTensor(np.zeros(X_neg.shape[0]))
-        X_query = torch.tensor(X_query)
-        Y_query = torch.LongTensor(np.zeros(X_query.shape[0]))
-
-        # num_batch_query = len(Y_query) // self.hparams.eval.query_batch_size
-        query_dataset = torch.utils.data.TensorDataset(X_query, Y_query)
-        q_loader = torch.utils.data.DataLoader(
-            dataset=query_dataset,
-            batch_sampler=None,
-            batch_size=self.hparams.eval.query_batch_size,
-            shuffle=False,
-        )
-        # query_set_feat = torch.zeros(0, 48).cpu()
-        # batch_samplr_pos = EpisodicBatchSampler(Y_pos, 2, 1, self.hparams.train.n_shot)
-        pos_dataset = torch.utils.data.TensorDataset(X_pos, Y_pos)
-        pos_loader = torch.utils.data.DataLoader(
-            dataset=pos_dataset, batch_sampler=None
-        )
-        "List for storing the combined probability across all iterations"
-        prob_comb = []
-        emb_dim = self.hparams.features.embedding_dim
-        pos_set_feat = torch.zeros(0, emb_dim).cpu()
-
-        print("Creating positive prototype")
-        for batch in tqdm(pos_loader):
-            x, y = batch
-            # x = self.concate_mask(x, mask)
-            feat = self.net(x.cuda())
-            feat = feat.cpu()
-            feat_mean = feat.mean(dim=0).unsqueeze(0)
-            pos_set_feat = torch.cat((pos_set_feat, feat_mean), dim=0)
-        pos_proto = pos_set_feat.mean(dim=0)
-
-        iterations = self.hparams.eval.iterations
-        for i in range(iterations):
-            prob_pos_iter = []
-            neg_indices = torch.randperm(len(X_neg))[: self.hparams.eval.samples_neg]
-            # import ipdb; ipdb.set_trace()
-            X_neg_ind = X_neg[neg_indices]
-            Y_neg_ind = Y_neg[neg_indices]
-            # X_neg_ind = self.concate_mask(X_neg_ind, mask)
-            feat_neg = self.net(X_neg_ind.cuda())
-            feat_neg = feat_neg.detach().cpu()
-            proto_neg = feat_neg.mean(dim=0)
-            q_iterator = iter(q_loader)
-
-            print("Iteration number {}".format(i))
-            for batch in tqdm(q_iterator):
-                x_q, y_q = batch
-                x_q = x_q
-                # x_q = self.concate_mask(x_q, mask)
-                x_query = self.net(x_q)
-
-                proto_neg = proto_neg.detach().cpu()
-                x_query = x_query.detach().cpu()
-
-                probability_pos = self.get_probability(pos_proto, proto_neg, x_query)
-                prob_pos_iter.extend(probability_pos)
-
-            prob_comb.append(prob_pos_iter)
-
-        prob_final = np.mean(np.array(prob_comb), axis=0)
-        # Save the probability here to perform model ensemble
-        filename = os.path.basename(audio_name).split(".")[0]
-        os.makedirs("prob_comb", exist_ok=True)
-        np.save("prob_comb/%s.npy" % filename, np.array(prob_comb))
-
-        thresh_list = np.arange(0, 1, 0.05)
-        onset_offset_ret = {}
-        for thresh in thresh_list:
-            krn = np.array([1, -1])
-            prob_thresh = np.where(prob_final > thresh, 1, 0)
-            # prob_pos_final = prob_final * prob_thresh
-
-            changes = np.convolve(krn, prob_thresh)
-
-            onset_frames = np.where(changes == 1)[0]
-            offset_frames = np.where(changes == -1)[0]
-
-            str_time_query = (
-                strt_index_query
-                * self.hparams.features.hop_mel
-                / self.hparams.features.sr
+        with torch.no_grad():
+            # Use as_tensor() instead of tensor(): if the input is already a tensor it
+            # returns it unchanged (no copy); if it is a numpy array it shares memory
+            # (zero-copy). Both cases avoid the duplicate RAM allocation that torch.tensor()
+            # would cause for large X_query / X_neg arrays.
+            X_pos = torch.as_tensor(X_pos)
+            Y_pos = torch.LongTensor(np.zeros(X_pos.shape[0]))
+            X_neg = torch.as_tensor(X_neg)
+            Y_neg = torch.LongTensor(np.zeros(X_neg.shape[0]))
+            
+            # Handle both streaming datasets and tensor arrays
+            # Reference: docs/memory_optimization/03_IMPLEMENTATION_PLAN.md Phase 3
+            if isinstance(X_query, StreamingSegmentDataset):
+                # Already a streaming dataset, create DataLoader directly
+                q_loader = torch.utils.data.DataLoader(
+                    X_query,
+                    batch_size=self.hparams.eval.query_batch_size,
+                    shuffle=False,
+                    num_workers=0,  # Must be 0 for HDF5 handles
+                )
+            else:
+                # Legacy path: convert tensor to dataset (backward compatibility)
+                X_query = torch.as_tensor(X_query)
+                Y_query = torch.LongTensor(np.zeros(X_query.shape[0]))
+                query_dataset = torch.utils.data.TensorDataset(X_query, Y_query)
+                # Free the Python-level names immediately after TensorDataset takes ownership.
+                del X_query, Y_query
+                q_loader = torch.utils.data.DataLoader(
+                    dataset=query_dataset,
+                    batch_sampler=None,
+                    batch_size=self.hparams.eval.query_batch_size,
+                    shuffle=False,
+                )
+                # DataLoader is now the sole owner of the query data; drop the dataset name too.
+                del query_dataset
+            # query_set_feat = torch.zeros(0, 48).cpu()
+            # batch_samplr_pos = EpisodicBatchSampler(Y_pos, 2, 1, self.hparams.train.n_shot)
+            pos_dataset = torch.utils.data.TensorDataset(X_pos, Y_pos)
+            pos_loader = torch.utils.data.DataLoader(
+                dataset=pos_dataset, batch_sampler=None
             )
+            "List for storing the combined probability across all iterations"
+            prob_comb = []
+            emb_dim = self.hparams.features.embedding_dim
+            pos_set_feat = torch.zeros(0, emb_dim).cpu()
 
-            onset = (
-                (onset_frames)
-                * (hop_seg)
-                * self.hparams.features.hop_mel
-                / self.hparams.features.sr
-            )
-            onset = onset + str_time_query
+            print("Creating positive prototype")
+            for batch in tqdm(pos_loader):
+                x, y = batch
+                # x = self.concate_mask(x, mask)
+                feat = self.net(x.cuda())
+                feat = feat.cpu()
+                feat_mean = feat.mean(dim=0).unsqueeze(0)
+                pos_set_feat = torch.cat((pos_set_feat, feat_mean), dim=0)
+            pos_proto = pos_set_feat.mean(dim=0)
+            del pos_set_feat, X_pos, Y_pos, pos_dataset, pos_loader
 
-            offset = (
-                (offset_frames)
-                * (hop_seg)
-                * self.hparams.features.hop_mel
-                / self.hparams.features.sr
-            )
-            offset = offset + str_time_query
+            iterations = self.hparams.eval.iterations
+            for i in range(iterations):
+                prob_pos_iter = []
+                if iteration_positions is not None:
+                    # Use precomputed deterministic positions (no RNG)
+                    neg_indices = torch.tensor(iteration_positions[i], dtype=torch.long)
+                else:
+                    # Fallback: original random sampling (backward compatibility)
+                    neg_indices = torch.randperm(len(X_neg))[: self.hparams.eval.samples_neg]
+                # import ipdb; ipdb.set_trace()
+                X_neg_ind = X_neg[neg_indices]
+                Y_neg_ind = Y_neg[neg_indices]
+                # X_neg_ind = self.concate_mask(X_neg_ind, mask)
+                feat_neg = self.net(X_neg_ind.cuda())
+                del X_neg_ind, Y_neg_ind
+                feat_neg = feat_neg.detach().cpu()
+                proto_neg = feat_neg.mean(dim=0)
+                del feat_neg
+                # Release CUDA allocator pool between iterations to prevent the pool
+                # from growing to a 3-iteration high-water mark on the GPU.
+                torch.cuda.empty_cache()
+                q_iterator = iter(q_loader)
 
-            assert len(onset) == len(offset)
-            onset_offset_ret[thresh] = [onset, offset]
+                print("Iteration number {}".format(i))
+                for batch in tqdm(q_iterator):
+                    x_q, y_q = batch
+                    x_q = x_q
+                    # x_q = self.concate_mask(x_q, mask)
+                    x_query = self.net(x_q.cuda())
 
-        # from scipy.signal import medfilt
+                    proto_neg = proto_neg.detach().cpu()
+                    x_query = x_query.detach().cpu()
 
-        # # Use median filtering
-        # for thresh in thresh_list:
-        #     krn = np.array([1, -1])
-        #     prob_thresh = np.where(medfilt(prob_final) > thresh, 1, 0)
-        #     # prob_pos_final = prob_final * prob_thresh
+                    probability_pos = self.get_probability(pos_proto, proto_neg, x_query)
+                    prob_pos_iter.extend(probability_pos)
 
-        #     changes = np.convolve(krn, prob_thresh)
+                prob_comb.append(prob_pos_iter)
 
-        #     onset_frames = np.where(changes == 1)[0]
-        #     offset_frames = np.where(changes == -1)[0]
+            # Convert prob_comb once and reuse for both mean and save — avoids the
+            # original double np.array(prob_comb) conversion (lines 997 and 1003 in
+            # the original) which created two full [3, N] arrays simultaneously.
+            # Using float32 halves the ndarray size vs. the default float64.
+            _prob_arr = np.array(prob_comb, dtype=np.float32)
+            del prob_comb
+            prob_final = _prob_arr.mean(axis=0)
+            del X_neg, Y_neg
+            del q_loader
+            torch.cuda.empty_cache()
+            # Save the probability here to perform model ensemble
+            filename = os.path.basename(audio_name).split(".")[0]
+            os.makedirs("prob_comb", exist_ok=True)
+            np.save("prob_comb/%s.npy" % filename, _prob_arr)
+            del _prob_arr
 
-        #     str_time_query = (
-        #         strt_index_query * self.hparams.features.hop_mel / self.hparams.features.sr
-        #     )
+            thresh_list = np.arange(0, 1, 0.05)
+            onset_offset_ret = {}
+            for thresh in thresh_list:
+                krn = np.array([1, -1])
+                prob_thresh = np.where(prob_final > thresh, 1, 0)
+                # prob_pos_final = prob_final * prob_thresh
 
-        #     onset = (
-        #         (onset_frames)
-        #         * (hop_seg)
-        #         * self.hparams.features.hop_mel
-        #         / self.hparams.features.sr
-        #     )
-        #     onset = onset + str_time_query
+                changes = np.convolve(krn, prob_thresh)
 
-        #     offset = (
-        #         (offset_frames)
-        #         * (hop_seg)
-        #         * self.hparams.features.hop_mel
-        #         / self.hparams.features.sr
-        #     )
-        #     offset = offset + str_time_query
+                onset_frames = np.where(changes == 1)[0]
+                offset_frames = np.where(changes == -1)[0]
 
-        #     assert len(onset) == len(offset)
+                str_time_query = (
+                    strt_index_query
+                    * self.hparams.features.hop_mel
+                    / self.hparams.features.sr
+                )
 
-        #     # Use median filtering (plus 1)
-        #     onset_offset_ret[thresh+1] = [onset, offset]
+                onset = (
+                    (onset_frames)
+                    * (hop_seg)
+                    * self.hparams.features.hop_mel
+                    / self.hparams.features.sr
+                )
+                onset = onset + str_time_query
 
-        return onset_offset_ret
+                offset = (
+                    (offset_frames)
+                    * (hop_seg)
+                    * self.hparams.features.hop_mel
+                    / self.hparams.features.sr
+                )
+                offset = offset + str_time_query
+
+                assert len(onset) == len(offset)
+                onset_offset_ret[thresh] = [onset, offset]
+
+            # from scipy.signal import medfilt
+
+            # # Use median filtering
+            # for thresh in thresh_list:
+            #     krn = np.array([1, -1])
+            #     prob_thresh = np.where(medfilt(prob_final) > thresh, 1, 0)
+            #     # prob_pos_final = prob_final * prob_thresh
+
+            #     changes = np.convolve(krn, prob_thresh)
+
+            #     onset_frames = np.where(changes == 1)[0]
+            #     offset_frames = np.where(changes == -1)[0]
+
+            #     str_time_query = (
+            #         strt_index_query * self.hparams.features.hop_mel / self.hparams.features.sr
+            #     )
+
+            #     onset = (
+            #         (onset_frames)
+            #         * (hop_seg)
+            #         * self.hparams.features.hop_mel
+            #         / self.hparams.features.sr
+            #     )
+            #     onset = onset + str_time_query
+
+            #     offset = (
+            #         (offset_frames)
+            #         * (hop_seg)
+            #         * self.hparams.features.hop_mel
+            #         / self.hparams.features.sr
+            #     )
+            #     offset = offset + str_time_query
+
+            #     assert len(onset) == len(offset)
+
+            #     # Use median filtering (plus 1)
+            #     onset_offset_ret[thresh+1] = [onset, offset]
+
+            return onset_offset_ret
 
     def euclidean_dist(self, x, y):
         """Compute euclidean distance between two tensors."""

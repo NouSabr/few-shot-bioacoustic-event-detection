@@ -1,3 +1,5 @@
+import sys
+import os
 import torch
 
 torch.use_deterministic_algorithms(True)
@@ -14,6 +16,30 @@ from omegaconf import DictConfig
 dotenv.load_dotenv(override=True)
 
 
+class _Tee:
+    """Mirrors stdout writes to both the terminal and a log file."""
+
+    def __init__(self, filepath):
+        self.terminal = sys.stdout
+        self.log = open(filepath, "w", buffering=1, encoding="utf-8")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        self.terminal.flush()
+        self.log.flush()
+
+    def close(self):
+        self.log.close()
+
+    # Proxy all other attribute access to the real stdout so that libraries
+    # that inspect sys.stdout (e.g. tqdm, rich) keep working.
+    def __getattr__(self, name):
+        return getattr(self.terminal, name)
+
+
 @hydra.main(config_path="configs/", config_name="train.yaml")
 def main(config: DictConfig):
     # Imports can be nested inside @hydra.main to optimize tab completion
@@ -21,14 +47,24 @@ def main(config: DictConfig):
     from src import utils
     from src.training_pipeline import train
 
-    if config.disable_cudnn:
-        print("cudnn is disabled, the trianing may be slower")
-        torch.backends.cudnn.enabled = False
-    # Applies optional utilities
-    utils.extras(config)
+    # Redirect stdout → stdout.log inside the Hydra run directory.
+    # os.getcwd() is already set to the Hydra output dir at this point.
+    log_path = os.path.join(os.getcwd(), "stdout.log")
+    tee = _Tee(log_path)
+    sys.stdout = tee
 
-    # Train model
-    return train(config)
+    try:
+        if config.disable_cudnn:
+            print("cudnn is disabled, the trianing may be slower")
+            torch.backends.cudnn.enabled = False
+        # Applies optional utilities
+        utils.extras(config)
+
+        # Train model
+        return train(config)
+    finally:
+        sys.stdout = tee.terminal
+        tee.close()
 
 
 if __name__ == "__main__":

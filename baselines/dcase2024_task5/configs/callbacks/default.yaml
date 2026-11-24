@@ -22,3 +22,20 @@ model_summary:
 
 # rich_progress_bar:
 #   _target_: pytorch_lightning.callbacks.RichProgressBar
+
+prototype_visualization:
+  _target_: src.callbacks.prototype_visualization_callback.PrototypeVisualizationCallback
+  viz_episode_freq: 1000  # Visualize every 1000 episodes
+  reduction_method: "pca"  # Options: 'pca', 'incremental_pca', 'umap'
+  n_components: 2
+  save_to_disk: false  # Set to true to save figures locally
+  output_dir: "visualizations/"
+  use_cache: true  # Cache reducer for consistency across episodes
+  figsize: [12, 8]
+  dpi: 100
+  log_to_wandb: true  # Log to WandB if available
+  log_to_tensorboard: false  # Log to TensorBoard if available
+
+frequency_masking:
+  _target_: src.callbacks.frequency_masking_callback.FrequencyMaskingCallback
+  log_freq: 1000  # Log masking stats every 1000 batches (0 to disable periodic logging)

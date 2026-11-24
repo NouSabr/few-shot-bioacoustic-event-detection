@@ -5,8 +5,8 @@ gpus: 1
 min_epochs: 1
 max_epochs: 200
 
-# accumulate_grad_batches: 4
-
+accumulate_grad_batches: 4
+precision: 16
 # number of validation steps to execute at the beginning of the training
 num_sanity_val_steps: 0
 

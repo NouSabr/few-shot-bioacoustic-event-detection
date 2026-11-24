@@ -1,7 +1,3 @@
-import sys
-
-sys.path.append("/vol/research/dcase2022/project/hhlab")
-
 import argparse
 import copy
 import csv
