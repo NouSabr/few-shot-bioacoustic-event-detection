@@ -50,6 +50,8 @@ wandb/
 checkpoints/
 .afri_cache/
 .reproduction-prepare.json
+/artifacts/runs/
+/artifacts/shared/
 *.log
 *.ckpt
 *.pth

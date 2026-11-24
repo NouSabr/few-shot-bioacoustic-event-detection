@@ -80,9 +80,9 @@ The [reproduction wrapper](baselines/dcase2024_task5/README.md#reproduction-plan
 plans all eight configurations with explicit seeds. Preparation supports opt-in
 execution; training and evaluation remain plan-only.
 
-The [artifact collection plan](artifacts/README.md) describes the proposed
-configuration/seed layout, checkpoint and prediction records, and workflow
-integration. The clean-history rebuild comes before that implementation.
+The [artifact inventory](artifacts/README.md) defines the configuration/seed
+layout and provides a static checker. Checkpoint collection and testing/audit
+integration remain pending.
 
 ## Attribution
 
