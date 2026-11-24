@@ -1,0 +1,19 @@
+\begin{table}
+\centering
+\caption{Main ablation results on DCASE 2024 Task 5 validation set. All values on a 0--100 scale. Bold = highest micro F-measure.}
+\label{tab:main_results}
+\begin{tabular}{llrr}
+\toprule
+{} &       F (micro) &  P (micro) &  R (micro) \\
+experiment               &                 &            &            \\
+\midrule
+Baseline                 &  \textbf{16.74} &      11.88 &      28.31 \\
+CIFE                     &           15.22 &      12.82 &      18.71 \\
+Phase 1 (Random)         &           15.49 &      11.81 &      22.50 \\
+Phase 2 (Energy)         &           15.44 &      10.51 &      29.08 \\
+Phase 3 (Activation)     &           15.45 &      11.64 &      22.95 \\
+Phase 3 + AFRI (Direct)  &           15.45 &      10.67 &      27.98 \\
+Phase 4 + AFRI (Inverse) &           15.46 &      10.68 &      27.98 \\
+\bottomrule
+\end{tabular}
+\end{table}

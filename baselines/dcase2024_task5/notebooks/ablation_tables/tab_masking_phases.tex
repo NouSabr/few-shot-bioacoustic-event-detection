@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\caption{Comparison of frequency masking strategies against the Baseline. $\Delta$~F~(micro) = absolute change in micro F-measure vs. Baseline. All strategies use aggressive coverage: $n_{\text{bands}}=4$, $p_{\text{mask}}=0.8$, $w_{\text{max}}=24$ mel bins.}
+\label{tab:masking_phases}
+\begin{tabular}{llrrr}
+\toprule
+{} &       F (micro) &  Δ F (micro) &  P (micro) &  R (micro) \\
+experiment           &                 &              &            &            \\
+\midrule
+Baseline             &  \textbf{16.74} &         0.00 &      11.88 &      28.31 \\
+Phase 1 (Random)     &           15.49 &        -1.25 &      11.81 &      22.50 \\
+Phase 2 (Energy)     &           15.44 &        -1.30 &      10.51 &      29.08 \\
+Phase 3 (Activation) &           15.45 &        -1.29 &      11.64 &      22.95 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}
+\centering
+\caption{Experiment configuration summary. \emph{Max width} = maximum frequency band width in mel bins. \emph{AFRI mode}: direct = mask species signal band; inverse = mask background band. All masking experiments use aggressive coverage parameters. Old (conservative) parameters were: $n_{\text{bands}}=2$, $p_{\text{mask}}=0.5$, $w_{\text{max}}=16$.}
+\label{tab:experiment_config}
+\begin{tabular}{llllllllll}
+\toprule
+{} & CIFE & Masking &        Mode & $n$ bands & $p$ mask & Max width & AFRI & AFRI mode &                                              Notes \\
+Experiment           &      &         &             &           &          &           &      &           &                                                    \\
+\midrule
+Baseline             &    ✗ &       ✗ &           — &         — &        — &         — &    ✗ &         — &                                    No augmentation \\
+CIFE                 &    ✓ &       ✗ &           — &         — &        — &         — &    ✗ &         — &                Transformer at layer2→layer3; α=0.3 \\
+Phase 1 (Random)     &    ✗ &       ✓ &      random &         4 &      0.8 &        24 &    ✗ &         — &                SpecAugment-style uniform selection \\
+Phase 2 (Energy)     &    ✗ &       ✓ &      energy &         4 &      0.8 &        24 &    ✗ &         — &      w\_energy=1.0; α\_energy=0.1 (new-weight EMA) \\
+Phase 3 (Activation) &    ✗ &       ✓ &  activation &         4 &      0.8 &        24 &    ✗ &         — &  w\_importance=1.0; α\_importance=0.9 (momentum... \\
+AFRI Direct          &    ✗ &       ✓ &  activation &         4 &      0.8 &        24 &    ✓ &    direct &                     w\_afri=1.0; masks signal band \\
+AFRI Inverse         &    ✗ &       ✓ &  activation &         4 &      0.8 &        24 &    ✓ &   inverse &                 w\_afri=1.0; masks background band \\
+\bottomrule
+\end{tabular}
+\end{table}

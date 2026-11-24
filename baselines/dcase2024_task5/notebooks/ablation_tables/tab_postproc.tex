@@ -1,0 +1,18 @@
+\begin{table}
+\centering
+\caption{Effect of post-processing. \emph{No Post-proc F}: best F-measure before any post-processing. \emph{Best Post-proc F}: F-measure after optimal post-processing threshold selection. \emph{Gain}: absolute improvement from post-processing.}
+\label{tab:postproc_effect}
+\begin{tabular}{lrrr}
+\toprule
+{} &  No Post-proc F &  Best Post-proc F &  Gain \\
+\midrule
+Baseline                 &           11.29 &             16.74 &  5.45 \\
+CIFE                     &            9.02 &             15.22 &  6.20 \\
+Phase 1 (Random)         &           10.26 &             15.49 &  5.23 \\
+Phase 2 (Energy)         &           10.34 &             15.44 &  5.10 \\
+Phase 3 (Activation)     &           10.28 &             15.45 &  5.16 \\
+Phase 3 + AFRI (Direct)  &           10.21 &             15.45 &  5.24 \\
+Phase 4 + AFRI (Inverse) &           10.21 &             15.46 &  5.24 \\
+\bottomrule
+\end{tabular}
+\end{table}
