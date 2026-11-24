@@ -2,13 +2,13 @@
   "font_sha256": "075e71be4c58beda172ecb574a799308f04c3d054c6a5b7434954d3b0f1b28d8",
   "legacy_svg_sha256": {
     "audit_workflow.svg": "43c4bd458f26fcfc9a3615b5c3dfa44a8ab7d08a2743e65f9fcb88d8e79b2dbf",
-    "recall_boxplots.svg": "65abfd985e415da8691cf3ffe2c76c257a4353e78921ceb83d58404572193503",
-    "score_coverage_paired_panels.svg": "50f5f58e3c4ebeb0510bd16c2fc5698518964215022d6d7430fad224017c3dfb"
+    "recall_boxplots.svg": "427215582b75183962b2a27b5f9ff293af70eea8f3d765d8e92f6703aa116e2a",
+    "score_coverage_paired_panels.svg": "e875b3b39551a754643c28c3e622a7b44fbecfc3acdd0cf6c6fa2b8f242198e7"
   },
   "legacy_svg_shape_sha256": {
     "audit_workflow.svg": "ccf2e78426e0e19b290afaaa55cbad4b1bb628602c251556b981fb56ec757c80",
-    "recall_boxplots.svg": "86af2431616a9809a35fd86db233ebf8a2aee3a7da7f9314f686f42795b48798",
-    "score_coverage_paired_panels.svg": "3a4ff3ef923d78b0fde13aaf50cfdf4ed4a4dd73e7edb0f95b21e5f779dadb63"
+    "recall_boxplots.svg": "0c7f7dca01882a964421e62c2edf81f08fe1171c7dd0f884dfddd32e475a8582",
+    "score_coverage_paired_panels.svg": "d9a9b2e96a20c055933035a580a8ba98986585c69dfdefe17ed37cf1d3ae6765"
   },
   "plot_input_sha256": {
     "inputs/plotting/subset_effects_seed3009.csv": "80acca3468aaf9690315b9eb1d0d02d0924120af6e46c099b7a7082e54aa2350",

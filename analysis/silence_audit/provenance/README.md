@@ -182,3 +182,32 @@ promotion receipts retain their original hashes; `SOURCE_MAP.json` and
 No fresh installation, event matching, patch validation, model run, raw
 annotation/audio access, project test suite, publication or permissions
 clearance is claimed. Earlier receipts are retained unchanged.
+
+
+### Figure-text cleanup v05
+
+This candidate preserves the preceding public count/profile package and changes
+only presentation: the active plot adapter and legacy boxplot helper remove
+duplicate explanatory banners/footers; recall's axis reads Training seed; the
+paired plot states 8 configurations, 3 seeds. Unused footer canvas space is
+cropped without changing any plotted coordinates. The mean legend and all
+numeric endpoints remain. The workflow and rule-check PDFs are byte-unchanged.
+
+The supplied heatmap retains its historical cell/axis drawing exactly. Only
+Seed A/B/C text blocks are removed and replaced by the actual seed identifiers.
+The base PDF, header overlay, pinned-font overlay producer and pypdf relabeling
+script are supplied for reproducibility. No original heatmap-data redraw is
+claimed. A pixel comparison outside the header strip and text/number checks
+confirm unchanged cells, colors, annotations, configuration labels and axes.
+
+The [cleanup record](figure_text_cleanup.json) contains the drawing proof and
+strict figure targets. The [current replay](runtime-verification-v05.json)
+records relocated counts/profiles, both rendering stages, supplied/rendered
+font/hash checks, and independent header generation/relabeling. Earlier v03/v04
+records and their older figure hashes remain historical, not current targets.
+No native matching, model execution, new metrics, clean installation, patch
+validation, public release or licensing clearance is claimed.
+
+The v05 receipt records the plotting-file and generated profile-table hashes.
+Earlier comment-only adaptations remain under `prior_post_replay_adaptations` in
+the manifest and describe the v04 wording pass.

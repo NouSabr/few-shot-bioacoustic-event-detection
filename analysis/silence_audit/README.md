@@ -12,13 +12,14 @@ needs no files from the local manuscript, thesis, or seminar workspaces.
 and licensing for newly authored code, remain on the
 [release checklist](RELEASE_CHECKLIST.md).
 
-The approved vertical workflow diagram and its rendering targets come from
-`bundle_v04`. The other four PDFs and the audit/profile code are unchanged.
-On 2026-11-24, one relocated copy passed counts/profile replay, both figure
-stages and all five final PDF hash/font checks using existing environments.
-Counts and stable profile outputs are byte-identical to the v03 replay.
-See [verification](provenance/README.md#vertical-workflow-refresh-v04) for
-the v04 results and historical two-copy v03 checks.
+The current figure-text cleanup removes duplicate plot footers, states the
+configuration/seed structure directly, and labels heatmap groups with the actual
+seed values. Counts, plotted points/boxes, heatmap cells and score values are
+unchanged. Four figures are drawn by the two-stage workflow below; the historical
+heatmap matrix is supplied with updated seed headers. The optional header-only
+reproduction is described below. Current checks and limits are recorded in
+[provenance](provenance/README.md#figure-text-cleanup-v05). Publication, data/code
+permissions and a fresh dependency installation are not claimed.
 
 ## 1. Reproduce from counts
 
@@ -102,8 +103,8 @@ and Pillow, separately from the optional matching environment. It replays the
 three SVG drawings with bundled Liberation Sans and regenerates the rule-check
 plot from archived aggregate counts in `inputs/plotting/`. All 971 points and the
 symlog transform/limits are retained; the sparse tick labels match the refreshed
-export. The recurrence heatmap is copied unchanged, not redrawn from historical
-plotting code. No raw annotations, audio, weights or GPU are needed.
+export. The recurrence heatmap is supplied with explicit seed headers; its cells,
+colors, values and axes are retained from the historical PDF, not redrawn. No raw annotations, audio, weights or GPU are needed.
 
 The renderer checks SVG drawing signatures with coordinates normalized to 1e-9
 point, plotting-input/font hashes, and all five final PDF hashes in
@@ -120,8 +121,32 @@ python3 -B scripts/verify_paper_figures.py --figure-dir results/figures01
 
 This can also inspect the supplied PDFs with `--figure-dir paper_figures`.
 Rendering and font checks passed in one relocated copy; see the
-[v04 runtime record](provenance/runtime-verification-v04.json). Historical
-v03 and staging checks are retained separately.
+[v05 runtime record](provenance/runtime-verification-v05.json). Historical
+v03/v04 and staging checks are retained separately.
+
+### Optional: reproduce only the heatmap seed-label update
+
+The before-label PDF and transparent header overlay are bundled in `assets/`.
+Using the recorded pypdf inspection environment:
+
+```bash
+python3 -E -B scripts/relabel_heatmap.py --output-dir results/heatmap-labels01
+```
+
+This removes only the old Seed A/B/C text blocks and merges the supplied
+explicit-seed headers. It reproduces the supplied heatmap PDF without redrawing
+its matrix. To regenerate the header overlay itself with the recorded plotting
+environment, then relabel using that independently regenerated overlay:
+
+```bash
+python3 -E -B scripts/make_heatmap_seed_overlay.py --output-dir results/overlay01
+python3 -E -B scripts/relabel_heatmap.py --overlay results/overlay01/heatmap_seed_labels_overlay.pdf --output-dir results/heatmap-labels02
+```
+
+Use the appropriate existing environment for each command; nothing installs
+automatically. The recipe checks input/font hashes. The unchanged DejaVu notice
+covers the newly embedded header font. This is a label-only transformation,
+not regeneration of the historical heatmap drawing from event data.
 
 ## Evaluation conventions
 

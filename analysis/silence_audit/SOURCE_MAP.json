@@ -22,19 +22,23 @@
   },
   {
     "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. v05 receipt provenance documentation.",
     "package_path": "README.md",
-    "sha256": "5aafb8862b5f45b16b07e4910342e29b0f8f71ddc0773ddce396a1ebba6c6a39",
-    "source": "paper_revision/reproducibility/bundle_v03/README.md",
-    "source_sha256": "5cd958bf4f58e17cd1fac93cbd881671daa8c4c00339625b22edcbd6c567ffcd",
-    "workflow_refresh_note": "Selective v04 workflow promotion; historical receipts preserved."
+    "previous_sha256": "375c9390bac16f26d43686cba1476a804e20d213f817a945aebd3c3e233aa872",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/README.md",
+    "sha256": "fe1f130e039ebe2b572cae106577238031ea6bef61e9360d8f2ab5d3757b0ef6",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
+    "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "RELEASE_CHECKLIST.md",
-    "sha256": "0899e9b00f93ba400a494d116f05d72cc2a776ed20e80e1899d2cab3505b4147",
-    "source": "paper_revision/reproducibility/bundle_v03/RELEASE_CHECKLIST.md",
-    "source_sha256": "f4200021326296d0b17c90be6d709df5b3fba75e32921c6c461315ce84e25850",
-    "workflow_refresh_note": "Selective v04 workflow promotion; historical receipts preserved."
+    "previous_sha256": "0899e9b00f93ba400a494d116f05d72cc2a776ed20e80e1899d2cab3505b4147",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/RELEASE_CHECKLIST.md",
+    "sha256": "99d44564bf08631e89816a6dc749f1d4a08950a96e3dbcce78c0031d906e1a7b",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
+    "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "byte-preserved",
@@ -45,10 +49,13 @@
   },
   {
     "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "THIRD_PARTY_NOTICES.md",
-    "sha256": "9c8a8aface228c969ef47f04b56da9ddb17b874e62ec5b333613f06bf0a47624",
-    "source": "paper_revision/reproducibility/bundle_v03/THIRD_PARTY_NOTICES.md",
-    "source_sha256": "c125aab33a5c6c872de6076ec33fb6055643506aa838e0067a068ee88eb7b1a3"
+    "previous_sha256": "9c8a8aface228c969ef47f04b56da9ddb17b874e62ec5b333613f06bf0a47624",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/THIRD_PARTY_NOTICES.md",
+    "sha256": "2b86b3feb75f2cc95604ef1cabcc0d7d283a6c30ba0cf703c05f0c7d567520e8",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
+    "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "byte-preserved",
@@ -75,10 +82,37 @@
   },
   {
     "disposition": "byte-preserved",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "assets/heatmap_seed_labels_base.pdf",
+    "sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/before_public/paper_figures/fig_tpos_recurrence_heatmap.pdf",
+    "source_sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81"
+  },
+  {
+    "disposition": "generated",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "assets/heatmap_seed_labels_overlay.pdf",
+    "sha256": "b27f90facfaf3e4814a687d00d2ac544efda5f8c60bb863e4b977ef3ab4c0bbc",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
+  },
+  {
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "expected/formatting_invariants.json",
-    "sha256": "6a7dce29f8701d78f5d37b91b41b8f7e050c5f92f1f15e87278ee0be1955ae00",
-    "source": "paper_revision/reproducibility/bundle_v04/expected/formatting_invariants.json",
-    "source_sha256": "6a7dce29f8701d78f5d37b91b41b8f7e050c5f92f1f15e87278ee0be1955ae00"
+    "previous_sha256": "6a7dce29f8701d78f5d37b91b41b8f7e050c5f92f1f15e87278ee0be1955ae00",
+    "previous_source": "paper_revision/reproducibility/bundle_v04/expected/formatting_invariants.json",
+    "sha256": "88126c17901d020719a5cbadbba5da4be0d850d377ef6051760c16654afd9892",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
+  },
+  {
+    "disposition": "generated",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "expected/heatmap_seed_labels.json",
+    "sha256": "d52cf25e479bafc0a2b56a85a62b2f399d6ace56c0be29cf02928c323df49e61",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "byte-preserved",
@@ -88,11 +122,14 @@
     "source_sha256": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "expected/legacy_paper_figure_sha256.json",
-    "sha256": "c804e955818466220233ea862c090daa92b536bbea75694be86eba69cb99e983",
-    "source": "paper_revision/reproducibility/bundle_v04/expected/legacy_paper_figure_sha256.json",
-    "source_sha256": "c804e955818466220233ea862c090daa92b536bbea75694be86eba69cb99e983"
+    "previous_sha256": "c804e955818466220233ea862c090daa92b536bbea75694be86eba69cb99e983",
+    "previous_source": "paper_revision/reproducibility/bundle_v04/expected/legacy_paper_figure_sha256.json",
+    "sha256": "2b39a7735b93dcffa00308569f1417d09a16ff45196209e6f5ddc1208b32098d",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "byte-preserved",
@@ -102,11 +139,14 @@
     "source_sha256": "133d0d361ab4ae310a87927cc990b02e4928b1797b81fef7d3ba0d57e1bfd85a"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "expected/paper_figure_sha256.json",
-    "sha256": "ab26b6f992dcf1f68ee6a792e18cee590ecb88ccfa4062a3f2ddbc665d4a7048",
-    "source": "paper_revision/reproducibility/bundle_v04/expected/paper_figure_sha256.json",
-    "source_sha256": "ab26b6f992dcf1f68ee6a792e18cee590ecb88ccfa4062a3f2ddbc665d4a7048"
+    "previous_sha256": "ab26b6f992dcf1f68ee6a792e18cee590ecb88ccfa4062a3f2ddbc665d4a7048",
+    "previous_source": "paper_revision/reproducibility/bundle_v04/expected/paper_figure_sha256.json",
+    "sha256": "379c4ad360886253c11c6bf98c58b6166f34dc933472a9c843c739b8f7614323",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "byte-preserved",
@@ -354,25 +394,34 @@
     "source_sha256": "0f179356d44abca9244ce60fdc820cfb59d01e96928b05d34f0b2ce85254e2be"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "paper_figures/fig_tpos_recurrence_heatmap.pdf",
-    "sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
-    "source": "paper_revision/reproducibility/bundle_v03/paper_figures/fig_tpos_recurrence_heatmap.pdf",
-    "source_sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81"
+    "previous_sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/paper_figures/fig_tpos_recurrence_heatmap.pdf",
+    "sha256": "f8b6b8e73ccfed0e10f03a46c53fb3798976747ad7ea973ddea8a7af9602ec99",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "paper_figures/recall_boxplots.pdf",
-    "sha256": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2",
-    "source": "paper_revision/reproducibility/bundle_v03/paper_figures/recall_boxplots.pdf",
-    "source_sha256": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2"
+    "previous_sha256": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/paper_figures/recall_boxplots.pdf",
+    "sha256": "465f29d833639afb3634f3c99ed769e757549d8b25094590d3b89e5af18270e3",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "paper_figures/score_coverage_paired_panels.pdf",
-    "sha256": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3",
-    "source": "paper_revision/reproducibility/bundle_v03/paper_figures/score_coverage_paired_panels.pdf",
-    "source_sha256": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3"
+    "previous_sha256": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/paper_figures/score_coverage_paired_panels.pdf",
+    "sha256": "66aa4f1912f88ec430b5b780bddf805401fd939c0b8d7d90399df1baba4559e2",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "byte-preserved",
@@ -383,10 +432,13 @@
   },
   {
     "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. v05 receipt provenance documentation.",
     "package_path": "provenance/README.md",
-    "sha256": "331375aae3b7c9f0f01434dea6f0ac3daf8ab64ae4a814341db9d8a8658f50da",
-    "source": "Authored for the public audit package in this cleanup batch.",
-    "workflow_refresh_note": "Selective v04 workflow promotion; historical receipts preserved."
+    "previous_sha256": "331375aae3b7c9f0f01434dea6f0ac3daf8ab64ae4a814341db9d8a8658f50da",
+    "previous_source": "Authored for the public audit package in this cleanup batch.",
+    "sha256": "3284e4863b0c3cfcf0959fb0cc33ccf452e3f7637a9b516360231acc1954e9a3",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
+    "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "byte-preserved",
@@ -451,6 +503,14 @@
     "source": "Recorded from approved counts-only verification on 2026-11-24."
   },
   {
+    "disposition": "generated",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "provenance/figure_text_cleanup.json",
+    "sha256": "91c0d579a6c5117dd5c97e266a51bb0d302bee44f155a629f89cd21ed77cb045",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
+  },
+  {
     "disposition": "byte-preserved",
     "package_path": "provenance/historical_count_policy.py",
     "sha256": "66935b48edb90ad8d8f3df63ba2f3b9ca9d4cef1e90282eab4bd88dbefe3b89d",
@@ -490,6 +550,14 @@
     "source_sha256": "c0366c5792cc5f5c262ca1ef8f86349f2ec12a6d0722b1118977789c31315b2d"
   },
   {
+    "disposition": "generated",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "provenance/runtime-verification-v05.json",
+    "sha256": "8016d7dc6096703873fc883d3b59cdb4d25bcb1ee74bc53143d7392a58191726",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/verify_cleanup_replay.py",
+    "source_sha256": "cdac0e831b125339d0c0b68a08c228a7ba39c42c804f566f73b2f86830d929c9"
+  },
+  {
     "disposition": "byte-preserved",
     "package_path": "provenance/vertical_workflow_refresh.json",
     "sha256": "1b0022411dede0026647bac7a828883531eca3184cc110846517c1a6dab7eed0",
@@ -522,11 +590,14 @@
     "source_sha256": "51099b1181420b9076ec6011f0eeb4d1b6675aaa0f42c98f4d24fe15078c767c"
   },
   {
-    "disposition": "byte-preserved",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "requirements-figure-checks.txt",
-    "sha256": "69202fdc5118816f854e110aeb89cab3b906555cb23737a65894bab716a58b37",
-    "source": "paper_revision/reproducibility/bundle_v03/requirements-figure-checks.txt",
-    "source_sha256": "69202fdc5118816f854e110aeb89cab3b906555cb23737a65894bab716a58b37"
+    "previous_sha256": "69202fdc5118816f854e110aeb89cab3b906555cb23737a65894bab716a58b37",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/requirements-figure-checks.txt",
+    "sha256": "762ef5b2238c5b1f1dc64ca0c7ecfcb5ff02a226ccf250185fb8650c6585319b",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
+    "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "byte-preserved",
@@ -571,6 +642,14 @@
   },
   {
     "disposition": "byte-preserved",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "scripts/make_heatmap_seed_overlay.py",
+    "sha256": "653ade3997ff4e63b94d50b8ca06de986033f5f6901979d4bdedefe2088984b7",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/templates/make_heatmap_seed_overlay.py",
+    "source_sha256": "653ade3997ff4e63b94d50b8ca06de986033f5f6901979d4bdedefe2088984b7"
+  },
+  {
+    "disposition": "byte-preserved",
     "package_path": "scripts/match_predictions.py",
     "sha256": "8925b36a3d793f5da3c31c41669b3b9a79b44a55d92b4f51ff823ed8c018371e",
     "source": "paper_revision/reproducibility/bundle_v03/scripts/match_predictions.py",
@@ -578,26 +657,33 @@
   },
   {
     "disposition": "adapted",
-    "note": "Layout comments removed after the v04 replay; Python AST unchanged.",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "scripts/plot_paper.py",
-    "sha256": "2394dab02edc0570f561d961e7ff6aaccdba108f01a71255f37156d65d175ddd",
-    "source": "paper_revision/reproducibility/bundle_v04/scripts/plot_paper.py",
-    "source_sha256": "654c20e6b0abe5dd069fb0b084ad2c894b71771bb46ae3ce64c1f3d2c78d999f"
+    "previous_sha256": "2394dab02edc0570f561d961e7ff6aaccdba108f01a71255f37156d65d175ddd",
+    "previous_source": "paper_revision/reproducibility/bundle_v04/scripts/plot_paper.py",
+    "sha256": "015e3e799be7891fb67bbcddeda54d3469c2b2ad4dbd8bd3c21a9efb3e540d6e",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "scripts/plot_results.py",
-    "sha256": "693509b82a09d6d6014f19757f0c96eca1affd5a0aec069b66a36c2e231ebb66",
-    "source": "paper_revision/reproducibility/bundle_v03/scripts/plot_results.py",
-    "source_sha256": "0bbd12f163469d7ce22249aeba571597ba5e9a4ec141114269f0bd09dadf7d8d"
+    "previous_sha256": "693509b82a09d6d6014f19757f0c96eca1affd5a0aec069b66a36c2e231ebb66",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/scripts/plot_results.py",
+    "sha256": "af7fd316b0a1858e0c62feadee0d6832d084a03fb1df9f531dd4cf8823e9f8d4",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
-    "disposition": "byte-preserved",
-    "note": "Historical PDF Creator path is fixed export metadata, not a filesystem dependency.",
+    "disposition": "adapted",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
     "package_path": "scripts/polish_paper.py",
-    "sha256": "28646de00db4c0e1c4054fb5adc1acc35154097ad648e9fc43ba6800ca58783e",
-    "source": "paper_revision/reproducibility/bundle_v03/scripts/polish_paper.py",
-    "source_sha256": "28646de00db4c0e1c4054fb5adc1acc35154097ad648e9fc43ba6800ca58783e"
+    "previous_sha256": "28646de00db4c0e1c4054fb5adc1acc35154097ad648e9fc43ba6800ca58783e",
+    "previous_source": "paper_revision/reproducibility/bundle_v03/scripts/polish_paper.py",
+    "sha256": "94e26b7d7c4a36a70561db4371da1ef534837016381afac223e4efee35b043b0",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/prepare_figures.py",
+    "source_sha256": "9464ba37696306399b2b925fe1f25a36db74e1de289ca6c0df679c8372810113"
   },
   {
     "disposition": "adapted",
@@ -606,6 +692,14 @@
     "sha256": "6da5acd6724bfda04a6d37d3cbde49488735214ae9b11e31080e403415b89fc8",
     "source": "paper_revision/analysis/recording_evidence/profile_recordings.py",
     "source_sha256": "0a6338139c77dbb8a58695932f133d19cb4635f7b5ce976ca476a937d338e83b"
+  },
+  {
+    "disposition": "byte-preserved",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "package_path": "scripts/relabel_heatmap.py",
+    "sha256": "e5024ef6ab0127aa944b02095c81f6c0bd402defc1917cab1b181dd7f5def0c4",
+    "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/templates/relabel_heatmap.py",
+    "source_sha256": "e5024ef6ab0127aa944b02095c81f6c0bd402defc1917cab1b181dd7f5def0c4"
   },
   {
     "disposition": "byte-preserved",

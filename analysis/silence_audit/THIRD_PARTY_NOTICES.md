@@ -72,3 +72,12 @@ license/copyright declaration. Selected predictions, counts, metadata, aggregate
 plotting tables and figure outputs still need author publication approval and
 appropriate data attribution. `DATA_ACCESS.md` identifies the official dataset
 record without asserting that its download matches the frozen annotation hashes.
+
+
+### Heatmap seed-label overlay
+
+The replacement headers use DejaVuSans-Bold.ttf from the recorded Matplotlib
+renderer; its exact font hash is pinned in `expected/heatmap_seed_labels.json`.
+The existing `assets/fonts/DejaVu-LICENSE.txt` is retained. The base heatmap PDF
+is the previously supplied historical drawing; only its three seed-header text
+blocks are changed. No license grant for unrelated code/data is inferred.

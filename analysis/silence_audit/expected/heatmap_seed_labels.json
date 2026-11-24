@@ -1,0 +1,25 @@
+{
+  "base_sha256": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+  "baseline_y_pt": 236.6797254001,
+  "centers_x_pt": [
+    148.0546666667,
+    294.03868750000004,
+    440.0210208333
+  ],
+  "font_sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+  "media_box_pt": [
+    520.225,
+    250.7234754001
+  ],
+  "new_labels": [
+    "Seed 1234",
+    "Seed 2026",
+    "Seed 3009"
+  ],
+  "old_labels": [
+    "Seed A",
+    "Seed B",
+    "Seed C"
+  ],
+  "overlay_sha256": "b27f90facfaf3e4814a687d00d2ac544efda5f8c60bb863e4b977ef3ab4c0bbc"
+}

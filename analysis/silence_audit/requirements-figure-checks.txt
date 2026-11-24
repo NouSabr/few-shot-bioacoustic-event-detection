@@ -1,2 +1,2 @@
-# Optional PDF hash/font inventory only; not needed for drawing or count audit.
+# PDF hash/font inspection and optional heatmap seed-label merge; not needed for count audit or other drawings.
 pypdf==7.1.1

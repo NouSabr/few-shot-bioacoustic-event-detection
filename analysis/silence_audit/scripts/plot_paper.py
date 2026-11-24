@@ -10,9 +10,9 @@ def require(value,message):
 
 def paired(pairs,means,out,png):
     BLUE,ORANGE,INK,PAIR='#226a9f','#c36a25','#263442','#d5dde3'
-    canvas=drawing.Canvas(1000,560,'Before and after label-informed deletion: paired-dot panels')
+    canvas=drawing.Canvas(1000,520,'Before and after label-informed deletion: paired-dot panels')
     canvas.text(500,31,'Before and after label-informed deletion',25,'middle',INK)
-    canvas.text(500,60,'24 selected configuration-seed outputs',18,'middle',INK)
+    canvas.text(500,60,'8 configurations, 3 seeds',18,'middle',INK)
 
     def marker(x,y,shape,color,radius=4.5,width=1.8):
         if shape=='circle':
@@ -67,15 +67,13 @@ def paired(pairs,means,out,png):
         canvas.text(after_x,bottom+32,'After deletion',20,'middle',ORANGE)
         change=deleted_mean-original_mean
         canvas.text((left+right)/2,498,f"Mean change: {change:+.2f} {panel['change_suffix']}",18,'middle',INK)
-    canvas.text(500,540,'Lines connect the same output; the two panels use separate vertical scales.',17,'middle',INK)
     canvas.save(out/'score_coverage_paired_panels',png=png)
 
 def boxes(input_dir,output_dir,png):
     data = {(r['configuration'],int(r['seed']),r['stage']):r
             for r in rows(input_dir/'recall_quantiles_by_output.csv')}
-    fig = Canvas(1120,800,'Per-recording recall distributions for each selected output')
+    fig = Canvas(1120,740,'Recording-level recall before and after deletion')
     fig.text(560,35,fig.title,23,'middle')
-    fig.text(560,65,'Each box summarizes the same 42 recording names; deleted recordings remain as zeros',16,'middle')
     for x,color,label in [(260,BLUE,'Original'),(540,ORANGE,'Label-informed deletion')]:
         fig.rect(x,85,18,14,color)
         fig.text(x+28,99,label,17)
@@ -105,9 +103,7 @@ def boxes(input_dir,output_dir,png):
                 fig.rect(x-7,values['q3'],14,values['q1']-values['q3'],'#ffffff',color,2)
                 fig.line(x-7,values['median'],x+7,values['median'],color,3)
     fig.text(20,122,'Recall (%)',16)
-    fig.text(560,712,'Training seed (one complete selected output per configuration and seed)',17,'middle')
-    fig.text(560,747,'Boxes: middle 50%; center line: median; whiskers: minimum and maximum; n = 42 per box.',15,'middle')
-    fig.text(560,777,'Descriptive distributions, not confidence intervals. Shared PB/PB24 name counted once per box.',14,'middle')
+    fig.text(560,712,'Training seed',17,'middle')
     fig.save(output_dir/'recall_boxplots',png)
 
 def workflow(out,png):

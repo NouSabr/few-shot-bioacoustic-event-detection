@@ -4,6 +4,13 @@ This checklist tracks publication permissions, licensing, verification and
 release identity. The package is prepared in the cleanup working tree;
 publication, clean-install validation and availability updates remain pending.
 
+Current figure-text candidate: plots/captions have been simplified without
+changing numerical inputs or plotted observations. The heatmap's seed headers
+are updated; its historical matrix is retained. See
+`provenance/figure_text_cleanup.json` and `provenance/runtime-verification-v05.json`.
+Earlier v03/v04 runtime records below remain historical. This refresh does not
+clear any outstanding author, data, code-license, URL/tag or publication decision.
+
 Before committing/publishing the package:
 
 - [ ] Approve the selected prediction, count, profile, and recording-metadata files

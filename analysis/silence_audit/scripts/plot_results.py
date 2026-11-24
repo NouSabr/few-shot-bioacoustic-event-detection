@@ -196,9 +196,8 @@ def render_figures(input_dir, output_dir, png=False):
 
     data = {(r['configuration'],int(r['seed']),r['stage']):r
             for r in rows(input_dir/'recall_quantiles_by_output.csv')}
-    fig = Canvas(1120,800,'Per-recording recall distributions for each selected output')
+    fig = Canvas(1120,740,'Recording-level recall before and after deletion')
     fig.text(560,35,fig.title,23,'middle')
-    fig.text(560,65,'Each box summarizes the same 42 recording names; deleted recordings remain as zeros',16,'middle')
     for x,color,label in [(260,BLUE,'Original'),(540,ORANGE,'Label-informed deletion')]:
         fig.rect(x,85,18,14,color)
         fig.text(x+28,99,label,17)
@@ -228,9 +227,7 @@ def render_figures(input_dir, output_dir, png=False):
                 fig.rect(x-7,values['q3'],14,values['q1']-values['q3'],'#ffffff',color,2)
                 fig.line(x-7,values['median'],x+7,values['median'],color,3)
     fig.text(20,122,'Recall (%)',16)
-    fig.text(560,712,'Training seed (one complete selected output per configuration and seed)',17,'middle')
-    fig.text(560,747,'Boxes: middle 50%; center line: median; whiskers: minimum and maximum; n = 42 per box.',15,'middle')
-    fig.text(560,777,'Descriptive distributions, not confidence intervals. Shared PB/PB24 name counted once per box.',14,'middle')
+    fig.text(560,712,'Training seed',17,'middle')
     fig.save(output_dir/'recall_boxplots',png)
 
 

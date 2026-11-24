@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-24",
+  "drawing_proof": {
+    "heatmap": {
+      "all_pixels_below_seed_header_strip_identical": true,
+      "cell_numbers_and_all_non_seed_text_identical": true,
+      "dimensions_unchanged": true,
+      "matrix_redrawn": false,
+      "old_headers_removed_not_hidden": true,
+      "seed_labels_updated": true
+    },
+    "no_new_matching_models_or_metric_computation": true,
+    "rule_check_and_workflow_pdfs_byte_unchanged": true,
+    "status": "passed",
+    "vector_proof": {
+      "audit_workflow": {
+        "all_plotted_geometry_identical": true,
+        "new_canvas_height": "540",
+        "only_approved_text_replacements_or_removals": true,
+        "previous_canvas_height": "540"
+      },
+      "recall_boxplots": {
+        "all_plotted_geometry_identical": true,
+        "new_canvas_height": "740",
+        "only_approved_text_replacements_or_removals": true,
+        "previous_canvas_height": "800"
+      },
+      "score_coverage_paired_panels": {
+        "all_plotted_geometry_identical": true,
+        "new_canvas_height": "520",
+        "only_approved_text_replacements_or_removals": true,
+        "previous_canvas_height": "560"
+      }
+    }
+  },
+  "figure_sha256": {
+    "audit_workflow.pdf": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+    "fig_rule_check.pdf": "0f179356d44abca9244ce60fdc820cfb59d01e96928b05d34f0b2ce85254e2be",
+    "fig_tpos_recurrence_heatmap.pdf": "f8b6b8e73ccfed0e10f03a46c53fb3798976747ad7ea973ddea8a7af9602ec99",
+    "recall_boxplots.pdf": "465f29d833639afb3634f3c99ed769e757549d8b25094590d3b89e5af18270e3",
+    "score_coverage_paired_panels.pdf": "66aa4f1912f88ec430b5b780bddf805401fd939c0b8d7d90399df1baba4559e2"
+  },
+  "previous_public_manifest_sha256": "c970900c326013898fbb5fb22d166cf9e54d81126a1f4c1b404db1884060d8be",
+  "prior_runtime_records_preserved": true,
+  "published": false,
+  "raw_count_inputs_predictions_and_audit_evaluator_code_changed": false,
+  "status": "APPROVED_FIGURE_TEXT_CLEANUP"
+}

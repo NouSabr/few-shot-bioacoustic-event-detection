@@ -102,7 +102,7 @@ def main():
     plt.rcParams.update({'pdf.fonttype': 42, 'pdf.use14corefonts': False})
     original.rule_check_figure(data, out)
     require(evidence['population'] == 971, 'Expected 971 rule-check observations')
-    # Supplied unchanged heatmap; its numerical audit is separate from its historical drawing.
+    # Supplied heatmap with explicit seed labels; matrix drawing is preserved from the historical PDF.
     shutil.copyfile(bundle / 'paper_figures/fig_tpos_recurrence_heatmap.pdf',
                     out / 'fig_tpos_recurrence_heatmap.pdf')
     hashes = json.loads((bundle / 'expected/paper_figure_sha256.json').read_text())
