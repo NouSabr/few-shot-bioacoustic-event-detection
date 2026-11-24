@@ -1,0 +1,2148 @@
+{
+  "common_overrides": [
+    "features.cife_nhead=4",
+    "features.cife_pool_size=[2,16]"
+  ],
+  "configurations": [
+    "baseline",
+    "cife",
+    "phase1_random",
+    "slot_uniform",
+    "phase2_energy",
+    "phase3_activation",
+    "afri_direct",
+    "afri_inverse"
+  ],
+  "operating_point_note": "Archived label-selected output choices, not training overrides or a deployable selection rule; the planner does not apply them.",
+  "prediction_manifest": {
+    "sha256": "708d9a348bae32bcbac9f8a83bc8020ef44ef422fb087ecabb7df79d1ca13a51",
+    "source": "../../analysis/silence_audit/inputs/prediction_manifest.csv"
+  },
+  "preset_overrides": {
+    "afri_direct": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=afri",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.use_afri=true",
+      "train_param.afri_mode=direct"
+    ],
+    "afri_inverse": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=afri",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.use_afri=true",
+      "train_param.afri_mode=inverse"
+    ],
+    "baseline": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=false",
+      "train_param.use_afri=false"
+    ],
+    "cife": [
+      "features.use_cife=true",
+      "train_param.use_freq_masking=false",
+      "train_param.use_afri=false"
+    ],
+    "phase1_random": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=random",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.use_afri=false"
+    ],
+    "phase2_energy": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=energy",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.freq_mask_energy_weight=1.0",
+      "train_param.use_afri=false"
+    ],
+    "phase3_activation": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=activation",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.freq_mask_importance_weight=1.0",
+      "train_param.use_afri=false",
+      "train_param.freq_mask_importance_ema_alpha=0.9"
+    ],
+    "slot_uniform": [
+      "features.use_cife=false",
+      "train_param.use_freq_masking=true",
+      "train_param.freq_mask_mode=slot_uniform",
+      "train_param.freq_mask_n_bands=4",
+      "train_param.freq_mask_prob=0.8",
+      "train_param.freq_mask_max_width=24",
+      "train_param.use_afri=false"
+    ]
+  },
+  "preset_source": {
+    "sha256": "043929ddcd943197729107a054208b47140544aceef4094c5ec1295bf26a6a97",
+    "source": "run_ablation_experiments.py"
+  },
+  "producer": {
+    "helpers": {
+      "sha256": "b4f43ca8a6d18ce2df3eea42f93247ee05dbd47bdec7bd374861227a0cd0acdf",
+      "source": "tools/reproduce.py"
+    },
+    "sha256": "f5c7452fec20d8b8817dd337b44c83fa91b52d14daed394d655bd84d4dd98066",
+    "source": "tools/extract_reproduction_evidence.py"
+  },
+  "read_limits": {
+    "max_bytes_per_log": 524288,
+    "max_physical_lines_per_log": 390
+  },
+  "runs": [
+    {
+      "checkpoint_binding": null,
+      "configuration": "baseline",
+      "declared_full_log_sha256": "42714236e663da1461bc65670a41d745f7fa766b180ec086fa0e23cbe6cde316",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 67093,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "e53f8e6cbf66d0ad97ae4cdf54007e7acf6daa773a013a26e2ea3a1b6223e057",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/baseline/stdout.log"
+      },
+      "logged_exp_name": "baseline_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          327
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          334
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          324
+        ],
+        "seed": [
+          287
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          363
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          367
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          358
+        ]
+      },
+      "printed_fields_sha256": "33c78ea48d306c5ce793dc0833522873a4c13edc2d0f13c3631cb46453f6720a",
+      "run_id": "baseline_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "612b81b757e644c193cd66f6340cef83c485cf2d610b944658613bcc045ecd29",
+      "selection_metadata": {
+        "sha256": "a93c059317e7c6093acb0cf051d60d0775f58b49149637dbbef01d7b5f7cc7fb",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/baseline/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "cife",
+      "declared_full_log_sha256": "cdf6cd556f362e260d35ddc64d17f25c43a1b691dc550e2b4290a53a620ec135",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130302,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "888ab3c70429adb3bdc39489a3b833fb635055d2ed4db849bca41dd606a30440",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/cife/stdout.log"
+      },
+      "logged_exp_name": "cife_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "1a337566456ba42a685a12246314734905d57260c278e1def9ea5206258f9175",
+      "run_id": "cife_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.5,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "11c3ba4f7eb12f207d2366052e6b444b100c4fb2ef9add8276a99ba59998755b",
+      "selection_metadata": {
+        "sha256": "2dfe73d1ef9d5d9e33821aea2f6242a721bb3f345f725854c5a520757f5c6bb9",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/cife/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase1_random",
+      "declared_full_log_sha256": "9e4685c755b27d02c17bd0101d4be5b2771ed75b2e8c602c09a24a3f06006368",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130300,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "fcdbcb6e6de825ea09dd4fe7a2cfcdd2a4b1b8553a65238119e60520f228a605",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase1_random/stdout.log"
+      },
+      "logged_exp_name": "phase1_random_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "526656f1a646465edb923c0c3836ba5231cdde714afa30ef8320db2f3a6dcf70",
+      "run_id": "phase1_random_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "08d9ae6d8159093bd14d3bf4d06bb99fb229783e60e9217a1a17c31c9535bd78",
+      "selection_metadata": {
+        "sha256": "68a1c448396f06a9fc74c9025cbcc7cd6863ebb21f1306345b783c77382c9b06",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase1_random/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "slot_uniform",
+      "declared_full_log_sha256": "b0f4a907ec53991cb8b66ccc6b522b8ec8e970a88e030ad36252c0a94b24710f",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130322,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "8a5fe3aa6be22ee4f0d7e9adb0a4c406605a0937917799346a7bcfdbf0bb3a84",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/slot_uniform/stdout.log"
+      },
+      "logged_exp_name": "slot_uniform_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "f597c1f915f47a1fdbf6b92f93920218e972b77e2d1dbb6a548d0c88da98a98d",
+      "run_id": "slot_uniform_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "5166fcbd31c49971121f286bc98e353e2db8720f155f8b99704d6d35d6567254",
+      "selection_metadata": {
+        "sha256": "db2916ae8fd2a4afed186c250569e8ce43313d8317df3aff8d7ef81bd50e3b40",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/slot_uniform/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase2_energy",
+      "declared_full_log_sha256": "8c7fd4e133a983c4f3cfb73a82ce48378a956c5f94ce8eff722dcd6ef1f71079",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130338,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "3bf7897b4b87ba6c715a5540a7eac3bbba2354664efc2d3f10463c48bd520da6",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase2_energy/stdout.log"
+      },
+      "logged_exp_name": "phase2_energy_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_energy_weight": [
+          31,
+          122,
+          365
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "3584d96201a9f160d723ee9db0c8e0b72fc875ade07531c488304324edc58d6c",
+      "run_id": "phase2_energy_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "b4469d6abcfc5af991460e74669e110cc4f31e9552cd577acc703f4e401c90a7",
+      "selection_metadata": {
+        "sha256": "a07d2c7f2547fe2858b056249691befdc930b7cc6e74ecdd7e7dfe6bfce7323a",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase2_energy/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase3_activation",
+      "declared_full_log_sha256": "6e6dd4ed5c475188b0e105fd11ea6ece0817ee55d965e5350d931ac110ce48c5",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 132534,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "a1aec9878f68ccea2033510a112e547a9a7af6faca513bd755ccb20433bb8961",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase3_activation/stdout.log"
+      },
+      "logged_exp_name": "phase3_activation_seed1234_recovery_20260921_221503",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_importance_ema_alpha": [
+          33,
+          124,
+          367
+        ],
+        "train_param.freq_mask_importance_weight": [
+          32,
+          123,
+          366
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "85cba85e2805b4895a5e9c4845dab126d9f9e5719160073d4df8edf31a6cc2cb",
+      "run_id": "phase3_activation_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "b7e56ce3e8bd5e0bd0b96c335a2f99d91a99e5f0746603f5997811bbeb1b5706",
+      "selection_metadata": {
+        "sha256": "25114a3196f0df7eaf083e7ca6b50a2a048e3ffc2a4c8b2b0991624668f72096",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/phase3_activation/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_direct",
+      "declared_full_log_sha256": "81e2bc8093df6ce8e48904e38ecee2b8c981f19ef3f085ad361057ae7a7f439f",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130340,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "ff31ff9db53578f453050b70d3b28b265dcf4776b053bfaf82419b980bf6115c",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/afri_direct/stdout.log"
+      },
+      "logged_exp_name": "afri_direct_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "4b6f978770fdfedd4f0e1f47ff1e57983bb8c348c0988c22f89595f1c4c78489",
+      "run_id": "afri_direct_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.75,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "4f397f661c721454630ae70b92ef0b405ffe48683bff2a7f583679627129de1a",
+      "selection_metadata": {
+        "sha256": "1c2fc55bdc2eaf69d35d6214841616da4d3b6689fec5631c5b4923eb405821af",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/afri_direct/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_inverse",
+      "declared_full_log_sha256": "bedd51e001147e2a0fa9a1a92b59c1ecbb0f7d1ca88f9446cc3c841c9ec24333",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130341,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "17213be442bc0e4d8cf7bdd55790b0b0b137dac130e35a7cafff120320d58d8a",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/afri_inverse/stdout.log"
+      },
+      "logged_exp_name": "afri_inverse_seed1234_20260917_090315",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "e0d84a2678309bdbaaf8f335d1f714ab60307505cab7243b26a25f8592216049",
+      "run_id": "afri_inverse_seed1234",
+      "seed": 1234,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "87c133137f6823b453d5550e0319302019d985c6cfca167c4be94069d479795e",
+      "selection_metadata": {
+        "sha256": "b0c7f48017480b3cbf8ca8227b0595ecef2bed33995192ee336716c03717e907",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_1234/afri_inverse/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "baseline",
+      "declared_full_log_sha256": "5b85763a4bbba467c30d34a0fee5411e2eb1de5120778afd313bdcf0032649e8",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130302,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "49df1bf78570c2a7f80d8fb0db7488f98690037654ed30f22cde6d2adfff6052",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/baseline/stdout.log"
+      },
+      "logged_exp_name": "baseline_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "85bb9dd273aa9863d1f949a174c37aab155c3c082e3ca10c1fe2057877d45e32",
+      "run_id": "baseline_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.85,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "e4f47b759ec339757f2939c3bb9bfa17158c9476f7d9c63e2c32ac5aa53b83cb",
+      "selection_metadata": {
+        "sha256": "c164ad659476086525f2f4301f485e0754f15c6f4ef94cad342613f8a7a39d8d",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/baseline/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "cife",
+      "declared_full_log_sha256": "05eb2691604b955f0342ffabc337b5e22e63f34ec945311c7ec81e9f34b42112",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130302,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "7b76cfde47afa6c44ba007c21ba60b4469824a28cc54355f72eaf8f4dba6b37d",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/cife/stdout.log"
+      },
+      "logged_exp_name": "cife_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "433ca6d5a5695c3a3d5bf5f450bddce8f1a39473fdaf3ef55f76584000c607ff",
+      "run_id": "cife_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.05,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "41f213a2e69dafbc8f605e3064b5551156a771f7cfce0effff3b62158c634a84",
+      "selection_metadata": {
+        "sha256": "0ae3d8a70cc815c1370790885f4cb5e1f0832cafe1143ad77191057e55fb243e",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/cife/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase1_random",
+      "declared_full_log_sha256": "5709dd6ca2011bc9850c1c18f61e9559d116ad8ae39582e4079ff62614588729",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130300,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "2b31d28ed3fe74d6b29de0b22c02bc08c5e2f15d70254f3ee8dbc43b33d4e020",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase1_random/stdout.log"
+      },
+      "logged_exp_name": "phase1_random_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "6bd2f31bade5cf3ff80d69298ac9fca745b3d581c64ff0f7b18ca9b20f33971f",
+      "run_id": "phase1_random_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "522da2e9c9aa687957f01eba2940aeb3405f0d21fed98e30f5c5c786d92ba42c",
+      "selection_metadata": {
+        "sha256": "fd26148176060482cc1c3802985f062bb83eb2bfd9e28488319c4c1ee83a2889",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase1_random/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "slot_uniform",
+      "declared_full_log_sha256": "0a9256eabd6b7f22cdf3960f079d16da37a42c4141e583733e5de7b05bf88a53",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130322,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "f970f14d962163cb106d8c92fcdf488a62e11ad19de673ffc6d6c65889888461",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/slot_uniform/stdout.log"
+      },
+      "logged_exp_name": "slot_uniform_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "d0f72683d63db4c13a86cabd0da0ba303c442fae4112a21ac715a66f13a2989b",
+      "run_id": "slot_uniform_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "d1fbfb142b5181a010642f71a1841a1410827021fb53e7f0f1fa8634c06b1cf6",
+      "selection_metadata": {
+        "sha256": "5fe5cfdc3f63aa30b26311be40e0b7226b84ae2a457420f9bb7c7cfbb5278b65",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/slot_uniform/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase2_energy",
+      "declared_full_log_sha256": "38bd4532dbdbc6ddb4177e1dc9fab786e71d171d8da895d4b0f4f59c369c8966",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 130338,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "03fc0b8e98cbc7e66d0ef5bd77043a3a503eba28dd148e282fbf29539cbfec50",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase2_energy/stdout.log"
+      },
+      "logged_exp_name": "phase2_energy_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_energy_weight": [
+          31,
+          122,
+          365
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "b8d0b0c6318d9a598678e6af6ca453f2bcddcfeaeed59fa512eb1b36bcbeb292",
+      "run_id": "phase2_energy_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "31237af38719b43d936ccd61cbf4dd9b1b8cfa9e04556050924a568cdf5b4b40",
+      "selection_metadata": {
+        "sha256": "b15da86a4a195fb1a1e8ccc5452dd4ed44fea92b80e207bf9fec0379ef2b7d0a",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase2_energy/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase3_activation",
+      "declared_full_log_sha256": "153c6dba001d7bb5e4e3738d21c535d9908bc2778236ea90205e928a64aea360",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 132534,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "a3d14afe840f270eba58f093d0c46b7b6aa9181a62521c06bffc9c001deea43e",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase3_activation/stdout.log"
+      },
+      "logged_exp_name": "phase3_activation_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_importance_ema_alpha": [
+          33,
+          124,
+          367
+        ],
+        "train_param.freq_mask_importance_weight": [
+          32,
+          123,
+          366
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "542c3dff8c3e6c09b760088403d696dfcebca9ab86c7cedae04084451c7aec50",
+      "run_id": "phase3_activation_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "a9fae820a227f0e076060610dbac2747215f1ee8e8addf535c07433c723fbed8",
+      "selection_metadata": {
+        "sha256": "6beeb942adf0de2b24d8b643764292e4e3aac6e1c1f1d6705dc1e60cb244cae0",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/phase3_activation/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_direct",
+      "declared_full_log_sha256": "6fa995a6f63d6720c1a7bad07d3f5ca3c4f16d4f63f0726a6724c70f5c608bd1",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 132518,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "77feb1c86be20c90a2a419e642b927418ea7074183627746139dd17f15707627",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/afri_direct/stdout.log"
+      },
+      "logged_exp_name": "afri_direct_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "02f5e31b29ab09da416673440dbae392affa441fce383d8e03d1b122ca3f1dc4",
+      "run_id": "afri_direct_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "88285804f47954308c3314c4969240cd9712f2e798ac23f890099d88c2a1ac74",
+      "selection_metadata": {
+        "sha256": "46f522037f3071bfe52afc2625bd16cf09e05248c73c7e3bf60b73e59983d850",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/afri_direct/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_inverse",
+      "declared_full_log_sha256": "9345f92807b94831e306eeb5a5a108f8798754ad46732338bc3eeac1270f6042",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 132519,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "9cae49a4d2f1dc140463b5da44f8e6a4aaf440287c8b73ec0ccbc7bbc24b2209",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/afri_inverse/stdout.log"
+      },
+      "logged_exp_name": "afri_inverse_seed2026_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "5da762736ede856c642346a4e951dc95eaa69429c365bdf359cdd1547028e376",
+      "run_id": "afri_inverse_seed2026",
+      "seed": 2026,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "badbcef7931ebe2551ba5da3c4f11153cd71fad5bcaebcf4084b745d41444ca7",
+      "selection_metadata": {
+        "sha256": "71a2e2874dce1afe059dcbd44b1bd89187f8cb416a2f2290cb1e76d6db00176b",
+        "source": "analysis/sweep_archive_seeds1234_2026/seed_2026/afri_inverse/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "baseline",
+      "declared_full_log_sha256": "d889f16555ea3530e6fe8655dd9adb5bdd410a22dacbd94fc2ace0104c06b30c",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 127398,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "52c486bbfbfbb213728ed3e1df41064d25e7b903267e40ff139d7b2c9432b60d",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/baseline/stdout.log"
+      },
+      "logged_exp_name": "baseline_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "9bd363cd3fa780174aeb667e8c8978abaa15b162151788ac174c4dd923dc58de",
+      "run_id": "baseline_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "e19781c1c6e43713cfa04560b5ca3acaee6df5edbcfe7abc72e41556d3ae73a6",
+      "selection_metadata": {
+        "sha256": "371da826d87f78ce609a0a402ca8673ecb3b55a966f958fd6e474aa29b676a73",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/baseline/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "cife",
+      "declared_full_log_sha256": "784aa977262a645d760c4a5a2012f244e0f4cde6572c36425d2ca68d60186de6",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 127398,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "6c17938fc7d59a191f3c07077d28f2a09ec31e265eae5ae5bbd1794b545f0207",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/cife/stdout.log"
+      },
+      "logged_exp_name": "cife_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "97e66980c2eef0521a94a3e152f1a22cd4e07c829d5a59fed913d0a574b7c8a3",
+      "run_id": "cife_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "7a42dcf9d356db09064e1387302ae20cf81f07909389a817df0a80e07b6661ec",
+      "selection_metadata": {
+        "sha256": "6384dd80510414516a571ed7dd5fd59fea7105aee625b4503c25ff13a16a61cc",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/cife/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase1_random",
+      "declared_full_log_sha256": "36602ebd596c53ff697a3fc72dee55d9a4ede7b0704f86c4de2937a115a4570a",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 127396,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "018b29e508691574037624c402492d4c19c093ffce186ddae6026a770b40f0d0",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase1_random/stdout.log"
+      },
+      "logged_exp_name": "phase1_random_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "f9e6514c038f09de76a9963a39c38f717c5daa9bc7f86b05c52ae5e5da361ce8",
+      "run_id": "phase1_random_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "ab5396c0581c093dfde78c5f5d935a6f7a206ad6912305a4657ed9bc6a3f76af",
+      "selection_metadata": {
+        "sha256": "17f51b471b82c8ae0e998797f1766e12a304e6c5b874f982f9ba8b36b161f2f2",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase1_random/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "slot_uniform",
+      "declared_full_log_sha256": "dbcac28b1e73d2b0d2a57dcb823df6644363aa82ae3d122c1066a106e85010d7",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 121973,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "ccfa9273bc3418ff123cfda25ce5d92c7163c234adf77db3a591a021f1185a22",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/slot_uniform/stdout.log"
+      },
+      "logged_exp_name": "slot_uniform_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "237888fd855e9b4b166693789a310495defbe350e3947bd5ab2945e7a0e777b0",
+      "run_id": "slot_uniform_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "671a8750f9f67ca79e70f17d775e2faf45970e44033b9b2add769317e67c2902",
+      "selection_metadata": {
+        "sha256": "da6d405198641083934161adf0c54771d1f50072d3d4056592352dec0c131129",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/slot_uniform/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase2_energy",
+      "declared_full_log_sha256": "b83a9d43fb11b61f506264ca6197b17309a7a6db5eee157aa2df72a07a1c8d6b",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 121989,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "0db4b582ba636d3790c5d2da3fa0783a60ba8c1e3271d4fba1a70710303561eb",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase2_energy/stdout.log"
+      },
+      "logged_exp_name": "phase2_energy_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_energy_weight": [
+          31,
+          122,
+          365
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "776781c5acc06f6c58c0cbee7021aef7fac14c5aceed4adc1894ec6fbb16146d",
+      "run_id": "phase2_energy_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "b2900089f771d94d77067eba0ee72d705fdd147b0a45f478a73df2ae6339e209",
+      "selection_metadata": {
+        "sha256": "8e243169395d300e91ff26978552a62957f92d2cc9ef925d031090a95d88556c",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase2_energy/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "phase3_activation",
+      "declared_full_log_sha256": "f15bf3ca8b94834ca6cb1aaf48102f4e3bc2c5f1356e6b702a9565230ea906d2",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 122007,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "6d7605435cf30b8c3be5014d750c441c7831de44cf0eb085efbe5e12e096dc94",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase3_activation/stdout.log"
+      },
+      "logged_exp_name": "phase3_activation_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.freq_mask_importance_ema_alpha": [
+          33,
+          124,
+          367
+        ],
+        "train_param.freq_mask_importance_weight": [
+          32,
+          123,
+          366
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "04f37a1200d81903282a66707724eb7a33eab4af15126e9469c6565a26723ba9",
+      "run_id": "phase3_activation_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "2a4c4047570227e4153cb5d31297310d6c4daf0a0c78db2aa2717d8ab76479a4",
+      "selection_metadata": {
+        "sha256": "3d1ccaf6b424c304c181f8e5191e3b8ddd223e3bce1ffdd8d4f47521a4be649e",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/phase3_activation/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_direct",
+      "declared_full_log_sha256": "6042e6ce4fe213c2f5977e59cecc0ad7bce8cf17dd07f8e2d8b4b2a46dc32dd9",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 121991,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "bbb40cae3b773ce1547aa7c2730d6f3a53f13c26084f97e5a850c1d1869ee644",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/afri_direct/stdout.log"
+      },
+      "logged_exp_name": "afri_direct_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "6b680b700fe5181ad07636fc81ad23958594c5add73feec21a874a5e0ca2114a",
+      "run_id": "afri_direct_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.85,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "e8da6667e4e9427ff637ea1d972c4cba1e91c8653e86783d27cdbc500e2cf05d",
+      "selection_metadata": {
+        "sha256": "468c4d7bebc6d1049280b93db0a1f1a80378d278b49f8e7d8ffda7bd368b228c",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/afri_direct/selection.json"
+      }
+    },
+    {
+      "checkpoint_binding": null,
+      "configuration": "afri_inverse",
+      "declared_full_log_sha256": "f74b9f34d363e58503c6eb035f66bd9b0648a6a0d10246b0548adc458b7714d3",
+      "historical_source_commit": null,
+      "log_prefix": {
+        "bytes_read": 121992,
+        "first_line": 1,
+        "line_count": 390,
+        "sha256": "c233fe1b1873497603ed21e4c7e43603fbdff39c297919964555a765acdddc0d",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/afri_inverse/stdout.log"
+      },
+      "logged_exp_name": "afri_inverse_seed3009_20260920_165537",
+      "printed_field_lines": {
+        "features.cife_nhead": [
+          76,
+          158,
+          199,
+          328
+        ],
+        "features.cife_pool_size": [
+          83,
+          165,
+          206,
+          335
+        ],
+        "features.use_cife": [
+          73,
+          155,
+          196,
+          325
+        ],
+        "seed": [
+          288
+        ],
+        "train_param.afri_mode": [
+          35,
+          126,
+          369
+        ],
+        "train_param.freq_mask_max_width": [
+          29,
+          120,
+          363
+        ],
+        "train_param.freq_mask_mode": [
+          26,
+          117,
+          360
+        ],
+        "train_param.freq_mask_n_bands": [
+          27,
+          118,
+          361
+        ],
+        "train_param.freq_mask_prob": [
+          28,
+          119,
+          362
+        ],
+        "train_param.freq_mask_seed": [
+          30,
+          121,
+          364
+        ],
+        "train_param.use_afri": [
+          34,
+          125,
+          368
+        ],
+        "train_param.use_freq_masking": [
+          25,
+          116,
+          359
+        ]
+      },
+      "printed_fields_sha256": "edad321c43d1a35fbb48a3bde565c2afd2f38e9c9c29500716bc50319c4454ca",
+      "run_id": "afri_inverse_seed3009",
+      "seed": 3009,
+      "selected_operating_point": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "selected_prediction_sha256": "efebc7fa2678c558cb9d1249c0401b5d93be6e21dea85859e323d693c0697ba2",
+      "selection_metadata": {
+        "sha256": "035cd4d8d833a490793c7a940ac01f2d114b57c384a8dddce002f5c9174a76b8",
+        "source": "analysis/sweep_archive_seed_3/seed_3009/afri_inverse/selection.json"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Selected printed CIFE/preset fields and global/masking seeds; not full historical configs or checkpoint/source-code identity.",
+  "seeds": [
+    1234,
+    2026,
+    3009
+  ],
+  "source_path_base": "Implementation directory; cache paths are provenance only, not planner dependencies.",
+  "verification": {
+    "all_preset_overrides_match": true,
+    "all_selected_fields_consistent": true,
+    "both_seeds_match_labels": true,
+    "checkpoint_binding_verified": false,
+    "full_historical_configuration_recovered": false,
+    "full_log_hashes_recomputed": false,
+    "historical_source_identity_established": false,
+    "prediction_files_rehashed": false,
+    "selection_hashes_match_prediction_manifest": true
+  }
+}

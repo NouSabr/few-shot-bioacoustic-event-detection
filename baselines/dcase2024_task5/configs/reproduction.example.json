@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "python": "/path/to/research-environment/bin/python",
+  "dataset_root": "/path/to/dataset",
+  "output_root": "../results/reproduction01",
+  "seeds": [
+    1234,
+    2026,
+    3009
+  ],
+  "configurations": [
+    "baseline",
+    "cife",
+    "phase1_random",
+    "slot_uniform",
+    "phase2_energy",
+    "phase3_activation",
+    "afri_direct",
+    "afri_inverse"
+  ],
+  "overrides": [
+    "logger=tensorboard",
+    "features.cife_nhead=4",
+    "features.cife_pool_size=[2,16]"
+  ],
+  "checkpoints": {},
+  "logged_evidence": {
+    "path": "reproduction.evidence.json",
+    "sha256": "82335389383f9239a0a2cd6c12dce37bd99da367cef5dcfab31e004a82cfeb3d"
+  }
+}
