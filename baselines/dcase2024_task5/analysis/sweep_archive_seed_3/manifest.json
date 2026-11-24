@@ -1,0 +1,2422 @@
+{
+  "all_raw": false,
+  "collected_at": "2026-09-24T20:12:44.102059+00:00",
+  "collector_provenance": {
+    "collector_git_commit": "6b50e74131c670787a6a7bf48e3524e5dc5fa520",
+    "collector_git_dirty": true
+  },
+  "copy_files": true,
+  "reference_dir": "/media/helios/Data/Uni/Masters/Dataset/Development_Set/Validation_Set",
+  "registry": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/configs/sweep_artifacts_3.local.yaml",
+  "runs": [
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/baseline/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/baseline/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/baseline/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "e19781c1c6e43713cfa04560b5ca3acaee6df5edbcfe7abc72e41556d3ae73a6",
+        "log_sha256": "d889f16555ea3530e6fe8655dd9adb5bdd410a22dacbd94fc2ace0104c06b30c",
+        "raw_csv_sha256": "54aba17e91583e5fd8fe81525a2e69903f4776e2785f1c1135f5c6b46a37b816"
+      },
+      "configuration": "baseline",
+      "logged_scores": {
+        "fmeasure_arithmetic": 32.067,
+        "fmeasure_harmonic": 18.386,
+        "precision_arithmetic": 0.31431421345083066,
+        "precision_harmonic": 0.13050115981173332,
+        "recall_arithmetic": 0.5551791031670931,
+        "recall_harmonic": 0.3110061498063629
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline_seed3009/2026-09-22_22-30-41/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline_seed3009/2026-09-22_22-30-41/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline_seed3009/2026-09-22_22-30-41/0.9500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline_seed3009/2026-09-22_22-30-41",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/baseline_seed3009/2026-09-22_22-30-41/0.9500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 32.067,
+        "recomputed_fmeasure_harmonic": 18.386,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 29,
+          "FP": 4,
+          "TP": 2,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 21,
+          "FP": 1,
+          "TP": 3,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 217,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 146,
+          "FP": 32,
+          "TP": 31,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 68,
+          "FP": 120,
+          "TP": 20,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 19,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 59,
+          "FP": 3,
+          "TP": 7,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 112,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 27,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 0,
+          "FP": 2,
+          "TP": 19,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 2,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 0,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 3,
+          "FP": 11,
+          "TP": 61,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 3,
+          "FP": 4,
+          "TP": 81,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 8,
+          "FP": 7,
+          "TP": 91,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 4,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 20,
+          "FP": 1290,
+          "TP": 71,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 152,
+          "FP": 320,
+          "TP": 346,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 53,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 171,
+          "FP": 1020,
+          "TP": 55,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 78,
+          "FP": 117,
+          "TP": 83,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 85,
+          "FP": 447,
+          "TP": 276,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 109,
+          "FP": 37,
+          "TP": 11,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 7,
+          "FP": 673,
+          "TP": 22,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 19,
+          "FP": 447,
+          "TP": 29,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 380,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 511,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 338,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 292,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 670,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 12,
+          "FP": 958,
+          "TP": 24,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 10,
+          "FP": 329,
+          "TP": 35,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 30,
+          "FP": 1368,
+          "TP": 14,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 4,
+          "FP": 1386,
+          "TP": 27,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 3,
+          "FP": 1594,
+          "TP": 38,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 452,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 402,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 23,
+          "FP": 386,
+          "TP": 30,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/cife/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/cife/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/cife/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "7a42dcf9d356db09064e1387302ae20cf81f07909389a817df0a80e07b6661ec",
+        "log_sha256": "784aa977262a645d760c4a5a2012f244e0f4cde6572c36425d2ca68d60186de6",
+        "raw_csv_sha256": "bf7fcd67199df0c2d50871d1ee31639da878759cfa5ddca8dbc0105933399ae7"
+      },
+      "configuration": "cife",
+      "logged_scores": {
+        "fmeasure_arithmetic": 33.281,
+        "fmeasure_harmonic": 20.502,
+        "precision_arithmetic": 0.3018241658187634,
+        "precision_harmonic": 0.15336217651749673,
+        "recall_arithmetic": 0.5422562988966931,
+        "recall_harmonic": 0.30916772068139803
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.15000000000000002,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/cife_seed3009/2026-09-23_03-36-37/0.9/Eval_VAL_threshold_fix_length_postproc_0.15000000000000002.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/cife_seed3009/2026-09-23_03-36-37/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/cife_seed3009/2026-09-23_03-36-37/0.9/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/cife_seed3009/2026-09-23_03-36-37",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/cife_seed3009/2026-09-23_03-36-37/0.9"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 33.281,
+        "recomputed_fmeasure_harmonic": 20.502,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 28,
+          "FP": 3,
+          "TP": 3,
+          "total_n_pos_events": 31
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 47,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 141,
+          "FP": 52,
+          "TP": 36,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 13,
+          "FP": 8,
+          "TP": 4,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 68,
+          "FP": 129,
+          "TP": 20,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 19,
+          "FP": 58,
+          "TP": 4,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 13,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 2,
+          "FP": 77,
+          "TP": 9,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 11,
+          "FP": 35,
+          "TP": 30,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 0,
+          "FP": 2,
+          "TP": 19,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 2,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 0,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 5,
+          "FP": 17,
+          "TP": 59,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 3,
+          "FP": 8,
+          "TP": 81,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 7,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 4,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 16,
+          "FP": 688,
+          "TP": 75,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 142,
+          "FP": 334,
+          "TP": 356,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 44,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 108,
+          "FP": 1441,
+          "TP": 118,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 68,
+          "FP": 127,
+          "TP": 93,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 61,
+          "FP": 475,
+          "TP": 300,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 108,
+          "FP": 35,
+          "TP": 12,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 4,
+          "FP": 579,
+          "TP": 25,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 21,
+          "FP": 401,
+          "TP": 27,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 363,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 9,
+          "FP": 483,
+          "TP": 33,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 1,
+          "FP": 404,
+          "TP": 39,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 6,
+          "FP": 289,
+          "TP": 44,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 5,
+          "FP": 754,
+          "TP": 36,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 13,
+          "FP": 1008,
+          "TP": 23,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 15,
+          "FP": 313,
+          "TP": 30,
+          "total_n_pos_events": 45
+        },
+        "pw5.wav": {
+          "FN": 2,
+          "FP": 1118,
+          "TP": 29,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 0,
+          "FP": 858,
+          "TP": 41,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 368,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 0,
+          "FP": 431,
+          "TP": 50,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 53,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase1_random/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase1_random/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase1_random/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "ab5396c0581c093dfde78c5f5d935a6f7a206ad6912305a4657ed9bc6a3f76af",
+        "log_sha256": "36602ebd596c53ff697a3fc72dee55d9a4ede7b0704f86c4de2937a115a4570a",
+        "raw_csv_sha256": "89fdf99d9dede2f12b24cbe59f7eb73a30bd8d70beb424ccdc30d74b60b3b446"
+      },
+      "configuration": "phase1_random",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.704,
+        "fmeasure_harmonic": 19.572,
+        "precision_arithmetic": 0.3050384923319302,
+        "precision_harmonic": 0.14061473323158455,
+        "recall_arithmetic": 0.558963211833612,
+        "recall_harmonic": 0.3218552311293526
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase1_random_seed3009/2026-09-23_09-46-52/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase1_random_seed3009/2026-09-23_09-46-52/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase1_random_seed3009/2026-09-23_09-46-52/0.9500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase1_random_seed3009/2026-09-23_09-46-52",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase1_random_seed3009/2026-09-23_09-46-52/0.9500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.704,
+        "recomputed_fmeasure_harmonic": 19.572,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 28,
+          "FP": 11,
+          "TP": 3,
+          "total_n_pos_events": 31
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 143,
+          "FP": 30,
+          "TP": 34,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 64,
+          "FP": 187,
+          "TP": 24,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 43,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 154,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 32,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 1,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 2,
+          "FP": 5,
+          "TP": 62,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 4,
+          "FP": 5,
+          "TP": 80,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 6,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 19,
+          "FP": 1379,
+          "TP": 72,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 150,
+          "FP": 310,
+          "TP": 348,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 48,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 169,
+          "FP": 1043,
+          "TP": 57,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 74,
+          "FP": 111,
+          "TP": 87,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 89,
+          "FP": 452,
+          "TP": 272,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 107,
+          "FP": 34,
+          "TP": 13,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 7,
+          "FP": 625,
+          "TP": 22,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 18,
+          "FP": 432,
+          "TP": 30,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 380,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 516,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 337,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 290,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 645,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 11,
+          "FP": 871,
+          "TP": 25,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 9,
+          "FP": 324,
+          "TP": 36,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 29,
+          "FP": 1356,
+          "TP": 15,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 5,
+          "FP": 1247,
+          "TP": 26,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 4,
+          "FP": 1467,
+          "TP": 37,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 447,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 409,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 23,
+          "FP": 388,
+          "TP": 30,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/slot_uniform/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/slot_uniform/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/slot_uniform/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "671a8750f9f67ca79e70f17d775e2faf45970e44033b9b2add769317e67c2902",
+        "log_sha256": "dbcac28b1e73d2b0d2a57dcb823df6644363aa82ae3d122c1066a106e85010d7",
+        "raw_csv_sha256": "ff2694044d15f03642240aa304c34725db434d0dbe05b2e319dd530857dc4488"
+      },
+      "configuration": "slot_uniform",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.089,
+        "fmeasure_harmonic": 18.096,
+        "precision_arithmetic": 0.28454757786295776,
+        "precision_harmonic": 0.12220145419350037,
+        "recall_arithmetic": 0.5662781031613098,
+        "recall_harmonic": 0.34853082005863073
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/slot_uniform_seed3009/2026-09-23_18-01-40/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/slot_uniform_seed3009/2026-09-23_18-01-40/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/slot_uniform_seed3009/2026-09-23_18-01-40/0.9500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/slot_uniform_seed3009/2026-09-23_18-01-40",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/slot_uniform_seed3009/2026-09-23_18-01-40/0.9500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.089,
+        "recomputed_fmeasure_harmonic": 18.096,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 27,
+          "FP": 15,
+          "TP": 4,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 21,
+          "FP": 2,
+          "TP": 3,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 232,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 141,
+          "FP": 37,
+          "TP": 36,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 63,
+          "FP": 200,
+          "TP": 25,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 69,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 154,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 32,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 1,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 2,
+          "FP": 3,
+          "TP": 62,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 4,
+          "FP": 3,
+          "TP": 80,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 8,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 18,
+          "FP": 1373,
+          "TP": 73,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 152,
+          "FP": 305,
+          "TP": 346,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 45,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 160,
+          "FP": 1094,
+          "TP": 66,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 72,
+          "FP": 111,
+          "TP": 89,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 86,
+          "FP": 459,
+          "TP": 275,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 106,
+          "FP": 34,
+          "TP": 14,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 7,
+          "FP": 609,
+          "TP": 22,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 20,
+          "FP": 428,
+          "TP": 28,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 380,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 495,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 336,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 286,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 641,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 11,
+          "FP": 883,
+          "TP": 25,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 11,
+          "FP": 318,
+          "TP": 34,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 29,
+          "FP": 1352,
+          "TP": 15,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 5,
+          "FP": 1223,
+          "TP": 26,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 2,
+          "FP": 1496,
+          "TP": 39,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 438,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 407,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 24,
+          "FP": 383,
+          "TP": 29,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase2_energy/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase2_energy/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase2_energy/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "b2900089f771d94d77067eba0ee72d705fdd147b0a45f478a73df2ae6339e209",
+        "log_sha256": "b83a9d43fb11b61f506264ca6197b17309a7a6db5eee157aa2df72a07a1c8d6b",
+        "raw_csv_sha256": "20dbd53370aca3ab78b8b5f2865b723c0ddbad9f909f475335eb472e7e293e4f"
+      },
+      "configuration": "phase2_energy",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.147,
+        "fmeasure_harmonic": 18.206,
+        "precision_arithmetic": 0.29408720078198625,
+        "precision_harmonic": 0.12389403825537253,
+        "recall_arithmetic": 0.5659825362544294,
+        "recall_harmonic": 0.34320723134768266
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.9,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase2_energy_seed3009/2026-09-23_23-46-23/0.9/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase2_energy_seed3009/2026-09-23_23-46-23/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase2_energy_seed3009/2026-09-23_23-46-23/0.9/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase2_energy_seed3009/2026-09-23_23-46-23",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase2_energy_seed3009/2026-09-23_23-46-23/0.9"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.147,
+        "recomputed_fmeasure_harmonic": 18.206,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 28,
+          "FP": 14,
+          "TP": 3,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 21,
+          "FP": 2,
+          "TP": 3,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 239,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 142,
+          "FP": 30,
+          "TP": 35,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 63,
+          "FP": 193,
+          "TP": 25,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 47,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 152,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 31,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 0,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 2,
+          "FP": 5,
+          "TP": 62,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 4,
+          "FP": 5,
+          "TP": 80,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 6,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 19,
+          "FP": 1402,
+          "TP": 72,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 151,
+          "FP": 319,
+          "TP": 347,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 2,
+          "FP": 46,
+          "TP": 3,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 168,
+          "FP": 1137,
+          "TP": 58,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 74,
+          "FP": 120,
+          "TP": 87,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 82,
+          "FP": 491,
+          "TP": 279,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 107,
+          "FP": 34,
+          "TP": 13,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 5,
+          "FP": 627,
+          "TP": 24,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 18,
+          "FP": 432,
+          "TP": 30,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 384,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 518,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 337,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 295,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 655,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 10,
+          "FP": 905,
+          "TP": 26,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 9,
+          "FP": 322,
+          "TP": 36,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 29,
+          "FP": 1359,
+          "TP": 15,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 5,
+          "FP": 1298,
+          "TP": 26,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 3,
+          "FP": 1466,
+          "TP": 38,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 450,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 408,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 23,
+          "FP": 385,
+          "TP": 30,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase3_activation/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase3_activation/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/phase3_activation/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "2a4c4047570227e4153cb5d31297310d6c4daf0a0c78db2aa2717d8ab76479a4",
+        "log_sha256": "f15bf3ca8b94834ca6cb1aaf48102f4e3bc2c5f1356e6b702a9565230ea906d2",
+        "raw_csv_sha256": "b8089ec8f34fd1b550da0b07cc4fe76e0e6c065ced161675322be64d7c625530"
+      },
+      "configuration": "phase3_activation",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.014,
+        "fmeasure_harmonic": 17.989,
+        "precision_arithmetic": 0.28239510536660867,
+        "precision_harmonic": 0.12121277178282601,
+        "recall_arithmetic": 0.566774874149884,
+        "recall_harmonic": 0.3486802487927315
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase3_activation_seed3009/2026-09-24_05-26-31/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase3_activation_seed3009/2026-09-24_05-26-31/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase3_activation_seed3009/2026-09-24_05-26-31/0.9500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase3_activation_seed3009/2026-09-24_05-26-31",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/phase3_activation_seed3009/2026-09-24_05-26-31/0.9500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.014,
+        "recomputed_fmeasure_harmonic": 17.989,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 27,
+          "FP": 16,
+          "TP": 4,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 21,
+          "FP": 2,
+          "TP": 3,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 231,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 141,
+          "FP": 39,
+          "TP": 36,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 63,
+          "FP": 209,
+          "TP": 25,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 73,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 155,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 32,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 1,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 2,
+          "FP": 3,
+          "TP": 62,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 4,
+          "FP": 3,
+          "TP": 80,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 8,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 18,
+          "FP": 1370,
+          "TP": 73,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 152,
+          "FP": 305,
+          "TP": 346,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 44,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 159,
+          "FP": 1112,
+          "TP": 67,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 72,
+          "FP": 111,
+          "TP": 89,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 83,
+          "FP": 454,
+          "TP": 278,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 106,
+          "FP": 34,
+          "TP": 14,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 7,
+          "FP": 608,
+          "TP": 22,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 20,
+          "FP": 424,
+          "TP": 28,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 382,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 495,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 338,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 283,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 638,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 11,
+          "FP": 875,
+          "TP": 25,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 11,
+          "FP": 319,
+          "TP": 34,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 29,
+          "FP": 1349,
+          "TP": 15,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 5,
+          "FP": 1221,
+          "TP": 26,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 2,
+          "FP": 1494,
+          "TP": 39,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 436,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 407,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 24,
+          "FP": 381,
+          "TP": 29,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_direct/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_direct/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_direct/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "e8da6667e4e9427ff637ea1d972c4cba1e91c8653e86783d27cdbc500e2cf05d",
+        "log_sha256": "6042e6ce4fe213c2f5977e59cecc0ad7bce8cf17dd07f8e2d8b4b2a46dc32dd9",
+        "raw_csv_sha256": "087006fb5b2ea3c17d97f0b99230100afca98c5330f56481a924c24d52c776e4"
+      },
+      "configuration": "afri_direct",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.198,
+        "fmeasure_harmonic": 18.079,
+        "precision_arithmetic": 0.29308972267112793,
+        "precision_harmonic": 0.12171982531037737,
+        "recall_arithmetic": 0.5672477494946889,
+        "recall_harmonic": 0.3512322187480439
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.85,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_direct_seed3009/2026-09-24_11-07-40/0.8500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_direct_seed3009/2026-09-24_11-07-40/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_direct_seed3009/2026-09-24_11-07-40/0.8500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_direct_seed3009/2026-09-24_11-07-40",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_direct_seed3009/2026-09-24_11-07-40/0.8500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.198,
+        "recomputed_fmeasure_harmonic": 18.079,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 27,
+          "FP": 13,
+          "TP": 4,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 20,
+          "FP": 2,
+          "TP": 4,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 276,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 141,
+          "FP": 35,
+          "TP": 36,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 63,
+          "FP": 217,
+          "TP": 25,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 43,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 143,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 30,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 0,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 3,
+          "FP": 9,
+          "TP": 61,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 81,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 8,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 3,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 18,
+          "FP": 1406,
+          "TP": 73,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 153,
+          "FP": 329,
+          "TP": 345,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 50,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 162,
+          "FP": 1243,
+          "TP": 64,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 75,
+          "FP": 124,
+          "TP": 86,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 76,
+          "FP": 522,
+          "TP": 285,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 107,
+          "FP": 34,
+          "TP": 13,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 6,
+          "FP": 651,
+          "TP": 23,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 18,
+          "FP": 437,
+          "TP": 30,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 390,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 524,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 335,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 303,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 661,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 13,
+          "FP": 797,
+          "TP": 23,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 10,
+          "FP": 322,
+          "TP": 35,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 29,
+          "FP": 1358,
+          "TP": 15,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 4,
+          "FP": 1314,
+          "TP": 27,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 6,
+          "FP": 1486,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 440,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 406,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 23,
+          "FP": 388,
+          "TP": 30,
+          "total_n_pos_events": 53
+        }
+      }
+    },
+    {
+      "archive": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_inverse/selected_final.csv",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_inverse/selected_raw.csv",
+        "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_3009/afri_inverse/selection.json"
+      },
+      "artifact_status": "complete_verified",
+      "checksums": {
+        "final_csv_sha256": "efebc7fa2678c558cb9d1249c0401b5d93be6e21dea85859e323d693c0697ba2",
+        "log_sha256": "f74b9f34d363e58503c6eb035f66bd9b0648a6a0d10246b0548adc458b7714d3",
+        "raw_csv_sha256": "4bb637a603bfb788c4a2dd7cca6b30f219f3b136ed88becb25152be7b79faa65"
+      },
+      "configuration": "afri_inverse",
+      "logged_scores": {
+        "fmeasure_arithmetic": 31.336,
+        "fmeasure_harmonic": 18.165,
+        "precision_arithmetic": 0.2864561351173596,
+        "precision_harmonic": 0.1232102501581511,
+        "recall_arithmetic": 0.5641516388789775,
+        "recall_harmonic": 0.34550934077678624
+      },
+      "message": "selected prediction artifacts located",
+      "note": null,
+      "provenance": {
+        "source_git_commit": null
+      },
+      "seed": 3009,
+      "selection": {
+        "detection_threshold": 0.95,
+        "postprocessing_mode": "B",
+        "postprocessing_threshold": 0.1,
+        "postprocessing_type": "fixed_length"
+      },
+      "source": {
+        "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+        "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/stdout.log",
+        "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001/Eval_raw.csv",
+        "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27",
+        "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001"
+      },
+      "sweep_id": "third_seed_sweep",
+      "verification": {
+        "delta_fmeasure_arithmetic": 0.0,
+        "delta_fmeasure_harmonic": 0.0,
+        "passed": true,
+        "performed": true,
+        "recomputed_fmeasure_arithmetic": 31.336,
+        "recomputed_fmeasure_harmonic": 18.165,
+        "tolerance": 0.001
+      },
+      "winning_per_file_counts": {
+        "BUK1_20181011_001004.wav": {
+          "FN": 27,
+          "FP": 12,
+          "TP": 4,
+          "total_n_pos_events": 31
+        },
+        "BUK1_20181013_023504.wav": {
+          "FN": 21,
+          "FP": 1,
+          "TP": 3,
+          "total_n_pos_events": 24
+        },
+        "BUK4_20160925_231604.wav": {
+          "FN": 37,
+          "FP": 1,
+          "TP": 0,
+          "total_n_pos_events": 37
+        },
+        "BUK4_20161011_000804.wav": {
+          "FN": 47,
+          "FP": 245,
+          "TP": 0,
+          "total_n_pos_events": 47
+        },
+        "BUK4_20161031_232104a.wav": {
+          "FN": 141,
+          "FP": 41,
+          "TP": 36,
+          "total_n_pos_events": 177
+        },
+        "BUK4_20171022_004304a.wav": {
+          "FN": 10,
+          "FP": 9,
+          "TP": 7,
+          "total_n_pos_events": 17
+        },
+        "BUK5_20161101_002104a.wav": {
+          "FN": 64,
+          "FP": 190,
+          "TP": 24,
+          "total_n_pos_events": 88
+        },
+        "BUK5_20180921_015906a.wav": {
+          "FN": 20,
+          "FP": 67,
+          "TP": 3,
+          "total_n_pos_events": 23
+        },
+        "BUK5_20181007_011905.wav": {
+          "FN": 58,
+          "FP": 4,
+          "TP": 8,
+          "total_n_pos_events": 66
+        },
+        "ME1.wav": {
+          "FN": 1,
+          "FP": 144,
+          "TP": 10,
+          "total_n_pos_events": 11
+        },
+        "ME2.wav": {
+          "FN": 7,
+          "FP": 31,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "R4_cleaned recording_13-10-17.wav": {
+          "FN": 1,
+          "FP": 4,
+          "TP": 18,
+          "total_n_pos_events": 19
+        },
+        "R4_cleaned recording_16-10-17.wav": {
+          "FN": 1,
+          "FP": 5,
+          "TP": 29,
+          "total_n_pos_events": 30
+        },
+        "R4_cleaned recording_17-10-17.wav": {
+          "FN": 0,
+          "FP": 1,
+          "TP": 36,
+          "total_n_pos_events": 36
+        },
+        "R4_cleaned recording_TEL_19-10-17.wav": {
+          "FN": 4,
+          "FP": 1,
+          "TP": 50,
+          "total_n_pos_events": 54
+        },
+        "R4_cleaned recording_TEL_20-10-17.wav": {
+          "FN": 2,
+          "FP": 3,
+          "TP": 62,
+          "total_n_pos_events": 64
+        },
+        "R4_cleaned recording_TEL_23-10-17.wav": {
+          "FN": 4,
+          "FP": 3,
+          "TP": 80,
+          "total_n_pos_events": 84
+        },
+        "R4_cleaned recording_TEL_24-10-17.wav": {
+          "FN": 7,
+          "FP": 5,
+          "TP": 92,
+          "total_n_pos_events": 99
+        },
+        "R4_cleaned recording_TEL_25-10-17.wav": {
+          "FN": 3,
+          "FP": 4,
+          "TP": 96,
+          "total_n_pos_events": 99
+        },
+        "RD_01.wav": {
+          "FN": 18,
+          "FP": 1339,
+          "TP": 73,
+          "total_n_pos_events": 91
+        },
+        "RD_02.wav": {
+          "FN": 155,
+          "FP": 296,
+          "TP": 343,
+          "total_n_pos_events": 498
+        },
+        "RD_03.wav": {
+          "FN": 3,
+          "FP": 47,
+          "TP": 2,
+          "total_n_pos_events": 5
+        },
+        "RD_04.wav": {
+          "FN": 164,
+          "FP": 1053,
+          "TP": 62,
+          "total_n_pos_events": 226
+        },
+        "RD_05.wav": {
+          "FN": 73,
+          "FP": 117,
+          "TP": 88,
+          "total_n_pos_events": 161
+        },
+        "RD_06.wav": {
+          "FN": 83,
+          "FP": 450,
+          "TP": 278,
+          "total_n_pos_events": 361
+        },
+        "file_423_487.wav": {
+          "FN": 0,
+          "FP": 0,
+          "TP": 57,
+          "total_n_pos_events": 57
+        },
+        "file_97_113.wav": {
+          "FN": 107,
+          "FP": 34,
+          "TP": 13,
+          "total_n_pos_events": 120
+        },
+        "pw1.wav": {
+          "FN": 6,
+          "FP": 606,
+          "TP": 23,
+          "total_n_pos_events": 29
+        },
+        "pw10.wav": {
+          "FN": 20,
+          "FP": 407,
+          "TP": 28,
+          "total_n_pos_events": 48
+        },
+        "pw11.wav": {
+          "FN": 0,
+          "FP": 369,
+          "TP": 39,
+          "total_n_pos_events": 39
+        },
+        "pw12.wav": {
+          "FN": 11,
+          "FP": 460,
+          "TP": 31,
+          "total_n_pos_events": 42
+        },
+        "pw13.wav": {
+          "FN": 2,
+          "FP": 342,
+          "TP": 38,
+          "total_n_pos_events": 40
+        },
+        "pw14.wav": {
+          "FN": 7,
+          "FP": 275,
+          "TP": 43,
+          "total_n_pos_events": 50
+        },
+        "pw15.wav": {
+          "FN": 7,
+          "FP": 649,
+          "TP": 34,
+          "total_n_pos_events": 41
+        },
+        "pw2.wav": {
+          "FN": 16,
+          "FP": 894,
+          "TP": 20,
+          "total_n_pos_events": 36
+        },
+        "pw3.wav": {
+          "FN": 10,
+          "FP": 305,
+          "TP": 35,
+          "total_n_pos_events": 45
+        },
+        "pw4.wav": {
+          "FN": 30,
+          "FP": 1363,
+          "TP": 14,
+          "total_n_pos_events": 44
+        },
+        "pw5.wav": {
+          "FN": 5,
+          "FP": 1301,
+          "TP": 26,
+          "total_n_pos_events": 31
+        },
+        "pw6.wav": {
+          "FN": 0,
+          "FP": 1343,
+          "TP": 41,
+          "total_n_pos_events": 41
+        },
+        "pw7.wav": {
+          "FN": 6,
+          "FP": 380,
+          "TP": 35,
+          "total_n_pos_events": 41
+        },
+        "pw8.wav": {
+          "FN": 1,
+          "FP": 400,
+          "TP": 49,
+          "total_n_pos_events": 50
+        },
+        "pw9.wav": {
+          "FN": 24,
+          "FP": 373,
+          "TP": 29,
+          "total_n_pos_events": 53
+        }
+      }
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "complete_verified": 8
+  },
+  "sweep_id": "third_seed_sweep"
+}

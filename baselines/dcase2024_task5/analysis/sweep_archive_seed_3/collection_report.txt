@@ -1,0 +1,27 @@
+Sweep collector report: third_seed_sweep
+Collected: 2026-09-24T20:12:44.102059+00:00
+
+[OK     ] baseline               seed=3009 status=complete_verified
+          k=0.95 post=fixed_length threshold=0.1 F=18.386
+          selected prediction artifacts located
+[OK     ] cife                   seed=3009 status=complete_verified
+          k=0.9 post=fixed_length threshold=0.15000000000000002 F=20.502
+          selected prediction artifacts located
+[OK     ] phase1_random          seed=3009 status=complete_verified
+          k=0.95 post=fixed_length threshold=0.1 F=19.572
+          selected prediction artifacts located
+[OK     ] slot_uniform           seed=3009 status=complete_verified
+          k=0.95 post=fixed_length threshold=0.1 F=18.096
+          selected prediction artifacts located
+[OK     ] phase2_energy          seed=3009 status=complete_verified
+          k=0.9 post=fixed_length threshold=0.1 F=18.206
+          selected prediction artifacts located
+[OK     ] phase3_activation      seed=3009 status=complete_verified
+          k=0.95 post=fixed_length threshold=0.1 F=17.989
+          selected prediction artifacts located
+[OK     ] afri_direct            seed=3009 status=complete_verified
+          k=0.85 post=fixed_length threshold=0.1 F=18.079
+          selected prediction artifacts located
+[OK     ] afri_inverse           seed=3009 status=complete_verified
+          k=0.95 post=fixed_length threshold=0.1 F=18.165
+          selected prediction artifacts located

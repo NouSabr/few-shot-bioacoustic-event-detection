@@ -1,0 +1,1 @@
+sweep_id,configuration,seed,artifact_status,message,postprocessing_type,detection_threshold,postprocessing_threshold,fmeasure_harmonic,fmeasure_arithmetic,verification_passed,log,run_directory,raw_csv,final_csv,note

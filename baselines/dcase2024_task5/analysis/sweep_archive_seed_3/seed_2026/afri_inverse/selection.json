@@ -1,0 +1,305 @@
+{
+  "archive": {
+    "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_2026/afri_inverse/selected_final.csv",
+    "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_2026/afri_inverse/selected_raw.csv",
+    "selection": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seed_3/seed_2026/afri_inverse/selection.json"
+  },
+  "artifact_status": "complete_verified",
+  "checksums": {
+    "final_csv_sha256": "efebc7fa2678c558cb9d1249c0401b5d93be6e21dea85859e323d693c0697ba2",
+    "log_sha256": "f74b9f34d363e58503c6eb035f66bd9b0648a6a0d10246b0548adc458b7714d3",
+    "raw_csv_sha256": "4bb637a603bfb788c4a2dd7cca6b30f219f3b136ed88becb25152be7b79faa65"
+  },
+  "configuration": "afri_inverse",
+  "logged_scores": {
+    "fmeasure_arithmetic": 31.336,
+    "fmeasure_harmonic": 18.165,
+    "precision_arithmetic": 0.2864561351173596,
+    "precision_harmonic": 0.1232102501581511,
+    "recall_arithmetic": 0.5641516388789775,
+    "recall_harmonic": 0.34550934077678624
+  },
+  "message": "selected prediction artifacts located",
+  "note": null,
+  "provenance": {
+    "source_git_commit": null
+  },
+  "seed": 2026,
+  "selection": {
+    "detection_threshold": 0.95,
+    "postprocessing_mode": "B",
+    "postprocessing_threshold": 0.1,
+    "postprocessing_type": "fixed_length"
+  },
+  "source": {
+    "final_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001/Eval_VAL_threshold_fix_length_postproc_0.1.csv",
+    "log": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/stdout.log",
+    "raw_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001/Eval_raw.csv",
+    "run_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27",
+    "threshold_directory": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/logs/experiments/runs/afri_inverse_seed3009/2026-09-24_16-36-27/0.9500000000000001"
+  },
+  "sweep_id": "third_seed_sweep",
+  "verification": {
+    "delta_fmeasure_arithmetic": 0.0,
+    "delta_fmeasure_harmonic": 0.0,
+    "passed": true,
+    "performed": true,
+    "recomputed_fmeasure_arithmetic": 31.336,
+    "recomputed_fmeasure_harmonic": 18.165,
+    "tolerance": 0.001
+  },
+  "winning_per_file_counts": {
+    "BUK1_20181011_001004.wav": {
+      "FN": 27,
+      "FP": 12,
+      "TP": 4,
+      "total_n_pos_events": 31
+    },
+    "BUK1_20181013_023504.wav": {
+      "FN": 21,
+      "FP": 1,
+      "TP": 3,
+      "total_n_pos_events": 24
+    },
+    "BUK4_20160925_231604.wav": {
+      "FN": 37,
+      "FP": 1,
+      "TP": 0,
+      "total_n_pos_events": 37
+    },
+    "BUK4_20161011_000804.wav": {
+      "FN": 47,
+      "FP": 245,
+      "TP": 0,
+      "total_n_pos_events": 47
+    },
+    "BUK4_20161031_232104a.wav": {
+      "FN": 141,
+      "FP": 41,
+      "TP": 36,
+      "total_n_pos_events": 177
+    },
+    "BUK4_20171022_004304a.wav": {
+      "FN": 10,
+      "FP": 9,
+      "TP": 7,
+      "total_n_pos_events": 17
+    },
+    "BUK5_20161101_002104a.wav": {
+      "FN": 64,
+      "FP": 190,
+      "TP": 24,
+      "total_n_pos_events": 88
+    },
+    "BUK5_20180921_015906a.wav": {
+      "FN": 20,
+      "FP": 67,
+      "TP": 3,
+      "total_n_pos_events": 23
+    },
+    "BUK5_20181007_011905.wav": {
+      "FN": 58,
+      "FP": 4,
+      "TP": 8,
+      "total_n_pos_events": 66
+    },
+    "ME1.wav": {
+      "FN": 1,
+      "FP": 144,
+      "TP": 10,
+      "total_n_pos_events": 11
+    },
+    "ME2.wav": {
+      "FN": 7,
+      "FP": 31,
+      "TP": 34,
+      "total_n_pos_events": 41
+    },
+    "R4_cleaned recording_13-10-17.wav": {
+      "FN": 1,
+      "FP": 4,
+      "TP": 18,
+      "total_n_pos_events": 19
+    },
+    "R4_cleaned recording_16-10-17.wav": {
+      "FN": 1,
+      "FP": 5,
+      "TP": 29,
+      "total_n_pos_events": 30
+    },
+    "R4_cleaned recording_17-10-17.wav": {
+      "FN": 0,
+      "FP": 1,
+      "TP": 36,
+      "total_n_pos_events": 36
+    },
+    "R4_cleaned recording_TEL_19-10-17.wav": {
+      "FN": 4,
+      "FP": 1,
+      "TP": 50,
+      "total_n_pos_events": 54
+    },
+    "R4_cleaned recording_TEL_20-10-17.wav": {
+      "FN": 2,
+      "FP": 3,
+      "TP": 62,
+      "total_n_pos_events": 64
+    },
+    "R4_cleaned recording_TEL_23-10-17.wav": {
+      "FN": 4,
+      "FP": 3,
+      "TP": 80,
+      "total_n_pos_events": 84
+    },
+    "R4_cleaned recording_TEL_24-10-17.wav": {
+      "FN": 7,
+      "FP": 5,
+      "TP": 92,
+      "total_n_pos_events": 99
+    },
+    "R4_cleaned recording_TEL_25-10-17.wav": {
+      "FN": 3,
+      "FP": 4,
+      "TP": 96,
+      "total_n_pos_events": 99
+    },
+    "RD_01.wav": {
+      "FN": 18,
+      "FP": 1339,
+      "TP": 73,
+      "total_n_pos_events": 91
+    },
+    "RD_02.wav": {
+      "FN": 155,
+      "FP": 296,
+      "TP": 343,
+      "total_n_pos_events": 498
+    },
+    "RD_03.wav": {
+      "FN": 3,
+      "FP": 47,
+      "TP": 2,
+      "total_n_pos_events": 5
+    },
+    "RD_04.wav": {
+      "FN": 164,
+      "FP": 1053,
+      "TP": 62,
+      "total_n_pos_events": 226
+    },
+    "RD_05.wav": {
+      "FN": 73,
+      "FP": 117,
+      "TP": 88,
+      "total_n_pos_events": 161
+    },
+    "RD_06.wav": {
+      "FN": 83,
+      "FP": 450,
+      "TP": 278,
+      "total_n_pos_events": 361
+    },
+    "file_423_487.wav": {
+      "FN": 0,
+      "FP": 0,
+      "TP": 57,
+      "total_n_pos_events": 57
+    },
+    "file_97_113.wav": {
+      "FN": 107,
+      "FP": 34,
+      "TP": 13,
+      "total_n_pos_events": 120
+    },
+    "pw1.wav": {
+      "FN": 6,
+      "FP": 606,
+      "TP": 23,
+      "total_n_pos_events": 29
+    },
+    "pw10.wav": {
+      "FN": 20,
+      "FP": 407,
+      "TP": 28,
+      "total_n_pos_events": 48
+    },
+    "pw11.wav": {
+      "FN": 0,
+      "FP": 369,
+      "TP": 39,
+      "total_n_pos_events": 39
+    },
+    "pw12.wav": {
+      "FN": 11,
+      "FP": 460,
+      "TP": 31,
+      "total_n_pos_events": 42
+    },
+    "pw13.wav": {
+      "FN": 2,
+      "FP": 342,
+      "TP": 38,
+      "total_n_pos_events": 40
+    },
+    "pw14.wav": {
+      "FN": 7,
+      "FP": 275,
+      "TP": 43,
+      "total_n_pos_events": 50
+    },
+    "pw15.wav": {
+      "FN": 7,
+      "FP": 649,
+      "TP": 34,
+      "total_n_pos_events": 41
+    },
+    "pw2.wav": {
+      "FN": 16,
+      "FP": 894,
+      "TP": 20,
+      "total_n_pos_events": 36
+    },
+    "pw3.wav": {
+      "FN": 10,
+      "FP": 305,
+      "TP": 35,
+      "total_n_pos_events": 45
+    },
+    "pw4.wav": {
+      "FN": 30,
+      "FP": 1363,
+      "TP": 14,
+      "total_n_pos_events": 44
+    },
+    "pw5.wav": {
+      "FN": 5,
+      "FP": 1301,
+      "TP": 26,
+      "total_n_pos_events": 31
+    },
+    "pw6.wav": {
+      "FN": 0,
+      "FP": 1343,
+      "TP": 41,
+      "total_n_pos_events": 41
+    },
+    "pw7.wav": {
+      "FN": 6,
+      "FP": 380,
+      "TP": 35,
+      "total_n_pos_events": 41
+    },
+    "pw8.wav": {
+      "FN": 1,
+      "FP": 400,
+      "TP": 49,
+      "total_n_pos_events": 50
+    },
+    "pw9.wav": {
+      "FN": 24,
+      "FP": 373,
+      "TP": 29,
+      "total_n_pos_events": 53
+    }
+  }
+}
