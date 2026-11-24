@@ -1,69 +1,160 @@
-# Baseline for DCASE 2024 Task 5
+# Bioacoustic detection research implementation
 
-The automatic detection and analysis of bioacoustic sound events is a valuable tool for assessing animal populations and their behaviours, facilitating conservation efforts, and providing insights into ecological dynamics. By leveraging advanced machine learning and computational bioacoustics techniques, it is possible to decode the complex acoustic signals of diverse species.
+This tree contains the project's CIFE and frequency-masking changes to inherited
+DCASE/Surrey code. The directory retains its historical name. See the
+[repository overview](../../README.md) for setup prerequisites, checkpoint
+availability and reproduction status.
 
-**Few-shot learning is a highly promising paradigm for sound event detection.** It describes tasks in which an algorithm must make predictions given only a few instances of each class, contrary to standard supervised learning paradigm. The main objective is to find reliable algorithms that are capable of dealing with data sparsity, class imbalance and noisy/busy environments.
+## Code map
 
-**It is also an extremely good fit to the needs of users in bioacoustics, in which increasingly large acoustic datasets commonly need to be labelled for events of an identified category** (e.g. species or call-type), even though this category might not be known in other datasets or have any yet-known label. While satisfying user needs, this will also benchmark few-shot learning for the wider domain of sound event detection (SED).
+| Path | Contents |
+| --- | --- |
+| [`src/models/`](src/models/) | Prototypical-network model and CIFE components |
+| [`src/datamodules/`](src/datamodules/) | Audio loading, episodic sampling and frequency maskers |
+| [`src/utils/`](src/utils/) | AFRI range estimation, frequency-importance tracking and experiment utilities |
+| [`configs/`](configs/) | Hydra configurations |
+| [`tests/`](tests/) | Test suite |
 
-## Description
+## Entry points
 
-This repo is built upon the [DCASE 2022 submission from Surrey](https://github.com/haoheliu/DCASE_2022_Task_5) for the [DCASE 2024 Challenge task 5 few-shot bio-acoustic detection](https://dcase.community/challenge2023/task-few-shot-bioacoustic-event-detection).
+Run from this directory after reviewing the environment and data requirements in
+the [root README](../../README.md#before-running).
 
+| Script | Purpose |
+| --- | --- |
+| [`train.py`](train.py) | Training with [train.yaml](configs/train.yaml) |
+| [`test.py`](test.py) | Checkpoint inference/evaluation with [test.yaml](configs/test.yaml) |
+| [`run_ablation_experiments.py`](run_ablation_experiments.py) | Ablation presets and run orchestration |
+| [`run_full_sweep.sh`](run_full_sweep.sh) | Multi-seed sweep orchestration |
 
-|    Method    | Precision (%) | Recall (%) | F-measure (%) |
-| :----------: | :-----------: | :--------: | :-----------: |
-| **Proposed** |     56.18     |   48.64   |     52.14     |
+Set dataset paths and evaluation `ckpt_path` for your environment. Choose CIFE
+and masking settings explicitly; evaluation model/feature settings must match
+the checkpoint. Use run-specific records to establish historical settings.
 
-The species-wise perfomrnace of this system:
+## Reproduction planning
 
-![species-wise performance](assets/species-wise_performance.png)
+[`tools/reproduce.py`](tools/reproduce.py) plans the eight existing presets across
+seeds **1234, 2026, 3009**: 24 runs. Only preparation supports execution; training
+and evaluation are plan-only. Plans cover the training and validation splits;
+held-out evaluation remains outside this workflow. One preparation stage serves
+the complete run grid.
 
-## How to train from scratch
-
-1. Prepare environment
-
-```bash
-# clone project
-git clone https://github.com/c4dm/dcase-few-shot-bioacoustic.git
-cd baselines/dcase2024_task5
-
-# create virtual environment
-# we use python == 3.7
-python -m venv ./dcase_t5
-source ./dcase_t5/bin/activate
-pip3 install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu113
-```
-
-2. Prepare training and validation data. Dataset will be automatically downloaded.
-
-```bash
-python3 data_preparation.py --data-dir /dir/to/local/dataset
-```
-
-3. Change the root directory in [train.yaml](config/train.yaml).
-
-```yaml
-path:
-  root_dir: <your-root-directory>
-```
-
-4. Train model with default configuration. Find more details in [train.yaml](config/train.yaml).
-5. Make your own training recipe. Ones can refer to [train.yaml](config/train.yaml) for more training options and [run.sh](run.sh) for more examples.
+Training, inference and evaluation use Python 3.7.17. The wrapper targets the same
+runtime. Set the research interpreter path in the manifest. Preview the
+[example manifest](configs/reproduction.example.json):
 
 ```bash
-# use PCEN as audio features and disable negative hard sampling
-python3 train.py features.feature_types="pcen" train_param.negative_train_contrast=false
+python3 -E -S -B tools/reproduce.py \
+  --config configs/reproduction.example.json --dry-run
 ```
 
-6. Train model with CPU only.
+Copy it to `configs/reproduction.local.json` (Git-ignored), set the interpreter,
+dataset and output paths, then check preparation:
 
 ```bash
-# train on CPU
-python train.py trainer.gpus=0
+python3 -E -S -B tools/reproduce.py \
+  --config configs/reproduction.local.json --stage prepare --preflight
 ```
 
-## Cite this work
+Manifest paths are relative to the manifest; `--report-dir` is relative to the
+calling directory. Seeds must be positive. Shared overrides cannot replace
+preset choices, seeds or managed paths. Missing checkpoints leave blocked
+evaluation entries in the plan.
+
+Preflight checks package-version metadata, WAV/CSV pairing, required files and
+output collisions. It does not validate package imports, CUDA, Hydra composition
+or checkpoint compatibility. Real-data preparation and model runs remain unvalidated.
+
+### Preparation
+
+**This writes beside the dataset. Use a fresh working data copy.** After reviewing
+preflight, execution requires an explicit stage and a new report directory outside
+the dataset:
+
+```bash
+python3 -E -S -B tools/reproduce.py \
+  --config configs/reproduction.local.json --stage prepare --execute \
+  --report-dir results/prepare01
+```
+
+The existing script writes HDF5 features and training-derived statistics in
+`Development_Set/norm_stats.npz`. It also processes `Development_Set/Test_Set` if
+present. Existing outputs, unsafe symlinks and unsupported audio paths are refused.
+Nothing is installed.
+
+`Development_Set/.reproduction-prepare.json` blocks repeat attempts once execution
+has claimed the dataset. The claim and partial outputs are not removed automatically.
+Review the receipt before manual cleanup or retry. There is no rollback, and other
+programs can still modify the data.
+
+Reports contain the command/arguments, input manifest and source snapshot, input
+file metadata, stdout/stderr, exit status and artifact hashes. Expected HDF5/NPZ
+outputs must be regular, nonempty files; formats and normalization are not validated.
+Raw inputs are not content-hashed, and partial outputs may have `sha256: null`.
+
+Exit codes: `0` success, `1` failed preflight/execution/output checks, `2` invalid
+input or report-path refusal, `130` interrupted execution. On POSIX, interrupting
+the run stops the child process group.
+
+### Checkpoints and logged settings
+
+The [evidence record](configs/reproduction.evidence.json) confirms the seeds,
+preset overrides and CIFE settings from the 24 cached headers. The example pins
+**4 heads and pooling `[2,16]`**, overriding `test.yaml`'s conflicting defaults.
+The planner checks the record's hash, cohort coverage and preset agreement without
+needing the cached logs. Archived operating points appear as report metadata
+and are excluded from command generation.
+
+The record covers selected printed fields. Full historical configurations and
+checkpoint identity remain unverified. Extraction reads at most 390 lines /
+512 KiB per log, computes prefix hashes, and preserves archive-supplied full-log
+hashes. Producer/helper hashes identify the extraction snapshot. With the local
+cache available, regenerate to a new file:
+
+```bash
+python3 -E -S -B tools/extract_reproduction_evidence.py \
+  --output results/config-evidence01.json
+```
+
+For a new cohort, omit `logged_evidence`. Existing records retain their original
+cohort identities.
+For later evaluation, register checkpoints explicitly under keys such as
+`baseline_seed1234`; the wrapper never selects one by filename:
+
+```json
+{
+  "path": "/path/to/selected.ckpt",
+  "sha256": "REPLACE_WITH_CHECKPOINT_SHA256",
+  "config_path": "/path/to/run/.hydra/config.yaml",
+  "config_sha256": "REPLACE_WITH_SAVED_CONFIG_SHA256"
+}
+```
+
+Replace both hashes with lowercase 64-digit digests to identify the file contents.
+Model compatibility requires a separate check. The [silence audit](../../analysis/silence_audit/README.md)
+is a separate workflow.
+
+### Wrapper tests
+
+```bash
+python3 -E -S -B tests/unit/test_reproduction_prepare.py
+```
+
+The tests use temporary dummy programs, file fixtures and Python's standard library.
+
+## Documentation
+
+- [CIFE integration](docs/CIFE/README.md)
+- [Frequency masking and AFRI](docs/dynamic_freq_masking/README.md)
+- Background: [episode construction](docs/general/EPISODE_CONSTRUCTION.md) and
+  [prototype visualization](docs/visualization/PROTOTYPE_VISUALIZATION_GUIDE.md).
+
+## Upstream work
+
+The inherited implementation builds on the
+[DCASE bioacoustic repository](https://github.com/c4dm/dcase-few-shot-bioacoustic)
+and [Haohe Liu's Surrey implementation](https://github.com/haoheliu/DCASE_2022_Task_5).
+Citations for the upstream work:
 
 ```bibtex
 @misc{liang2024mind,
@@ -83,6 +174,6 @@ python train.py trainer.gpus=0
 }
 ```
 
-## Acknowledgement
-
-> This repository is implemented based on @haoheliu's amazing [repository](https://github.com/haoheliu/DCASE_2022_Task_5). Thank @haoheliu for his contribution to the community.
+See the [existing license notice](../../LICENSE) and
+[third-party provenance and release checks](../../THIRD_PARTY_NOTICES.md) for
+CIFE/AFRI sources and unresolved distribution terms.
