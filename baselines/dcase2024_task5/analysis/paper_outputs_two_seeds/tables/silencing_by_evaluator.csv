@@ -1,0 +1,3 @@
+evaluator_variant,eligible_interventions,subset_improvements,aggregate_improvements,mean_delta_harmonic,max_delta_harmonic,subset_improvement_rate,aggregate_improvement_rate
+corrected,665,201,201,-0.2970375939849626,1.7550000000000026,0.3022556390977444,0.3022556390977444
+released,665,191,191,-0.312097744360902,1.711000000000002,0.28721804511278193,0.28721804511278193

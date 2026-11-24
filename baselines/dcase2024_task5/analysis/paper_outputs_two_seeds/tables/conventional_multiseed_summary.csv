@@ -1,0 +1,9 @@
+configuration,configuration_label,mean_fmeasure_harmonic,sd_fmeasure_harmonic,min_fmeasure_harmonic,max_fmeasure_harmonic,mean_fmeasure_arithmetic,n_seeds
+baseline,Baseline,16.6535,0.054447222151364126,16.615,16.692,30.016,2
+phase1_random,Random,16.4275,1.1448058787410196,15.618,17.237,29.3135,2
+slot_uniform,Slot uniform,16.4125,1.4432049404017424,15.392,17.433,28.962,2
+phase3_activation,Activation,16.3945,1.5506851711420977,15.298,17.491,29.4165,2
+cife,CIFE-inspired,16.386,1.5414927829866734,15.296,17.476,28.8355,2
+phase2_energy,Energy,16.1955,1.0769236277471135,15.434,16.957,28.9115,2
+afri_inverse,AFRI inverse,16.137999999999998,0.7424621202458767,15.613,16.663,29.052,2
+afri_direct,AFRI direct,16.1145,0.8662058069535211,15.502,16.727,29.209,2

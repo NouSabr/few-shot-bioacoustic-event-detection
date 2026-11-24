@@ -1,0 +1,231 @@
+{
+  "collector_manifest": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/manifest.json",
+  "collector_manifest_sha256": "24533c0227d4b51427e15024a59454082465fcae4854e184883b193551d2620b",
+  "completed_runs": [
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "baseline",
+      "n_prediction_rows": 16457,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/baseline/selected_final.csv",
+      "prediction_sha256": "612b81b757e644c193cd66f6340cef83c485cf2d610b944658613bcc045ecd29",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "cife",
+      "n_prediction_rows": 17258,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/cife/selected_final.csv",
+      "prediction_sha256": "11c3ba4f7eb12f207d2366052e6b444b100c4fb2ef9add8276a99ba59998755b",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase1_random",
+      "n_prediction_rows": 15868,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/phase1_random/selected_final.csv",
+      "prediction_sha256": "08d9ae6d8159093bd14d3bf4d06bb99fb229783e60e9217a1a17c31c9535bd78",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "slot_uniform",
+      "n_prediction_rows": 16133,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/slot_uniform/selected_final.csv",
+      "prediction_sha256": "5166fcbd31c49971121f286bc98e353e2db8720f155f8b99704d6d35d6567254",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase2_energy",
+      "n_prediction_rows": 16662,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/phase2_energy/selected_final.csv",
+      "prediction_sha256": "b4469d6abcfc5af991460e74669e110cc4f31e9552cd577acc703f4e401c90a7",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase3_activation",
+      "n_prediction_rows": 15419,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/phase3_activation/selected_final.csv",
+      "prediction_sha256": "b7e56ce3e8bd5e0bd0b96c335a2f99d91a99e5f0746603f5997811bbeb1b5706",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "afri_direct",
+      "n_prediction_rows": 16603,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/afri_direct/selected_final.csv",
+      "prediction_sha256": "4f397f661c721454630ae70b92ef0b405ffe48683bff2a7f583679627129de1a",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "afri_inverse",
+      "n_prediction_rows": 15781,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_1234/afri_inverse/selected_final.csv",
+      "prediction_sha256": "87c133137f6823b453d5550e0319302019d985c6cfca167c4be94069d479795e",
+      "seed": 1234,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "baseline",
+      "n_prediction_rows": 16189,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/baseline/selected_final.csv",
+      "prediction_sha256": "e4f47b759ec339757f2939c3bb9bfa17158c9476f7d9c63e2c32ac5aa53b83cb",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "cife",
+      "n_prediction_rows": 15540,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/cife/selected_final.csv",
+      "prediction_sha256": "41f213a2e69dafbc8f605e3064b5551156a771f7cfce0effff3b62158c634a84",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase1_random",
+      "n_prediction_rows": 15848,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/phase1_random/selected_final.csv",
+      "prediction_sha256": "522da2e9c9aa687957f01eba2940aeb3405f0d21fed98e30f5c5c786d92ba42c",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "slot_uniform",
+      "n_prediction_rows": 15935,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/slot_uniform/selected_final.csv",
+      "prediction_sha256": "d1fbfb142b5181a010642f71a1841a1410827021fb53e7f0f1fa8634c06b1cf6",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase2_energy",
+      "n_prediction_rows": 16441,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/phase2_energy/selected_final.csv",
+      "prediction_sha256": "31237af38719b43d936ccd61cbf4dd9b1b8cfa9e04556050924a568cdf5b4b40",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "phase3_activation",
+      "n_prediction_rows": 15456,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/phase3_activation/selected_final.csv",
+      "prediction_sha256": "a9fae820a227f0e076060610dbac2747215f1ee8e8addf535c07433c723fbed8",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "afri_direct",
+      "n_prediction_rows": 16425,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/afri_direct/selected_final.csv",
+      "prediction_sha256": "88285804f47954308c3314c4969240cd9712f2e798ac23f890099d88c2a1ac74",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    },
+    {
+      "artifact_status": "complete_verified",
+      "configuration": "afri_inverse",
+      "n_prediction_rows": 15424,
+      "n_reference_files": 42,
+      "prediction_csv": "/media/helios/Masters/Repository/dcase-few-shot-bioacoustic/baselines/dcase2024_task5/analysis/sweep_archive_seeds1234_2026/seed_2026/afri_inverse/selected_final.csv",
+      "prediction_sha256": "badbcef7931ebe2551ba5da3c4f11153cd71fad5bcaebcf4084b745d41444ca7",
+      "seed": 2026,
+      "variants": [
+        "released",
+        "corrected"
+      ]
+    }
+  ],
+  "created_at": "2026-09-23T15:34:22.373426+00:00",
+  "evaluator_variants": [
+    "released",
+    "corrected"
+  ],
+  "n_completed_runs": 16,
+  "n_interventions": 1344,
+  "n_skipped_or_failed_runs": 0,
+  "n_subset_effects": 1376,
+  "provenance": {
+    "git_commit": "86a4bed8680f2568cafff1ada811871305767b0b",
+    "git_dirty": true
+  },
+  "reference_dir": "/media/helios/Data/Uni/Masters/Dataset/Development_Set/Validation_Set",
+  "reference_fingerprint_sha256": "1e08160b27d37df8339b3d3f256bdda6405cfd756268697f6e563a55b05f5fde",
+  "schema_version": 1,
+  "skipped_or_failed_runs": []
+}
