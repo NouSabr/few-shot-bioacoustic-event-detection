@@ -20,9 +20,10 @@ inherited baseline, lives under the historical path
 
 ## Before running
 
-1. Review the implementation's
-   [dependency pins](baselines/dcase2024_task5/requirements.txt). A clean-environment
-   installation still requires release validation.
+1. Use **Python 3.7.17** and review the implementation's
+   [data/environment requirements](baselines/dcase2024_task5/README.md#data-and-environment)
+   and [dependency pins](baselines/dcase2024_task5/requirements.txt).
+   A clean-environment installation still requires release validation.
 2. Review [data preparation](baselines/dcase2024_task5/data_preparation.py) and the
    dataset paths in the [training](baselines/dcase2024_task5/configs/train.yaml)
    and [evaluation](baselines/dcase2024_task5/configs/test.yaml) configurations.

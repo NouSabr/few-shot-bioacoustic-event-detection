@@ -31,6 +31,105 @@ Set dataset paths and evaluation `ckpt_path` for your environment. Choose CIFE
 and masking settings explicitly; evaluation model/feature settings must match
 the checkpoint. Use run-specific records to establish historical settings.
 
+## Data and environment
+
+### Runtime
+
+Use **Python 3.7.17** for preparation, training and inference. The
+[dependency pins](requirements.txt) include `torch==1.11.0+cu113`,
+`torchaudio==0.11.0+cu113` and `pytorch-lightning==1.6.0`. A clean installation,
+package imports and CUDA/native-library compatibility still need validation.
+Retain the working environment export and driver/GPU details with recovered runs.
+
+### Dataset layout
+
+Set the reproduction manifest's `dataset_root` to the directory containing
+`Development_Set`:
+
+```text
+<dataset_root>/
+  Development_Set/
+    Training_Set/
+      <subset-or-class>/
+        recording.wav
+        recording.csv
+    Validation_Set/
+      <subset>/
+        recording.wav
+        recording.csv
+```
+
+Keep WAV/CSV basenames paired and retain the original subset/class directories,
+annotation bytes and row order. Use a fresh writable data copy for preparation;
+features and statistics are written beside these inputs.
+
+The [data-access notes](../../analysis/silence_audit/DATA_ACCESS.md) identify
+published dataset records and the exact annotation hashes required by optional
+audit matching. The original training archive/version and raw-input hashes remain
+unverified. Record the downloaded archive/version and checksums before claiming a
+historical training replay.
+
+The wrapper plans evaluation on `Validation_Set` and sets `path.test_dir=null`.
+Preparation also processes `Development_Set/Test_Set` when present; its preflight
+requires paired CSVs there. The direct YAML defaults point `path.test_dir` at
+`<dataset_root>/Test_Set`. Held-out test preparation/evaluation needs a separate
+validated procedure.
+
+### Stored features
+
+Historical preparation used `data_preparation.py`; its producing commit remains
+unpinned. The checked-in [script](data_preparation.py) uses its own hard-coded
+extractor; changing Hydra's `features.*` values leaves preparation unchanged.
+
+| Extraction setting | Value |
+| --- | --- |
+| Sample rate | 22,050 Hz |
+| FFT length / hop | 1,024 / 256 samples |
+| Mel bins / upper frequency | 128 / 11,025 Hz |
+| Waveform scaling | Divide by the maximum absolute sample |
+| Log transform | Natural logarithm of the mel spectrogram plus `1e-8` |
+
+The extractor omits a `fmin` argument, while the YAML files declare
+`features.fmin: 50`. Their `features.eps` values also differ from the extractor's
+log offset. Recover the original script/config records to bind these settings to
+the archived features; these differences are left unchanged.
+
+The wrapper requests HDF5 output. Preparation writes each recording's
+`<stem>_logmel.h5`, with the feature array under `data`. It computes one scalar
+mean and population standard deviation from available training log-mel values using
+Welford's algorithm, saves `logmel_mean` and `logmel_std` in
+`Development_Set/norm_stats.npz`, and normalizes all processed splits with those
+training statistics. Retain the statistics with their dataset/preparation identity.
+
+The default [FeatureLoader](src/datamodules/components/pcen.py) prefers HDF5 over
+NPY and uses stored features with runtime normalization skipped. Review the
+[guarded preparation procedure](#preparation) before execution. Real-data feature
+contents and normalization remain unvalidated.
+
+### AFRI feature provenance
+
+The author recalls using mel features for AFRI mask production and an additional
+preparation pass that produced mel and log-mel. That pass's command, script
+revision and normalization choices still need recovery. The checked-in extractor
+computes mel internally, then discards it before writing; the current wrapper
+only tracks log-mel outputs.
+
+The [AFRI notebook](notebooks/visualize_afri_profiles.ipynb) was used for
+analysis/profile creation. Its saved run loads an existing cache under a `logmel`
+configuration; the inputs used to create that cache remain unverified.
+
+The training AFRI profile builder reads the dataset's configured feature arrays
+(`features.feature_types`, currently `logmel`) on a cache miss. It can load an
+existing profile cache first. Its cache key includes sample rate, hop and mel-bin
+count but omits feature type and normalization identity, so the key alone cannot
+establish which inputs produced the archived profiles.
+
+Recover the mel-generation procedure, whether those arrays were raw or normalized,
+and the training cache's `metadata.json` and `profiles.npz`. The separate evaluation
+frequency-mask path also reads `*_mel.h5`/`*_mel.npy` and external `mask_<key>` files;
+its inputs need their own provenance if that path was used. AFRI recomputation
+remains unvalidated until the historical input path is resolved.
+
 ## Reproduction planning
 
 [`tools/reproduce.py`](tools/reproduce.py) plans the eight existing presets across
