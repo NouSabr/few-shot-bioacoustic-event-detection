@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from torch.utils.data import Dataset
 from torchvision.io import read_image
-from src.datamodules.components.pcen import Feature_Extractor
+from src.datamodules.components.pcen import FeatureLoader
 from src.datamodules.components.Datagenerator import Datagen_test
 
 
@@ -43,7 +43,7 @@ class PrototypeTestSet(Dataset):
         self.train_param = train_param
         self.eval_param = eval_param
         self.fps = self.features.sr / self.features.hop_mel
-        self.fe = Feature_Extractor(self.features)
+        self.fe = FeatureLoader(self.features)
 
         extension = "*.csv"
         self.all_csv_files = [

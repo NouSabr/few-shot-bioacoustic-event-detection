@@ -5,6 +5,8 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import transforms
 
+from src.datamodules.components.custom_collate import streaming_collate_fn
+
 
 class PrototypeDataModule(LightningDataModule):
     """Example of LightningDataModule for MNIST dataset.
@@ -52,6 +54,28 @@ class PrototypeDataModule(LightningDataModule):
 
     def setup(self, stage: Optional[str] = None):
         pass
+    
+    def set_freq_importance_tracker(self, tracker):
+        """
+        Set frequency importance tracker for activation-guided masking.
+        
+        This connects the tracker from the model to the dataset's frequency masker,
+        enabling Phase 3 activation-guided frequency masking.
+        
+        Args:
+            tracker: FrequencyImportanceTracker instance from the model
+        """
+        masker = getattr(getattr(self, 'dataset', None), 'freq_masker', None)
+        if masker is None:
+            print("⚠️  Dataset has no frequency masker to connect tracker to")
+        elif not hasattr(masker, 'importance_tracker'):
+            # Only the activation strategy consumes a tracker; setting the
+            # attribute on any other masker would be inert but misleading.
+            print(f"⚠️  {type(masker).__name__} does not use an importance "
+                  f"tracker - not connecting")
+        else:
+            masker.importance_tracker = tracker
+            print("✓ Frequency importance tracker connected to training dataset")
 
     def init(self, stage: Optional[str] = None):
         """Load data. Set variables: `self.data_train`, `self.data_val`, `self.data_test`.
@@ -62,7 +86,6 @@ class PrototypeDataModule(LightningDataModule):
         """
         from src.datamodules.components import (
             IdentityBatchSampler,
-            PrototypeDynamicDataSet,
             PrototypeDynamicArrayDataSet,  # The PCEN training dataset
             PrototypeDynamicArrayDataSetVal,  # The validation dataset for validation process
             PrototypeDynamicArrayDataSetWithEval,  # Training with the first 5 validation data
@@ -92,8 +115,17 @@ class PrototypeDataModule(LightningDataModule):
                 / (self.hparams.train_param.k_way * self.hparams.train_param.n_shot * 2)
             ),
         )
+        # Honour the configured num_workers (configs/datamodule/prototype.yaml).
+        # This was hardcoded to 2 while the config said 0, so every run log
+        # printed 0 and every run actually forked 2 workers. That mattered:
+        # forked workers each hold a copy of the frequency masker, so they drew
+        # identical mask sequences from the same seed and read the importance
+        # tracker as a frozen epoch-start snapshot. At 0 the masker runs in this
+        # process and reads the tracker live.
         self.train_loader = torch.utils.data.DataLoader(
-            self.dataset, batch_sampler=self.sampler, num_workers=2
+            self.dataset,
+            batch_sampler=self.sampler,
+            num_workers=self.hparams.num_workers,
         )
 
         # Validation dataset
@@ -113,12 +145,13 @@ class PrototypeDataModule(LightningDataModule):
             ),
         )
         self.val_loader = torch.utils.data.DataLoader(
-            self.val_dataset, batch_sampler=self.val_sampler, num_workers=2
+            self.val_dataset,
+            batch_sampler=self.val_sampler,
+            num_workers=self.hparams.num_workers,
         )
 
         from src.datamodules.components import (
             PrototypeTestSet,
-            PrototypeAdaSeglenTestSet,
             PrototypeAdaSeglenBetterNegTestSetV2,
         )
 
@@ -144,10 +177,23 @@ class PrototypeDataModule(LightningDataModule):
         return self.val_loader
 
     def test_dataloader(self):
+        """
+        Test dataloader with custom collate function for streaming HDF5 datasets.
+        
+        The custom collate function is required because the test dataset returns
+        heterogeneous objects that cannot be batched using PyTorch's default collate:
+        - Open HDF5 file handles (h5py.Dataset objects)
+        - Lists of metadata dictionaries
+        - Mixed numpy arrays and scalars
+        
+        Reference: src/datamodules/components/custom_collate.py
+        Reference: docs/memory_optimization/03_IMPLEMENTATION_PLAN.md Phase 3
+        """
         return DataLoader(
             dataset=self.data_test,
             batch_size=1,
-            num_workers=0,
-            pin_memory=True,
+            num_workers=0,  # Must be 0 for HDF5 handles (not thread-safe)
+            pin_memory=False,
             shuffle=False,
+            collate_fn=streaming_collate_fn,  # Custom collate for streaming datasets
         )

@@ -14,7 +14,7 @@ import pandas as pd
 from torch.utils.data import Dataset
 
 from src.datamodules.components.Datagenerator import Datagen_test
-from src.datamodules.components.pcen import Feature_Extractor
+from src.datamodules.components.pcen import FeatureLoader
 
 
 class PrototypeDynamicDataSet(Dataset):
@@ -30,7 +30,7 @@ class PrototypeDynamicDataSet(Dataset):
         self.train_param = train_param
         self.samples_per_cls = train_param.n_shot * 2
         self.seg_len = train_param.seg_len
-        self.fe = Feature_Extractor(self.features)
+        self.fe = FeatureLoader(self.features)
         self.fps = self.features.sr / self.features.hop_mel
         self.all_csv_files = self.get_all_csv_files()
         self.length = int(3600 * 8 / self.train_param.hop_seg)

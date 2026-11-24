@@ -18,7 +18,19 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 from src.datamodules.components.Datagenerator import Datagen_test
-from src.datamodules.components.pcen import Feature_Extractor
+from src.datamodules.components.pcen import FeatureLoader
+
+
+class LazyHDF5Concat:
+    """Wrapper to lazily concatenate multiple HDF5 datasets along axis 1 (features)"""
+    def __init__(self, h5_datasets):
+        self.datasets = h5_datasets
+        self.shape = (h5_datasets[0].shape[0], sum(d.shape[1] for d in h5_datasets))
+    
+    def __getitem__(self, key):
+        # Handle slicing - load only requested rows from each dataset and concatenate
+        chunks = [dataset[key] for dataset in self.datasets]
+        return np.concatenate(chunks, axis=1)
 
 # logmel.npy: log mel spectrogram
 # .npy: PCEN spectrogram
@@ -37,11 +49,11 @@ class PrototypeDynamicArrayDataSetWithEval(Dataset):
         self.seg_len = train_param.seg_len
 
         if path.test_dir is not None:
-            self.fe = Feature_Extractor(
+            self.fe = FeatureLoader(
                 self.features, audio_path=[path.train_dir, path.eval_dir, path.test_dir]
             )
         else:
-            self.fe = Feature_Extractor(
+            self.fe = FeatureLoader(
                 self.features, audio_path=[path.train_dir, path.eval_dir]
             )
 
@@ -69,6 +81,7 @@ class PrototypeDynamicArrayDataSetWithEval(Dataset):
         self.pcen = {}
         self.mel = {}
         self.mask = {}
+        self.h5_files = []  # Track open HDF5 files for cleanup
 
         # Store the un_normalized mel spectrograms
         """meta dic structure
@@ -172,7 +185,32 @@ class PrototypeDynamicArrayDataSetWithEval(Dataset):
         for file in tqdm(self.all_csv_files):
             audio_path = file.replace("csv", "wav")
             if audio_path not in self.pcen.keys():
-                self.pcen[audio_path] = self.fe.extract_feature(audio_path)
+                # Check if HDF5 files exist for all configured feature types
+                all_h5_exist = True
+                h5_paths = []
+                for suffix in self.fe.feature_types:
+                    h5_path = audio_path.replace(".wav", f"_{suffix}.h5")
+                    h5_paths.append(h5_path)
+                    if not os.path.exists(h5_path):
+                        all_h5_exist = False
+                        break
+                
+                if all_h5_exist:
+                    # Open HDF5 files and store handles for lazy loading
+                    h5_datasets = []
+                    for h5_path in h5_paths:
+                        h5_file = h5py.File(h5_path, 'r')
+                        self.h5_files.append(h5_file)
+                        h5_datasets.append(h5_file['data'])
+                    
+                    # Use wrapper for lazy concatenation if multiple features, direct handle if single
+                    if len(h5_datasets) == 1:
+                        self.pcen[audio_path] = h5_datasets[0]
+                    else:
+                        self.pcen[audio_path] = LazyHDF5Concat(h5_datasets)
+                else:
+                    # Fall back to feature extractor (handles NPY or generates features)
+                    self.pcen[audio_path] = self.fe.extract_feature(audio_path)
 
     def calculate_feature_mean_std(self):
         A = [self.pcen[k] for k in self.pcen.keys()]
@@ -452,6 +490,14 @@ class PrototypeDynamicArrayDataSetWithEval(Dataset):
         label2indx = {label: index for index, label in enumerate(self.classes)}
         y = np.array([label2indx[label] for label in self.classes])
         return {c: idx for c, idx in zip(self.classes, y)}
+
+    def __del__(self):
+        """Close all HDF5 files on cleanup"""
+        for h5_file in self.h5_files:
+            try:
+                h5_file.close()
+            except:
+                pass
 
     def get_freq_mask(self, info_prev, info, info_next, mel):
         # mel: [128, T]
