@@ -1,0 +1,42 @@
+# Prototype Visualization Callback Configuration
+# This callback creates periodic visualizations of the embedding space during training
+
+prototype_visualization:
+  _target_: src.callbacks.prototype_visualization_callback.PrototypeVisualizationCallback
+  
+  # Visualization frequency (every N episodes)
+  viz_episode_freq: 1000
+  
+  # Dimensionality reduction method
+  # Options: 'pca' (fastest), 'incremental_pca' (for large datasets), 'umap' (best quality)
+  reduction_method: "pca"
+  
+  # Number of dimensions for reduction (typically 2 for 2D plots)
+  n_components: 2
+  
+  # Whether to save visualizations to disk
+  save_to_disk: false
+  
+  # Output directory for saved visualizations (only used if save_to_disk=true)
+  output_dir: "visualizations/"
+  
+  # Whether to cache the fitted dimensionality reducer
+  # Set to true for consistency across episodes, false to fit fresh each time
+  use_cache: true
+  
+  # Figure size (width, height) in inches
+  figsize: [12, 8]
+  
+  # Figure DPI (dots per inch) for quality
+  dpi: 100
+  
+  # Whether to log to Weights & Biases (if available)
+  log_to_wandb: true
+  
+  # Whether to log to TensorBoard (if available)
+  log_to_tensorboard: true
+
+# Example usage in train.yaml:
+# callbacks:
+#   - default
+#   - visualization
