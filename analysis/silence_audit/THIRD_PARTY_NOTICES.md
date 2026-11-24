@@ -1,8 +1,9 @@
 # Attribution and scope of included notices
 
-The existing project MIT notice is preserved in `LICENSE` (Centre for Digital
-Music, 2022). The included DCASE evaluator/matcher snapshots are from that
-MIT-licensed project; their exact hashes are pinned in the bundle manifest.
+Original audit software and documentation are licensed under MIT.
+`LICENSE` retains the Centre for Digital Music (2022) notice. The included DCASE
+evaluator/matcher snapshots come from that MIT-licensed project; their hashes
+are pinned in the bundle manifest.
 Upstream baseline source/notice reference:
 https://github.com/c4dm/dcase-few-shot-bioacoustic
 https://github.com/c4dm/dcase-few-shot-bioacoustic/blob/main/LICENSE
@@ -49,10 +50,12 @@ Matplotlib, NumPy, pandas, seaborn, Pillow and pypdf are optional, unvendored
 rendering/inspection dependencies with their own notices. Their observed
 versions are recorded in `requirements-plotting.txt` and
 `requirements-figure-checks.txt`, separately from native matching and training.
-No dependency was installed by this refresh, and retaining these notices does
-not clear distribution of newly authored plotting/wrapper code or data.
+No dependency was installed by this refresh. Data-use approvals remain separate
+from the MIT declaration for original software and documentation.
 
 ## Release boundary reviewed on 2026-11-24
+
+This review predates the author's MIT selection for original contributions.
 
 The upstream DCASE MIT notice, AFRI README use conditions, official dataset
 record and Matplotlib DejaVu notice were checked against their primary sources.

@@ -129,6 +129,9 @@ Refer to the upstream challenge documentation for the inherited task description
 dataset acknowledgements and challenge-paper citations. The challenge rules and
 baseline scores describe those upstream versions.
 
-The existing [license notice](LICENSE) is preserved. See
-[third-party provenance and release checks](THIRD_PARTY_NOTICES.md) for CIFE/AFRI
-sources, reference-snapshot retrieval and unresolved distribution terms.
+## License
+
+Original contributions in this fork are licensed under the [MIT License](LICENSE).
+The inherited DCASE copyright and license notice is preserved. Third-party code,
+fonts and data retain their applicable terms; see the
+[third-party notices](THIRD_PARTY_NOTICES.md) for sources and outstanding checks.

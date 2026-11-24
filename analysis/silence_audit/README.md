@@ -8,9 +8,9 @@ threshold, and post-processing stay fixed.
 This directory is self-contained: it can be copied outside this repository. It
 needs no files from the local manuscript, thesis, or seminar workspaces.
 
-**Release candidate.** Publication permissions for predictions, counts and metadata,
-and licensing for newly authored code, remain on the
-[release checklist](RELEASE_CHECKLIST.md).
+**Release candidate.** Original audit code and documentation are licensed under
+[MIT](LICENSE). Publication permissions for predictions, counts and metadata,
+and separate third-party terms, remain on the [release checklist](RELEASE_CHECKLIST.md).
 
 The current figure-text cleanup removes duplicate plot footers, states the
 configuration/seed structure directly, and labels heatmap groups with the actual
@@ -18,8 +18,9 @@ seed values. Counts, plotted points/boxes, heatmap cells and score values are
 unchanged. Four figures are drawn by the two-stage workflow below; the historical
 heatmap matrix is supplied with updated seed headers. The optional header-only
 reproduction is described below. Current checks and limits are recorded in
-[provenance](provenance/README.md#figure-text-cleanup-v05). Publication, data/code
-permissions and a fresh dependency installation are not claimed.
+[provenance](provenance/README.md#figure-text-cleanup-v05). Publication,
+third-party/data permissions and a fresh dependency installation remain separate
+from these checks.
 
 ## 1. Reproduce from counts
 

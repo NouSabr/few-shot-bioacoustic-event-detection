@@ -4,6 +4,13 @@ This is a partial inventory of the inherited DCASE code and the CIFE/AFRI
 adaptations, not a dependency-license audit or a new license grant. Removing
 reference copies does not resolve the terms for retained adapted code.
 
+## Project contributions
+
+Original code and documentation in this fork are licensed under the
+[MIT License](LICENSE). The inherited DCASE MIT notice is retained. This selection
+leaves the separate terms and permission checks for third-party material below
+unchanged.
+
 ## DCASE baseline
 
 The existing [MIT notice](LICENSE), copyright Centre for Digital Music (2022),

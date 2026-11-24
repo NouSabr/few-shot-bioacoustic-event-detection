@@ -20,8 +20,8 @@ Before committing/publishing the package:
 - [ ] Verify downloaded annotation bytes against all frozen reference SHA-256 hashes
       before optional matching. No archive was downloaded in the readiness review;
       raw annotations remain external.
-- [ ] Review code attribution/use terms, including the newly authored wrappers and
-      plots. The existing project MIT notice does not relicense unrelated work.
+- [x] Select MIT for original audit code/documentation, retaining inherited notices.
+- [ ] Review separate third-party code, dependency and font terms and attribution.
 - [x] Inspect the current package inventory/source map for scope and hash coverage;
       public data/code approval remains separate.
 - [x] Historical v03 counts-only audit and profiles (2026-11-24):
@@ -51,6 +51,8 @@ environments. No training, inference, matching, dependency installation or
 project test suite was run. Publication permissions remain unresolved.
 
 ## Historical notice-only release-readiness review — 2026-11-24
+
+This review predates the author's MIT selection recorded above.
 
 Documentation/notice review only; no new audit/profile/figure execution, matching,
 annotation/audio download, dependency installation or model run. The prior runtime

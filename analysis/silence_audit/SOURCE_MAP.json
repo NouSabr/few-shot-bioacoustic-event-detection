@@ -22,21 +22,21 @@
   },
   {
     "disposition": "adapted",
-    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. v05 receipt provenance documentation.",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. v05 receipt provenance documentation. MIT selected for original code/documentation; third-party terms retained.",
     "package_path": "README.md",
     "previous_sha256": "375c9390bac16f26d43686cba1476a804e20d213f817a945aebd3c3e233aa872",
     "previous_source": "paper_revision/reproducibility/bundle_v03/README.md",
-    "sha256": "fe1f130e039ebe2b572cae106577238031ea6bef61e9360d8f2ab5d3757b0ef6",
+    "sha256": "e452e050d968394f75cb78572d7a1555f9a3f82024acadc2009aabd034d52a30",
     "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
     "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
   {
     "disposition": "adapted",
-    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. MIT selected for original code/documentation; third-party terms retained.",
     "package_path": "RELEASE_CHECKLIST.md",
     "previous_sha256": "0899e9b00f93ba400a494d116f05d72cc2a776ed20e80e1899d2cab3505b4147",
     "previous_source": "paper_revision/reproducibility/bundle_v03/RELEASE_CHECKLIST.md",
-    "sha256": "99d44564bf08631e89816a6dc749f1d4a08950a96e3dbcce78c0031d906e1a7b",
+    "sha256": "4d6e66c864173544c274a8fff297df8eb40e98e9d8a17c1cebb71fe96bba5e49",
     "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
     "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
@@ -49,11 +49,11 @@
   },
   {
     "disposition": "adapted",
-    "note": "Approved figure-label/caption cleanup; no count-policy or data changes.",
+    "note": "Approved figure-label/caption cleanup; no count-policy or data changes. MIT selected for original code/documentation; third-party terms retained.",
     "package_path": "THIRD_PARTY_NOTICES.md",
     "previous_sha256": "9c8a8aface228c969ef47f04b56da9ddb17b874e62ec5b333613f06bf0a47624",
     "previous_source": "paper_revision/reproducibility/bundle_v03/THIRD_PARTY_NOTICES.md",
-    "sha256": "2b86b3feb75f2cc95604ef1cabcc0d7d283a6c30ba0cf703c05f0c7d567520e8",
+    "sha256": "5add0fdfc8d4db71f106bd7a576357ef3c9fe07e38dee1bbc6f539eaff18833d",
     "source": "paper_revision/figure_text_cleanup/2026-11-24-v01/finalize_bundle.py",
     "source_sha256": "250630a8165c464b51462f16742ef9c029113c3b778267ae22841c2f73331b34"
   },
