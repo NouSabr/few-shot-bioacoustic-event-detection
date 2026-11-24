@@ -1,0 +1,23 @@
+{
+  "approved_workflow_sha256": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+  "date": "2026-11-24",
+  "new_matching_or_model_work": false,
+  "previous_public_manifest_sha256": "a4e93e569f9ac527f57f89d81a1d829e734cdf9d6e76f91504aca6e94e7120b7",
+  "producer": "paper_revision/reproducibility/sync_public_vertical_workflow.py",
+  "producer_sha256": "c0366c5792cc5f5c262ca1ef8f86349f2ec12a6d0722b1118977789c31315b2d",
+  "public_adaptations_profiles_and_notices_preserved": true,
+  "published": false,
+  "scientific_inputs_and_audit_code_unchanged": true,
+  "selected_source_files_sha256": {
+    "expected/formatting_invariants.json": "6a7dce29f8701d78f5d37b91b41b8f7e050c5f92f1f15e87278ee0be1955ae00",
+    "expected/legacy_paper_figure_sha256.json": "c804e955818466220233ea862c090daa92b536bbea75694be86eba69cb99e983",
+    "expected/paper_figure_sha256.json": "ab26b6f992dcf1f68ee6a792e18cee590ecb88ccfa4062a3f2ddbc665d4a7048",
+    "paper_figures/audit_workflow.pdf": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+    "scripts/formatting_drawing.py": "ea8ffabb2e1804c81c03a87afd034cc0aff37f423837822d54b39edf2917aa8f",
+    "scripts/plot_paper.py": "654c20e6b0abe5dd069fb0b084ad2c894b71771bb46ae3ce64c1f3d2c78d999f"
+  },
+  "source_bundle": "paper_revision/reproducibility/bundle_v04",
+  "source_manifest_sha256": "567226dcd6fac6adac276a38002879aa13b69c197f54a482fd13ccd73df38030",
+  "staging_snapshot_note": "vertical_workflow_refresh.json remains an unchanged historical staging receipt.",
+  "status": "SELECTIVE_WORKFLOW_PROMOTION"
+}

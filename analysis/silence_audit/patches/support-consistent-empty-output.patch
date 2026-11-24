@@ -1,0 +1,14 @@
+--- a/src/utils/evaluation.py
++++ b/src/utils/evaluation.py
+@@ -278,7 +278,10 @@
+                     inv_gt_file_structure[audiofilename],
+                     audiofilename[0:-4] + ".csv",
+                 ),
+-                dtype=str,
++                dtype={"Starttime": np.float64, "Endtime": np.float64},
++            )
++            ref_events_this_audiofile = remove_shots_from_ref(
++                ref_events_this_audiofile, number_shots=N_SHOTS
+             )
+             total_n_pos_events_in_audiofile = len(
+                 select_events_with_value(ref_events_this_audiofile, value=POS_VALUE)

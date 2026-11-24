@@ -1,0 +1,362 @@
+{
+  "audit": {
+    "checks": 6683,
+    "files_sha256": {
+      "deletion_summary.csv": "2bc2e1358cd1ec46fd1494494c75e7f9d7e086acc9a80c1756b068f29827b3b0",
+      "joint_endpoints.csv": "950ca4d5abcb9d80acb96c8ae4b4df71b57467cd0b43d74779b79d032818d491",
+      "metrics_by_output.csv": "00d83957cd5fc7e6d1ae6ceb183b3358db076cd9de55fdf02aa2eafa059a42cd",
+      "recall_quantiles_by_output.csv": "392b4c65bcb6a1df69023f9a60a2ed7070132217bcdc4905c54e432561cc54d3",
+      "reconciliation.csv": "9a8a34416a8b7723fcfe98bc13567f915f6863414e48186c9131868bc93a17b5",
+      "recording_metrics.csv": "9d64cc7286e64def392cf1fb0c3a40656d17b868e0a22498392a1d2af7718e41",
+      "recurrence.csv": "0ec16b5dd2a0d0bc5a2830957af8b46eb9318bfbba4a958c67ed222223be7c9b",
+      "rule_check.csv": "55fd89e9d99a1c536f3c5b3b76e6ef62737a729382034cb95b0b6c4b354a83da",
+      "single_deletions.csv": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522",
+      "subset_summary.csv": "58dfb3eb4e2dca07eef85de7fbfe047ff7d474b3997d62d9e032f7b09f95f57d",
+      "summary.csv": "a38fea02be5c503e0f0784b41fa923658eafe026105f12089ee43739eefe5689"
+    },
+    "joint_maxima_verified": 24,
+    "matching_performed": false,
+    "n_memberships": 43,
+    "n_outputs": 24,
+    "n_recording_names": 42,
+    "official_tp_positive_cases": 932,
+    "official_tp_positive_gains": 255,
+    "selection_note": "Archived sets retained; a maximum score need not have a unique set/coverage.",
+    "single_deletions": 2016,
+    "status": "passed",
+    "training_or_inference": false
+  },
+  "clean_environment_installation_claimed": false,
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-E",
+        "-S",
+        "-B",
+        "<RELOCATED>/package/scripts/profile_recordings.py",
+        "--output-dir",
+        "<RELOCATED>/profiles"
+      ],
+      "returncode": 0,
+      "stage": "profiles"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-E",
+        "-S",
+        "-B",
+        "<RELOCATED>/package/scripts/run_audit.py",
+        "--output-dir",
+        "<RELOCATED>/audit",
+        "--verify-maxima"
+      ],
+      "returncode": 0,
+      "stage": "audit"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-E",
+        "-S",
+        "-B",
+        "<RELOCATED>/package/scripts/plot_paper.py",
+        "--audit-dir",
+        "<RELOCATED>/audit",
+        "--output-dir",
+        "<RELOCATED>/svg"
+      ],
+      "returncode": 0,
+      "stage": "svg"
+    },
+    {
+      "command": [
+        "<WORKSPACE>/.venv_verify/bin/python",
+        "-E",
+        "-B",
+        "<RELOCATED>/package/scripts/polish_paper.py",
+        "--svg-dir",
+        "<RELOCATED>/svg",
+        "--output-dir",
+        "<RELOCATED>/figures"
+      ],
+      "returncode": 0,
+      "stage": "figures"
+    },
+    {
+      "command": [
+        "<WORKSPACE>/paper_revision/.tools/pdf-venv/bin/python",
+        "-E",
+        "-B",
+        "<RELOCATED>/package/scripts/verify_paper_figures.py",
+        "--figure-dir",
+        "<RELOCATED>/figures"
+      ],
+      "returncode": 0,
+      "stage": "rendered_fonts"
+    },
+    {
+      "command": [
+        "<WORKSPACE>/paper_revision/.tools/pdf-venv/bin/python",
+        "-E",
+        "-B",
+        "<RELOCATED>/package/scripts/verify_paper_figures.py",
+        "--figure-dir",
+        "<RELOCATED>/package/paper_figures"
+      ],
+      "returncode": 0,
+      "stage": "supplied_fonts"
+    }
+  ],
+  "count_outputs_byte_identical_to_v03": true,
+  "date": "2026-11-24",
+  "executed_package_manifest_sha256": "06785ad42bb2bd64689525798188a7de5fe0c6f8d96379f37aec2ae6971d44e8",
+  "existing_output_refusals": [
+    "profiles",
+    "audit",
+    "svg",
+    "figures"
+  ],
+  "font_inventory": {
+    "figures": 5,
+    "fonts": {
+      "audit_workflow.pdf": [
+        {
+          "embedded": true,
+          "name": "/GZNDLD+LiberationSans"
+        }
+      ],
+      "fig_rule_check.pdf": [
+        {
+          "embedded": true,
+          "name": "/BMEIIJ+DejaVuSans-Oblique"
+        },
+        {
+          "embedded": true,
+          "name": "/GNHVSC+DejaVuSans"
+        },
+        {
+          "embedded": true,
+          "name": "/DRGNWI+DejaVuSans"
+        }
+      ],
+      "fig_tpos_recurrence_heatmap.pdf": [
+        {
+          "embedded": true,
+          "name": "/EVICAO+DejaVuSans-Bold"
+        },
+        {
+          "embedded": true,
+          "name": "/BMQQDV+DejaVuSans"
+        }
+      ],
+      "recall_boxplots.pdf": [
+        {
+          "embedded": true,
+          "name": "/BFRGKJ+LiberationSans"
+        }
+      ],
+      "score_coverage_paired_panels.pdf": [
+        {
+          "embedded": true,
+          "name": "/BTKHFI+LiberationSans"
+        }
+      ]
+    },
+    "status": "passed"
+  },
+  "formatting_report": {
+    "final_pdfs_sha256": {
+      "audit_workflow.pdf": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+      "fig_rule_check.pdf": "0f179356d44abca9244ce60fdc820cfb59d01e96928b05d34f0b2ce85254e2be",
+      "fig_tpos_recurrence_heatmap.pdf": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+      "recall_boxplots.pdf": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2",
+      "score_coverage_paired_panels.pdf": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3"
+    },
+    "full_historical_heatmap_regeneration_claimed": false,
+    "intermediate_svg_byte_differences": [
+      "score_coverage_paired_panels.svg"
+    ],
+    "new_metrics_matching_or_models": false,
+    "rule_check": {
+      "linscale": 0.8,
+      "linthresh": 0.5,
+      "point_array_sha256": [
+        "b2c678e97890491c9847f0236571a32e1bf3478b71eaa68cc83d63af28947736",
+        "70b5d1b974392b517cd88e03cb52159cd59618dca732a456b2ed621ecf941570"
+      ],
+      "points_unchanged": true,
+      "population": 971,
+      "yscale": "symlog",
+      "ytick_labels_do_not_overlap": true,
+      "yticks": [
+        -10,
+        -1,
+        0,
+        1,
+        10
+      ]
+    },
+    "status": "passed",
+    "svg_shape_precision_digits": 9,
+    "versions": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "seaborn": "0.13.2"
+    }
+  },
+  "independent_profile_before_audit": true,
+  "metadata_update_scope": "After replay only this receipt, source-map hashes and inventory/status metadata change; executed/scientific artifacts remain unchanged.",
+  "native_event_matching_executed": false,
+  "native_reference_patch_matching_validated": false,
+  "outputs_sha256": {
+    "audit": {
+      "audit_report.json": "1caefc8304e5f443be95da61cde82fd93e5c9a90989c7f7e71caffb23382490d",
+      "deletion_summary.csv": "2bc2e1358cd1ec46fd1494494c75e7f9d7e086acc9a80c1756b068f29827b3b0",
+      "joint_endpoints.csv": "950ca4d5abcb9d80acb96c8ae4b4df71b57467cd0b43d74779b79d032818d491",
+      "metrics_by_output.csv": "00d83957cd5fc7e6d1ae6ceb183b3358db076cd9de55fdf02aa2eafa059a42cd",
+      "recall_quantiles_by_output.csv": "392b4c65bcb6a1df69023f9a60a2ed7070132217bcdc4905c54e432561cc54d3",
+      "reconciliation.csv": "9a8a34416a8b7723fcfe98bc13567f915f6863414e48186c9131868bc93a17b5",
+      "recording_metrics.csv": "9d64cc7286e64def392cf1fb0c3a40656d17b868e0a22498392a1d2af7718e41",
+      "recurrence.csv": "0ec16b5dd2a0d0bc5a2830957af8b46eb9318bfbba4a958c67ed222223be7c9b",
+      "rule_check.csv": "55fd89e9d99a1c536f3c5b3b76e6ef62737a729382034cb95b0b6c4b354a83da",
+      "single_deletions.csv": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522",
+      "subset_summary.csv": "58dfb3eb4e2dca07eef85de7fbfe047ff7d474b3997d62d9e032f7b09f95f57d",
+      "summary.csv": "a38fea02be5c503e0f0784b41fa923658eafe026105f12089ee43739eefe5689"
+    },
+    "figures": {
+      "audit_workflow.pdf": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+      "audit_workflow.png": "b4ef708b09f85916b31ab5e89dee33acaa550a324c0cf0fd2b590fc99d248975",
+      "fig_rule_check.pdf": "0f179356d44abca9244ce60fdc820cfb59d01e96928b05d34f0b2ce85254e2be",
+      "fig_rule_check.png": "8c1ffb75defbdc498f28794cd9c802df9c64ecfde83a02a04e4217ebd8c16380",
+      "fig_tpos_recurrence_heatmap.pdf": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+      "formatting_report.json": "a9a5fce455385b74a8801e6363dad7b4891460ecd434a046fb24716fa1f8f99b",
+      "recall_boxplots.pdf": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2",
+      "recall_boxplots.png": "b7e588aab0a493b8d5353126ef59897e8c8cb7ba811634bdc1cfd3de63cefaee",
+      "score_coverage_paired_panels.pdf": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3",
+      "score_coverage_paired_panels.png": "c733410f9c0041eada9921ad639bb95f8c124c9d141c01f76e18b510215d8e04"
+    },
+    "profiles": {
+      "gaining_cases.csv": "8b3f312e2e0da5db8773e5e25256c45a8d83c6521b8ad3a8599ce89f5a713a79",
+      "manifest.json": "0fd7eeb54b9aaf5248ea6d791a152d022bb1e553b517a84126bdaf9a24d181e7",
+      "reconciliation.csv": "35d2225e2904ddf89ecb21d10e3c840d2e245aa1df534019d39c62da137196c6",
+      "recording_output_evidence.csv": "8ce07529d6f958c57fb21619247547e79cc07334d35f9e55b74585cee1fa7271",
+      "recording_profiles.csv": "6c3eb2bc1b2e368a3271a7ec2c93442fb5d1f6ba0d74a828b1814dfcbfce8233",
+      "report.md": "56d3d66ed9dd4309fc182f9f74f4ffd324caffa0389e1f4e388c976a4882f5b1",
+      "sources/profile_recordings.py": "6da5acd6724bfda04a6d37d3cbde49488735214ae9b11e31080e403415b89fc8",
+      "subset_summary.csv": "51099b1181420b9076ec6011f0eeb4d1b6675aaa0f42c98f4d24fe15078c767c",
+      "summary.json": "c1b47493c5331009108e3180087b447df0570cafcdcd43e90e8a117bf1c9f1de"
+    },
+    "svg": {
+      "audit_workflow.pdf": "c00ccfc3b84d84153f4bf7bdf8ae649030813f8d21f111f1fb564b37606a960f",
+      "audit_workflow.svg": "43c4bd458f26fcfc9a3615b5c3dfa44a8ab7d08a2743e65f9fcb88d8e79b2dbf",
+      "figure_manifest.json": "65cb765696065e53bd87ac54309cd6115ae00572cf143e21d4970824926c3721",
+      "recall_boxplots.pdf": "05e7b60e2322aaaa00052e57ef04ad9e8c5fbdfc1867953443c171919fd1ad9f",
+      "recall_boxplots.svg": "65abfd985e415da8691cf3ffe2c76c257a4353e78921ceb83d58404572193503",
+      "score_coverage_paired_panels.pdf": "a3619264d629fe188d89fe06f5a8b7471e198ffb4756332274d6ec383acce910",
+      "score_coverage_paired_panels.svg": "d43ee44be43a64c3ebfd17a2882fabb7ca53708c990165ffe11721fc7ad405bd"
+    }
+  },
+  "package_artifacts_sha256": {
+    "assets/fonts/LICENSE.txt": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9",
+    "assets/fonts/LiberationSans-Regular.ttf": "075e71be4c58beda172ecb574a799308f04c3d054c6a5b7434954d3b0f1b28d8",
+    "expected/formatting_invariants.json": "6a7dce29f8701d78f5d37b91b41b8f7e050c5f92f1f15e87278ee0be1955ae00",
+    "expected/interventions.csv": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522",
+    "expected/legacy_paper_figure_sha256.json": "c804e955818466220233ea862c090daa92b536bbea75694be86eba69cb99e983",
+    "expected/metrics_by_output.csv": "133d0d361ab4ae310a87927cc990b02e4928b1797b81fef7d3ba0d57e1bfd85a",
+    "expected/paper_figure_sha256.json": "ab26b6f992dcf1f68ee6a792e18cee590ecb88ccfa4062a3f2ddbc665d4a7048",
+    "expected/subset_summary.csv": "58dfb3eb4e2dca07eef85de7fbfe047ff7d474b3997d62d9e032f7b09f95f57d",
+    "inputs/archived_endpoints.csv": "9103abddd4a9fddd697580f14686301806c68d388387514b8e368737ae276fa1",
+    "inputs/fresh_counts.csv": "e018c1377c524fc0dc73b2bd768c06faedfbc627d67670a795bd58a5ded2ed41",
+    "inputs/joint_deletions.csv": "61580a3a5d4e3347282cae8517d1fd638e0ef6f8e9d57942edb4b058a97f60bc",
+    "inputs/plotting/subset_effects_seed3009.csv": "80acca3468aaf9690315b9eb1d0d02d0924120af6e46c099b7a7082e54aa2350",
+    "inputs/plotting/subset_effects_seeds1234_2026.csv": "73b08caa31a8c69428b4c5b8f76c5d0e50b4fd07906d4586b05396bfab4fd0bb",
+    "inputs/prediction_manifest.csv": "708d9a348bae32bcbac9f8a83bc8020ef44ef422fb087ecabb7df79d1ca13a51",
+    "inputs/predictions/afri_direct/seed_1234.csv": "4f397f661c721454630ae70b92ef0b405ffe48683bff2a7f583679627129de1a",
+    "inputs/predictions/afri_direct/seed_2026.csv": "88285804f47954308c3314c4969240cd9712f2e798ac23f890099d88c2a1ac74",
+    "inputs/predictions/afri_direct/seed_3009.csv": "e8da6667e4e9427ff637ea1d972c4cba1e91c8653e86783d27cdbc500e2cf05d",
+    "inputs/predictions/afri_inverse/seed_1234.csv": "87c133137f6823b453d5550e0319302019d985c6cfca167c4be94069d479795e",
+    "inputs/predictions/afri_inverse/seed_2026.csv": "badbcef7931ebe2551ba5da3c4f11153cd71fad5bcaebcf4084b745d41444ca7",
+    "inputs/predictions/afri_inverse/seed_3009.csv": "efebc7fa2678c558cb9d1249c0401b5d93be6e21dea85859e323d693c0697ba2",
+    "inputs/predictions/baseline/seed_1234.csv": "612b81b757e644c193cd66f6340cef83c485cf2d610b944658613bcc045ecd29",
+    "inputs/predictions/baseline/seed_2026.csv": "e4f47b759ec339757f2939c3bb9bfa17158c9476f7d9c63e2c32ac5aa53b83cb",
+    "inputs/predictions/baseline/seed_3009.csv": "e19781c1c6e43713cfa04560b5ca3acaee6df5edbcfe7abc72e41556d3ae73a6",
+    "inputs/predictions/cife/seed_1234.csv": "11c3ba4f7eb12f207d2366052e6b444b100c4fb2ef9add8276a99ba59998755b",
+    "inputs/predictions/cife/seed_2026.csv": "41f213a2e69dafbc8f605e3064b5551156a771f7cfce0effff3b62158c634a84",
+    "inputs/predictions/cife/seed_3009.csv": "7a42dcf9d356db09064e1387302ae20cf81f07909389a817df0a80e07b6661ec",
+    "inputs/predictions/phase1_random/seed_1234.csv": "08d9ae6d8159093bd14d3bf4d06bb99fb229783e60e9217a1a17c31c9535bd78",
+    "inputs/predictions/phase1_random/seed_2026.csv": "522da2e9c9aa687957f01eba2940aeb3405f0d21fed98e30f5c5c786d92ba42c",
+    "inputs/predictions/phase1_random/seed_3009.csv": "ab5396c0581c093dfde78c5f5d935a6f7a206ad6912305a4657ed9bc6a3f76af",
+    "inputs/predictions/phase2_energy/seed_1234.csv": "b4469d6abcfc5af991460e74669e110cc4f31e9552cd577acc703f4e401c90a7",
+    "inputs/predictions/phase2_energy/seed_2026.csv": "31237af38719b43d936ccd61cbf4dd9b1b8cfa9e04556050924a568cdf5b4b40",
+    "inputs/predictions/phase2_energy/seed_3009.csv": "b2900089f771d94d77067eba0ee72d705fdd147b0a45f478a73df2ae6339e209",
+    "inputs/predictions/phase3_activation/seed_1234.csv": "b7e56ce3e8bd5e0bd0b96c335a2f99d91a99e5f0746603f5997811bbeb1b5706",
+    "inputs/predictions/phase3_activation/seed_2026.csv": "a9fae820a227f0e076060610dbac2747215f1ee8e8addf535c07433c723fbed8",
+    "inputs/predictions/phase3_activation/seed_3009.csv": "2a4c4047570227e4153cb5d31297310d6c4daf0a0c78db2aa2717d8ab76479a4",
+    "inputs/predictions/slot_uniform/seed_1234.csv": "5166fcbd31c49971121f286bc98e353e2db8720f155f8b99704d6d35d6567254",
+    "inputs/predictions/slot_uniform/seed_2026.csv": "d1fbfb142b5181a010642f71a1841a1410827021fb53e7f0f1fa8634c06b1cf6",
+    "inputs/predictions/slot_uniform/seed_3009.csv": "671a8750f9f67ca79e70f17d775e2faf45970e44033b9b2add769317e67c2902",
+    "inputs/reference_populations.csv": "55eb2511281d477f8783efd79e1f8032295e2947d88c3bc42afcbc836e4fc9e7",
+    "matching_runtime.json": "701576a1d9fa5dfd3d2661f4b5a309e56b4da2fd5bf3a9098e3a090249e846a8",
+    "paper_figures/audit_workflow.pdf": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+    "paper_figures/fig_rule_check.pdf": "0f179356d44abca9244ce60fdc820cfb59d01e96928b05d34f0b2ce85254e2be",
+    "paper_figures/fig_tpos_recurrence_heatmap.pdf": "b00d3fb1524b9a2f2a083befbb205d1e4e02ad20a29ff214dd9008b39a90cb81",
+    "paper_figures/recall_boxplots.pdf": "1ab8c34cf027d7e71a39a4969aa15a745b82cab44be9106b4692f6c0c901ebd2",
+    "paper_figures/score_coverage_paired_panels.pdf": "61209573d0d45576d7cfbf4e1719a6ec7163ef67956925074ddfff0577758ab3",
+    "provenance/historical_count_policy.py": "66935b48edb90ad8d8f3df63ba2f3b9ca9d4cef1e90282eab4bd88dbefe3b89d",
+    "recording_evidence/expected/recording_profiles.csv": "6c3eb2bc1b2e368a3271a7ec2c93442fb5d1f6ba0d74a828b1814dfcbfce8233",
+    "recording_evidence/expected/subset_summary.csv": "51099b1181420b9076ec6011f0eeb4d1b6675aaa0f42c98f4d24fe15078c767c",
+    "requirements-figure-checks.txt": "69202fdc5118816f854e110aeb89cab3b906555cb23737a65894bab716a58b37",
+    "requirements-matching.txt": "04630c5951c50a7f3c701817012c20f8c901bddbd1d82d0dc5f77b0d93839bac",
+    "requirements-plotting.txt": "46d4bd2ac823a8845b781cf11e61c786f6134846f34988375ee07fe507641441",
+    "scripts/counts.py": "6088bb686ece9e7757e03b456c9394b3ce8da0ec89fbd16404a951e2f3c9a275",
+    "scripts/formatting_drawing.py": "ea8ffabb2e1804c81c03a87afd034cc0aff37f423837822d54b39edf2917aa8f",
+    "scripts/fresh_counts.py": "09509a9fa133a0aa4373e8fcf1c13506cabda260af170a1fdf4d3ff811405c17",
+    "scripts/match_predictions.py": "8925b36a3d793f5da3c31c41669b3b9a79b44a55d92b4f51ff823ed8c018371e",
+    "scripts/plot_paper.py": "654c20e6b0abe5dd069fb0b084ad2c894b71771bb46ae3ce64c1f3d2c78d999f",
+    "scripts/plot_results.py": "693509b82a09d6d6014f19757f0c96eca1affd5a0aec069b66a36c2e231ebb66",
+    "scripts/polish_paper.py": "28646de00db4c0e1c4054fb5adc1acc35154097ad648e9fc43ba6800ca58783e",
+    "scripts/profile_recordings.py": "6da5acd6724bfda04a6d37d3cbde49488735214ae9b11e31080e403415b89fc8",
+    "scripts/rule_check_drawing.py": "0123e92386e6a3d67590a47c299594b7c689a99c8e638afb0a3a8fa06afd469d",
+    "scripts/run_audit.py": "94a8481ac1837f7cacc43790383ea9efc7f4eccfcba9ad4dd5cf39a47be18f6f",
+    "scripts/svg_signature.py": "f88b2c7f2d30f11b68e6fba47f0a4c2ae4f9cd2add763ef87b6853f10951ce2e",
+    "scripts/verify_paper_figures.py": "e9a233157ec65fd1f588ba2c824f5edee34cf6a125b146b5ba77ef3fab61976e",
+    "vendor/dcase2024/LICENSE": "be3e7d4449bc7ef074b53a9e782eaa3f42a3eac647bd04def65ff21d5e153bcf",
+    "vendor/dcase2024/src/__init__.py": "ce1a26cad08568824ab8c3e4f9790a8df7d327f2c20c53a9a78359fa145a9b76",
+    "vendor/dcase2024/src/utils/__init__.py": "ce1a26cad08568824ab8c3e4f9790a8df7d327f2c20c53a9a78359fa145a9b76",
+    "vendor/dcase2024/src/utils/evaluation.py": "21a45ddc7a8417c1cdd1f427a5254a09f30eac4dc6f546b694165fa6b34c783f",
+    "vendor/dcase2024/src/utils/evaluation_support_consistent.py": "413a8b1254e8b6f7ba08489c44ef458f1b0eb9a1a5a5a329dc16ce2f427f38fc",
+    "vendor/dcase2024/src/utils/metrics.py": "519feac230efc0902509e16e217ec0fadf3fa2fc3a040b4801ee6d1058f3160b"
+  },
+  "profile_checks": 2035,
+  "profile_summary": {
+    "acoustic_explanation_verified": false,
+    "distinct_recording_names": 42,
+    "event_matching_executed": false,
+    "gaining_recording_names": 13,
+    "official_gaining_cases": 255,
+    "outputs": 24,
+    "primary_tp_positive_cases": 932,
+    "raw_annotations_read": false,
+    "reconstructed_cases": 2016,
+    "recurrent_names": 10,
+    "reference_subset_rows": 43
+  },
+  "project_test_suite_executed": false,
+  "publication_permissions_cleared": false,
+  "published": false,
+  "raw_annotations_or_audio_read": false,
+  "regenerated_pdfs": [
+    "audit_workflow.pdf",
+    "fig_rule_check.pdf",
+    "recall_boxplots.pdf",
+    "score_coverage_paired_panels.pdf"
+  ],
+  "scope": "One relocated public-package replay after selective vertical workflow refresh; existing environments, external cwd and temporary caches. Not OS isolation or a fresh installation.",
+  "stable_profile_outputs_byte_identical_to_v03": true,
+  "status": "passed",
+  "supplied_unchanged_heatmap": "fig_tpos_recurrence_heatmap.pdf",
+  "training_or_inference": false
+}

@@ -1,0 +1,47 @@
+{
+  "font_sha256": "075e71be4c58beda172ecb574a799308f04c3d054c6a5b7434954d3b0f1b28d8",
+  "legacy_svg_sha256": {
+    "audit_workflow.svg": "43c4bd458f26fcfc9a3615b5c3dfa44a8ab7d08a2743e65f9fcb88d8e79b2dbf",
+    "recall_boxplots.svg": "65abfd985e415da8691cf3ffe2c76c257a4353e78921ceb83d58404572193503",
+    "score_coverage_paired_panels.svg": "50f5f58e3c4ebeb0510bd16c2fc5698518964215022d6d7430fad224017c3dfb"
+  },
+  "legacy_svg_shape_sha256": {
+    "audit_workflow.svg": "ccf2e78426e0e19b290afaaa55cbad4b1bb628602c251556b981fb56ec757c80",
+    "recall_boxplots.svg": "86af2431616a9809a35fd86db233ebf8a2aee3a7da7f9314f686f42795b48798",
+    "score_coverage_paired_panels.svg": "3a4ff3ef923d78b0fde13aaf50cfdf4ed4a4dd73e7edb0f95b21e5f779dadb63"
+  },
+  "plot_input_sha256": {
+    "inputs/plotting/subset_effects_seed3009.csv": "80acca3468aaf9690315b9eb1d0d02d0924120af6e46c099b7a7082e54aa2350",
+    "inputs/plotting/subset_effects_seeds1234_2026.csv": "73b08caa31a8c69428b4c5b8f76c5d0e50b4fd07906d4586b05396bfab4fd0bb"
+  },
+  "rule_check": {
+    "false_alarm_only": 39,
+    "linscale": 0.8,
+    "linthresh": 0.5,
+    "point_array_sha256": [
+      "b2c678e97890491c9847f0236571a32e1bf3478b71eaa68cc83d63af28947736",
+      "70b5d1b974392b517cd88e03cb52159cd59618dca732a456b2ed621ecf941570"
+    ],
+    "points_unchanged": true,
+    "population": 971,
+    "source_function": "generate_final_paper_figures.rule_check_figure",
+    "tp_positive": 932,
+    "xlim": [
+      -0.2771305988315482,
+      1.012464094449854
+    ],
+    "ylim": [
+      -32.810637824129465,
+      47.69609415588909
+    ],
+    "yscale": "symlog",
+    "ytick_labels_do_not_overlap": true,
+    "yticks": [
+      -10.0,
+      -1.0,
+      0.0,
+      1.0,
+      10.0
+    ]
+  }
+}

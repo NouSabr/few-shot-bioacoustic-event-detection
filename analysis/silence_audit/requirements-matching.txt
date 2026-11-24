@@ -1,0 +1,8 @@
+# Observed replay runtime; not the historical training/evaluation environment.
+# Python 3.14.4; numeric packages reused read-only from .venv_verify.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+mir-eval==0.7
+future==0.18.3
+six==1.17.0

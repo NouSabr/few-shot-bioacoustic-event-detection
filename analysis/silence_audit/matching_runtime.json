@@ -1,0 +1,10 @@
+{
+  "future": "0.18.3",
+  "mir-eval": "0.7",
+  "mir_eval_util_sha256": "252101d97b8afc8a424b914f88be21081fce2eaec1df11c6273ef73408f1bba9",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "python": "3.14.4",
+  "scipy": "1.18.1",
+  "six": "1.17.0"
+}

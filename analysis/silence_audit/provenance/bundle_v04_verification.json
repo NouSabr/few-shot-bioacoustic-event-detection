@@ -1,0 +1,51 @@
+{
+  "all_five_final_pdfs_have_embedded_fonts": true,
+  "archive_sha256": "4d2bc5be615a3b830abbfe7475733f1e414ccfe607308addba4b50e0430cc2c5",
+  "bundle_files": 78,
+  "clean_environment_installation_claimed": false,
+  "count_audit_standard_library_only": true,
+  "count_metric_checks": 6683,
+  "existing_project_notice_preserved": true,
+  "font_inventory_passed": true,
+  "formatted_figure_overwrite_refused_without_changes": true,
+  "formatted_paper_figures": true,
+  "formatting_runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "seaborn": "0.13.2"
+  },
+  "historical_heatmap_drawing_regeneration_claimed": false,
+  "joint_maxima_verified": 24,
+  "legacy_vector_stage_standard_library_only": true,
+  "native_event_matching_executed": false,
+  "native_reference_patch_matching_validated": false,
+  "optional_matching_cli_help_checked": true,
+  "original_and_isolated_audit_byte_identical": true,
+  "overwrite_refused_without_changes": true,
+  "paper_pdfs_byte_identical_to_approved": [
+    "audit_workflow.pdf",
+    "fig_rule_check.pdf",
+    "fig_tpos_recurrence_heatmap.pdf",
+    "recall_boxplots.pdf",
+    "score_coverage_paired_panels.pdf"
+  ],
+  "prebuilt_paper_pdfs_match_current": true,
+  "prediction_files": 24,
+  "published": false,
+  "python_version": "3.14.4",
+  "raw_annotations_included": false,
+  "regenerated_pdfs_byte_identical": [
+    "audit_workflow.pdf",
+    "fig_rule_check.pdf",
+    "recall_boxplots.pdf",
+    "score_coverage_paired_panels.pdf"
+  ],
+  "release_status": "STAGING: data/permissions/author/publication review and optional matching validation remain",
+  "single_deletion_cases": 2016,
+  "source_python_syntax_valid": true,
+  "standard_library_only": false,
+  "status": "passed",
+  "supplied_unchanged_heatmap": "fig_tpos_recurrence_heatmap.pdf",
+  "zip_crc_and_allowlist_valid": true
+}

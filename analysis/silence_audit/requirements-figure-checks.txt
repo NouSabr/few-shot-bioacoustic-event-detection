@@ -1,0 +1,2 @@
+# Optional PDF hash/font inventory only; not needed for drawing or count audit.
+pypdf==7.1.1

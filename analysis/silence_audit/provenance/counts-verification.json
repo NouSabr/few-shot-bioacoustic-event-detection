@@ -1,0 +1,122 @@
+{
+  "audit": {
+    "checks": 6683,
+    "joint_maxima_verified": 24,
+    "matching_performed": false,
+    "n_memberships": 43,
+    "n_outputs": 24,
+    "n_recording_names": 42,
+    "official_tp_positive_cases": 932,
+    "official_tp_positive_gains": 255,
+    "selection_note": "Archived sets retained; a maximum score need not have a unique set/coverage.",
+    "single_deletions": 2016,
+    "status": "passed",
+    "training_or_inference": false
+  },
+  "branch_index_and_working_tree_unchanged_by_execution": true,
+  "byte_identical_relocated_repeats": {
+    "audit_files": 12,
+    "profile_files": 9
+  },
+  "commands": [
+    "python3 -E -S -B scripts/run_audit.py --output-dir NEW_AUDIT_DIRECTORY --verify-maxima",
+    "python3 -E -S -B scripts/profile_recordings.py --output-dir NEW_PROFILE_DIRECTORY"
+  ],
+  "date": "2026-11-24",
+  "execution_scope": {
+    "dependency_installation": false,
+    "event_matching": false,
+    "inference": false,
+    "plotting": false,
+    "raw_annotations": false,
+    "raw_audio": false,
+    "test_suite": false,
+    "training": false
+  },
+  "independent_profile_before_audit": true,
+  "isolation": "Two hash-allowlisted relocated temporary copies; external working directory; minimal environment. Not container or OS-level isolation.",
+  "output_hash_scope": "All audit outputs and stable profile outputs. The generated profile manifest was verified and byte-repeatable, but its digest is omitted here because it includes package-inventory hashes that change when this verification record is added. Executable/scientific file hashes above exclude documentation and verification metadata.",
+  "outputs_sha256": {
+    "audit": {
+      "audit_report.json": "1caefc8304e5f443be95da61cde82fd93e5c9a90989c7f7e71caffb23382490d",
+      "deletion_summary.csv": "2bc2e1358cd1ec46fd1494494c75e7f9d7e086acc9a80c1756b068f29827b3b0",
+      "joint_endpoints.csv": "950ca4d5abcb9d80acb96c8ae4b4df71b57467cd0b43d74779b79d032818d491",
+      "metrics_by_output.csv": "00d83957cd5fc7e6d1ae6ceb183b3358db076cd9de55fdf02aa2eafa059a42cd",
+      "recall_quantiles_by_output.csv": "392b4c65bcb6a1df69023f9a60a2ed7070132217bcdc4905c54e432561cc54d3",
+      "reconciliation.csv": "9a8a34416a8b7723fcfe98bc13567f915f6863414e48186c9131868bc93a17b5",
+      "recording_metrics.csv": "9d64cc7286e64def392cf1fb0c3a40656d17b868e0a22498392a1d2af7718e41",
+      "recurrence.csv": "0ec16b5dd2a0d0bc5a2830957af8b46eb9318bfbba4a958c67ed222223be7c9b",
+      "rule_check.csv": "55fd89e9d99a1c536f3c5b3b76e6ef62737a729382034cb95b0b6c4b354a83da",
+      "single_deletions.csv": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522",
+      "subset_summary.csv": "58dfb3eb4e2dca07eef85de7fbfe047ff7d474b3997d62d9e032f7b09f95f57d",
+      "summary.csv": "a38fea02be5c503e0f0784b41fa923658eafe026105f12089ee43739eefe5689"
+    },
+    "profiles": {
+      "gaining_cases.csv": "8b3f312e2e0da5db8773e5e25256c45a8d83c6521b8ad3a8599ce89f5a713a79",
+      "reconciliation.csv": "35d2225e2904ddf89ecb21d10e3c840d2e245aa1df534019d39c62da137196c6",
+      "recording_output_evidence.csv": "8ce07529d6f958c57fb21619247547e79cc07334d35f9e55b74585cee1fa7271",
+      "recording_profiles.csv": "6c3eb2bc1b2e368a3271a7ec2c93442fb5d1f6ba0d74a828b1814dfcbfce8233",
+      "report.md": "56d3d66ed9dd4309fc182f9f74f4ffd324caffa0389e1f4e388c976a4882f5b1",
+      "sources/profile_recordings.py": "6da5acd6724bfda04a6d37d3cbde49488735214ae9b11e31080e403415b89fc8",
+      "subset_summary.csv": "51099b1181420b9076ec6011f0eeb4d1b6675aaa0f42c98f4d24fe15078c767c",
+      "summary.json": "c1b47493c5331009108e3180087b447df0570cafcdcd43e90e8a117bf1c9f1de"
+    }
+  },
+  "overwrite_refusal_checks": [
+    "audit:populated",
+    "audit:empty",
+    "audit:file",
+    "profiles:populated",
+    "profiles:empty",
+    "profiles:file"
+  ],
+  "overwrite_targets_unchanged": true,
+  "package_and_protected_original_files_unchanged_by_execution": true,
+  "package_inventory_hashes_checked_each_run": true,
+  "profile_row_counts": {
+    "gaining_cases.csv": 255,
+    "reconciliation.csv": 2035,
+    "recording_output_evidence.csv": 312,
+    "recording_profiles.csv": 13,
+    "subset_summary.csv": 6
+  },
+  "profiles": {
+    "acoustic_explanation_verified": false,
+    "distinct_recording_names": 42,
+    "event_matching_executed": false,
+    "gaining_recording_names": 13,
+    "official_gaining_cases": 255,
+    "outputs": 24,
+    "primary_tp_positive_cases": 932,
+    "raw_annotations_read": false,
+    "reconstructed_cases": 2016,
+    "recurrent_names": 10,
+    "reference_subset_rows": 43
+  },
+  "python": "3.14.4",
+  "python_flags": [
+    "-E",
+    "-S",
+    "-B"
+  ],
+  "runtime_version_matrix_tested": false,
+  "schema_version": 1,
+  "scope": "Counts-only audit and recording profiles; no fresh event matching or model execution.",
+  "status": "passed",
+  "successful_runs_per_command": 2,
+  "verified_files_sha256": {
+    "expected/interventions.csv": "1585fabf7538fd0f362b8a8119291050489d14440e1e7152894e2bc583aa3522",
+    "expected/metrics_by_output.csv": "133d0d361ab4ae310a87927cc990b02e4928b1797b81fef7d3ba0d57e1bfd85a",
+    "expected/subset_summary.csv": "58dfb3eb4e2dca07eef85de7fbfe047ff7d474b3997d62d9e032f7b09f95f57d",
+    "inputs/archived_endpoints.csv": "9103abddd4a9fddd697580f14686301806c68d388387514b8e368737ae276fa1",
+    "inputs/fresh_counts.csv": "e018c1377c524fc0dc73b2bd768c06faedfbc627d67670a795bd58a5ded2ed41",
+    "inputs/joint_deletions.csv": "61580a3a5d4e3347282cae8517d1fd638e0ef6f8e9d57942edb4b058a97f60bc",
+    "inputs/reference_populations.csv": "55eb2511281d477f8783efd79e1f8032295e2947d88c3bc42afcbc836e4fc9e7",
+    "recording_evidence/expected/recording_profiles.csv": "6c3eb2bc1b2e368a3271a7ec2c93442fb5d1f6ba0d74a828b1814dfcbfce8233",
+    "recording_evidence/expected/subset_summary.csv": "51099b1181420b9076ec6011f0eeb4d1b6675aaa0f42c98f4d24fe15078c767c",
+    "scripts/counts.py": "6088bb686ece9e7757e03b456c9394b3ce8da0ec89fbd16404a951e2f3c9a275",
+    "scripts/fresh_counts.py": "09509a9fa133a0aa4373e8fcf1c13506cabda260af170a1fdf4d3ff811405c17",
+    "scripts/profile_recordings.py": "6da5acd6724bfda04a6d37d3cbde49488735214ae9b11e31080e403415b89fc8",
+    "scripts/run_audit.py": "94a8481ac1837f7cacc43790383ea9efc7f4eccfcba9ad4dd5cf39a47be18f6f"
+  }
+}

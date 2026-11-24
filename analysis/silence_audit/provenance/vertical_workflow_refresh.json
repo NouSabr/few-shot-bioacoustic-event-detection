@@ -1,0 +1,12 @@
+{
+  "approved_vertical_generator_sha256": "1c0912e6902998e7281d054c9a1561280d6da1e76cfc57a8c3238dbc675ead4c",
+  "approved_workflow_pdf_sha256": "91a08d9b3ac25ce53459cff14c14553432ea92bb2bf3d9ced0f8561a6b97d209",
+  "approved_workflow_svg_sha256": "43c4bd458f26fcfc9a3615b5c3dfa44a8ab7d08a2743e65f9fcb88d8e79b2dbf",
+  "new_model_or_matching_work": false,
+  "only_plot_function_changed": "workflow",
+  "pdf_metadata_note": "Creator aligned with approved preview only for audit_workflow; all other figure metadata unchanged",
+  "previous_manifest_sha256": "92e7006684029531eeeb245f16b3eecf6a394949d28ff1d818ae6d75068a6444",
+  "public_mirror_updated": false,
+  "raw_vector_workflow_pdf_sha256": "c00ccfc3b84d84153f4bf7bdf8ae649030813f8d21f111f1fb564b37606a960f",
+  "scientific_inputs_and_audit_scripts_changed": false
+}

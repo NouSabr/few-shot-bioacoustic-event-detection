@@ -1,0 +1,2017 @@
+configuration,seed,evaluator_variant,recording,tp,fp,fn,has_predictions
+baseline,1234,released,BUK1_20181011_001004.wav,3,31,28,True
+baseline,1234,released,BUK1_20181013_023504.wav,0,0,29,False
+baseline,1234,released,BUK4_20160925_231604.wav,0,0,42,False
+baseline,1234,released,BUK4_20161011_000804.wav,0,164,47,True
+baseline,1234,released,BUK4_20161031_232104a.wav,22,20,155,True
+baseline,1234,released,BUK4_20171022_004304a.wav,5,7,12,True
+baseline,1234,released,BUK5_20161101_002104a.wav,19,152,69,True
+baseline,1234,released,BUK5_20180921_015906a.wav,4,14,19,True
+baseline,1234,released,BUK5_20181007_011905.wav,6,7,60,True
+baseline,1234,released,ME1.wav,6,199,5,True
+baseline,1234,released,ME2.wav,34,22,7,True
+baseline,1234,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+baseline,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+baseline,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+baseline,1234,released,R4_cleaned recording_TEL_20-10-17.wav,59,14,5,True
+baseline,1234,released,R4_cleaned recording_TEL_23-10-17.wav,80,10,4,True
+baseline,1234,released,R4_cleaned recording_TEL_24-10-17.wav,90,8,9,True
+baseline,1234,released,R4_cleaned recording_TEL_25-10-17.wav,95,7,4,True
+baseline,1234,released,RD_01.wav,75,985,16,True
+baseline,1234,released,RD_02.wav,324,487,174,True
+baseline,1234,released,RD_03.wav,3,51,2,True
+baseline,1234,released,RD_04.wav,76,1829,150,True
+baseline,1234,released,RD_05.wav,82,95,79,True
+baseline,1234,released,RD_06.wav,270,403,91,True
+baseline,1234,released,file_423_487.wav,57,1,0,True
+baseline,1234,released,file_97_113.wav,10,41,110,True
+baseline,1234,released,pw1.wav,23,671,6,True
+baseline,1234,released,pw10.wav,31,465,17,True
+baseline,1234,released,pw11.wav,39,424,0,True
+baseline,1234,released,pw12.wav,31,449,11,True
+baseline,1234,released,pw13.wav,40,368,0,True
+baseline,1234,released,pw14.wav,44,343,6,True
+baseline,1234,released,pw15.wav,34,744,7,True
+baseline,1234,released,pw2.wav,22,965,14,True
+baseline,1234,released,pw3.wav,34,353,11,True
+baseline,1234,released,pw4.wav,16,1386,28,True
+baseline,1234,released,pw5.wav,27,1466,4,True
+baseline,1234,released,pw6.wav,40,1075,1,True
+baseline,1234,released,pw7.wav,33,379,8,True
+baseline,1234,released,pw8.wav,50,469,0,True
+baseline,1234,released,pw9.wav,31,384,22,True
+baseline,1234,corrected,BUK1_20181011_001004.wav,3,31,28,True
+baseline,1234,corrected,BUK1_20181013_023504.wav,0,0,24,False
+baseline,1234,corrected,BUK4_20160925_231604.wav,0,0,37,False
+baseline,1234,corrected,BUK4_20161011_000804.wav,0,164,47,True
+baseline,1234,corrected,BUK4_20161031_232104a.wav,22,20,155,True
+baseline,1234,corrected,BUK4_20171022_004304a.wav,5,7,12,True
+baseline,1234,corrected,BUK5_20161101_002104a.wav,19,152,69,True
+baseline,1234,corrected,BUK5_20180921_015906a.wav,4,14,19,True
+baseline,1234,corrected,BUK5_20181007_011905.wav,6,7,60,True
+baseline,1234,corrected,ME1.wav,6,199,5,True
+baseline,1234,corrected,ME2.wav,34,22,7,True
+baseline,1234,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+baseline,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+baseline,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+baseline,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,59,14,5,True
+baseline,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,10,4,True
+baseline,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,90,8,9,True
+baseline,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,95,7,4,True
+baseline,1234,corrected,RD_01.wav,75,985,16,True
+baseline,1234,corrected,RD_02.wav,324,487,174,True
+baseline,1234,corrected,RD_03.wav,3,51,2,True
+baseline,1234,corrected,RD_04.wav,76,1829,150,True
+baseline,1234,corrected,RD_05.wav,82,95,79,True
+baseline,1234,corrected,RD_06.wav,270,403,91,True
+baseline,1234,corrected,file_423_487.wav,57,1,0,True
+baseline,1234,corrected,file_97_113.wav,10,41,110,True
+baseline,1234,corrected,pw1.wav,23,671,6,True
+baseline,1234,corrected,pw10.wav,31,465,17,True
+baseline,1234,corrected,pw11.wav,39,424,0,True
+baseline,1234,corrected,pw12.wav,31,449,11,True
+baseline,1234,corrected,pw13.wav,40,368,0,True
+baseline,1234,corrected,pw14.wav,44,343,6,True
+baseline,1234,corrected,pw15.wav,34,744,7,True
+baseline,1234,corrected,pw2.wav,22,965,14,True
+baseline,1234,corrected,pw3.wav,34,353,11,True
+baseline,1234,corrected,pw4.wav,16,1386,28,True
+baseline,1234,corrected,pw5.wav,27,1466,4,True
+baseline,1234,corrected,pw6.wav,40,1075,1,True
+baseline,1234,corrected,pw7.wav,33,379,8,True
+baseline,1234,corrected,pw8.wav,50,469,0,True
+baseline,1234,corrected,pw9.wav,31,384,22,True
+cife,1234,released,BUK1_20181011_001004.wav,2,0,29,True
+cife,1234,released,BUK1_20181013_023504.wav,0,2,24,True
+cife,1234,released,BUK4_20160925_231604.wav,0,0,42,False
+cife,1234,released,BUK4_20161011_000804.wav,0,141,47,True
+cife,1234,released,BUK4_20161031_232104a.wav,11,7,166,True
+cife,1234,released,BUK4_20171022_004304a.wav,5,8,12,True
+cife,1234,released,BUK5_20161101_002104a.wav,17,162,71,True
+cife,1234,released,BUK5_20180921_015906a.wav,3,15,20,True
+cife,1234,released,BUK5_20181007_011905.wav,5,19,61,True
+cife,1234,released,ME1.wav,9,75,2,True
+cife,1234,released,ME2.wav,31,27,10,True
+cife,1234,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+cife,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,1234,released,R4_cleaned recording_TEL_20-10-17.wav,59,25,5,True
+cife,1234,released,R4_cleaned recording_TEL_23-10-17.wav,76,16,8,True
+cife,1234,released,R4_cleaned recording_TEL_24-10-17.wav,90,14,9,True
+cife,1234,released,R4_cleaned recording_TEL_25-10-17.wav,92,19,7,True
+cife,1234,released,RD_01.wav,76,1009,15,True
+cife,1234,released,RD_02.wav,343,415,155,True
+cife,1234,released,RD_03.wav,3,47,2,True
+cife,1234,released,RD_04.wav,115,1966,111,True
+cife,1234,released,RD_05.wav,85,137,76,True
+cife,1234,released,RD_06.wav,291,775,70,True
+cife,1234,released,file_423_487.wav,57,1,0,True
+cife,1234,released,file_97_113.wav,12,36,108,True
+cife,1234,released,pw1.wav,27,677,2,True
+cife,1234,released,pw10.wav,32,461,16,True
+cife,1234,released,pw11.wav,38,520,1,True
+cife,1234,released,pw12.wav,32,458,10,True
+cife,1234,released,pw13.wav,39,361,1,True
+cife,1234,released,pw14.wav,45,377,5,True
+cife,1234,released,pw15.wav,33,806,8,True
+cife,1234,released,pw2.wav,24,1032,12,True
+cife,1234,released,pw3.wav,37,374,8,True
+cife,1234,released,pw4.wav,15,1336,29,True
+cife,1234,released,pw5.wav,28,1412,3,True
+cife,1234,released,pw6.wav,35,1179,6,True
+cife,1234,released,pw7.wav,35,485,6,True
+cife,1234,released,pw8.wav,49,425,1,True
+cife,1234,released,pw9.wav,32,404,21,True
+cife,1234,corrected,BUK1_20181011_001004.wav,2,0,29,True
+cife,1234,corrected,BUK1_20181013_023504.wav,0,2,24,True
+cife,1234,corrected,BUK4_20160925_231604.wav,0,0,37,False
+cife,1234,corrected,BUK4_20161011_000804.wav,0,141,47,True
+cife,1234,corrected,BUK4_20161031_232104a.wav,11,7,166,True
+cife,1234,corrected,BUK4_20171022_004304a.wav,5,8,12,True
+cife,1234,corrected,BUK5_20161101_002104a.wav,17,162,71,True
+cife,1234,corrected,BUK5_20180921_015906a.wav,3,15,20,True
+cife,1234,corrected,BUK5_20181007_011905.wav,5,19,61,True
+cife,1234,corrected,ME1.wav,9,75,2,True
+cife,1234,corrected,ME2.wav,31,27,10,True
+cife,1234,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+cife,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,59,25,5,True
+cife,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,76,16,8,True
+cife,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,90,14,9,True
+cife,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,92,19,7,True
+cife,1234,corrected,RD_01.wav,76,1009,15,True
+cife,1234,corrected,RD_02.wav,343,415,155,True
+cife,1234,corrected,RD_03.wav,3,47,2,True
+cife,1234,corrected,RD_04.wav,115,1966,111,True
+cife,1234,corrected,RD_05.wav,85,137,76,True
+cife,1234,corrected,RD_06.wav,291,775,70,True
+cife,1234,corrected,file_423_487.wav,57,1,0,True
+cife,1234,corrected,file_97_113.wav,12,36,108,True
+cife,1234,corrected,pw1.wav,27,677,2,True
+cife,1234,corrected,pw10.wav,32,461,16,True
+cife,1234,corrected,pw11.wav,38,520,1,True
+cife,1234,corrected,pw12.wav,32,458,10,True
+cife,1234,corrected,pw13.wav,39,361,1,True
+cife,1234,corrected,pw14.wav,45,377,5,True
+cife,1234,corrected,pw15.wav,33,806,8,True
+cife,1234,corrected,pw2.wav,24,1032,12,True
+cife,1234,corrected,pw3.wav,37,374,8,True
+cife,1234,corrected,pw4.wav,15,1336,29,True
+cife,1234,corrected,pw5.wav,28,1412,3,True
+cife,1234,corrected,pw6.wav,35,1179,6,True
+cife,1234,corrected,pw7.wav,35,485,6,True
+cife,1234,corrected,pw8.wav,49,425,1,True
+cife,1234,corrected,pw9.wav,32,404,21,True
+phase1_random,1234,released,BUK1_20181011_001004.wav,4,25,27,True
+phase1_random,1234,released,BUK1_20181013_023504.wav,3,4,21,True
+phase1_random,1234,released,BUK4_20160925_231604.wav,0,4,37,True
+phase1_random,1234,released,BUK4_20161011_000804.wav,0,240,47,True
+phase1_random,1234,released,BUK4_20161031_232104a.wav,23,53,154,True
+phase1_random,1234,released,BUK4_20171022_004304a.wav,6,9,11,True
+phase1_random,1234,released,BUK5_20161101_002104a.wav,19,243,69,True
+phase1_random,1234,released,BUK5_20180921_015906a.wav,4,28,19,True
+phase1_random,1234,released,BUK5_20181007_011905.wav,5,11,61,True
+phase1_random,1234,released,ME1.wav,7,312,4,True
+phase1_random,1234,released,ME2.wav,34,23,7,True
+phase1_random,1234,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase1_random,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase1_random,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase1_random,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase1_random,1234,released,R4_cleaned recording_TEL_20-10-17.wav,60,5,4,True
+phase1_random,1234,released,R4_cleaned recording_TEL_23-10-17.wav,80,6,4,True
+phase1_random,1234,released,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+phase1_random,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase1_random,1234,released,RD_01.wav,75,1116,16,True
+phase1_random,1234,released,RD_02.wav,325,361,173,True
+phase1_random,1234,released,RD_03.wav,3,50,2,True
+phase1_random,1234,released,RD_04.wav,81,1302,145,True
+phase1_random,1234,released,RD_05.wav,81,102,80,True
+phase1_random,1234,released,RD_06.wav,248,352,113,True
+phase1_random,1234,released,file_423_487.wav,57,0,0,True
+phase1_random,1234,released,file_97_113.wav,11,41,109,True
+phase1_random,1234,released,pw1.wav,26,647,3,True
+phase1_random,1234,released,pw10.wav,33,461,15,True
+phase1_random,1234,released,pw11.wav,39,421,0,True
+phase1_random,1234,released,pw12.wav,32,488,10,True
+phase1_random,1234,released,pw13.wav,40,358,0,True
+phase1_random,1234,released,pw14.wav,44,329,6,True
+phase1_random,1234,released,pw15.wav,34,726,7,True
+phase1_random,1234,released,pw2.wav,19,718,17,True
+phase1_random,1234,released,pw3.wav,41,349,4,True
+phase1_random,1234,released,pw4.wav,15,1413,29,True
+phase1_random,1234,released,pw5.wav,28,1295,3,True
+phase1_random,1234,released,pw6.wav,41,1192,0,True
+phase1_random,1234,released,pw7.wav,33,369,8,True
+phase1_random,1234,released,pw8.wav,50,444,0,True
+phase1_random,1234,released,pw9.wav,31,386,22,True
+phase1_random,1234,corrected,BUK1_20181011_001004.wav,4,25,27,True
+phase1_random,1234,corrected,BUK1_20181013_023504.wav,3,4,21,True
+phase1_random,1234,corrected,BUK4_20160925_231604.wav,0,4,37,True
+phase1_random,1234,corrected,BUK4_20161011_000804.wav,0,240,47,True
+phase1_random,1234,corrected,BUK4_20161031_232104a.wav,23,53,154,True
+phase1_random,1234,corrected,BUK4_20171022_004304a.wav,6,9,11,True
+phase1_random,1234,corrected,BUK5_20161101_002104a.wav,19,243,69,True
+phase1_random,1234,corrected,BUK5_20180921_015906a.wav,4,28,19,True
+phase1_random,1234,corrected,BUK5_20181007_011905.wav,5,11,61,True
+phase1_random,1234,corrected,ME1.wav,7,312,4,True
+phase1_random,1234,corrected,ME2.wav,34,23,7,True
+phase1_random,1234,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase1_random,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase1_random,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase1_random,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase1_random,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,60,5,4,True
+phase1_random,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,6,4,True
+phase1_random,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+phase1_random,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase1_random,1234,corrected,RD_01.wav,75,1116,16,True
+phase1_random,1234,corrected,RD_02.wav,325,361,173,True
+phase1_random,1234,corrected,RD_03.wav,3,50,2,True
+phase1_random,1234,corrected,RD_04.wav,81,1302,145,True
+phase1_random,1234,corrected,RD_05.wav,81,102,80,True
+phase1_random,1234,corrected,RD_06.wav,248,352,113,True
+phase1_random,1234,corrected,file_423_487.wav,57,0,0,True
+phase1_random,1234,corrected,file_97_113.wav,11,41,109,True
+phase1_random,1234,corrected,pw1.wav,26,647,3,True
+phase1_random,1234,corrected,pw10.wav,33,461,15,True
+phase1_random,1234,corrected,pw11.wav,39,421,0,True
+phase1_random,1234,corrected,pw12.wav,32,488,10,True
+phase1_random,1234,corrected,pw13.wav,40,358,0,True
+phase1_random,1234,corrected,pw14.wav,44,329,6,True
+phase1_random,1234,corrected,pw15.wav,34,726,7,True
+phase1_random,1234,corrected,pw2.wav,19,718,17,True
+phase1_random,1234,corrected,pw3.wav,41,349,4,True
+phase1_random,1234,corrected,pw4.wav,15,1413,29,True
+phase1_random,1234,corrected,pw5.wav,28,1295,3,True
+phase1_random,1234,corrected,pw6.wav,41,1192,0,True
+phase1_random,1234,corrected,pw7.wav,33,369,8,True
+phase1_random,1234,corrected,pw8.wav,50,444,0,True
+phase1_random,1234,corrected,pw9.wav,31,386,22,True
+slot_uniform,1234,released,BUK1_20181011_001004.wav,5,23,26,True
+slot_uniform,1234,released,BUK1_20181013_023504.wav,3,4,21,True
+slot_uniform,1234,released,BUK4_20160925_231604.wav,0,4,37,True
+slot_uniform,1234,released,BUK4_20161011_000804.wav,0,232,47,True
+slot_uniform,1234,released,BUK4_20161031_232104a.wav,22,52,155,True
+slot_uniform,1234,released,BUK4_20171022_004304a.wav,6,9,11,True
+slot_uniform,1234,released,BUK5_20161101_002104a.wav,19,246,69,True
+slot_uniform,1234,released,BUK5_20180921_015906a.wav,4,38,19,True
+slot_uniform,1234,released,BUK5_20181007_011905.wav,5,12,61,True
+slot_uniform,1234,released,ME1.wav,7,313,4,True
+slot_uniform,1234,released,ME2.wav,34,24,7,True
+slot_uniform,1234,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+slot_uniform,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+slot_uniform,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+slot_uniform,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+slot_uniform,1234,released,R4_cleaned recording_TEL_20-10-17.wav,61,5,3,True
+slot_uniform,1234,released,R4_cleaned recording_TEL_23-10-17.wav,80,7,4,True
+slot_uniform,1234,released,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+slot_uniform,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+slot_uniform,1234,released,RD_01.wav,75,1118,16,True
+slot_uniform,1234,released,RD_02.wav,323,396,175,True
+slot_uniform,1234,released,RD_03.wav,3,48,2,True
+slot_uniform,1234,released,RD_04.wav,77,1133,149,True
+slot_uniform,1234,released,RD_05.wav,82,100,79,True
+slot_uniform,1234,released,RD_06.wav,241,339,120,True
+slot_uniform,1234,released,file_423_487.wav,57,0,0,True
+slot_uniform,1234,released,file_97_113.wav,11,42,109,True
+slot_uniform,1234,released,pw1.wav,26,652,3,True
+slot_uniform,1234,released,pw10.wav,33,461,15,True
+slot_uniform,1234,released,pw11.wav,39,427,0,True
+slot_uniform,1234,released,pw12.wav,32,476,10,True
+slot_uniform,1234,released,pw13.wav,40,369,0,True
+slot_uniform,1234,released,pw14.wav,44,352,6,True
+slot_uniform,1234,released,pw15.wav,34,733,7,True
+slot_uniform,1234,released,pw2.wav,21,918,15,True
+slot_uniform,1234,released,pw3.wav,36,352,9,True
+slot_uniform,1234,released,pw4.wav,16,1405,28,True
+slot_uniform,1234,released,pw5.wav,27,1367,4,True
+slot_uniform,1234,released,pw6.wav,41,1300,0,True
+slot_uniform,1234,released,pw7.wav,33,369,8,True
+slot_uniform,1234,released,pw8.wav,50,448,0,True
+slot_uniform,1234,released,pw9.wav,31,388,22,True
+slot_uniform,1234,corrected,BUK1_20181011_001004.wav,5,23,26,True
+slot_uniform,1234,corrected,BUK1_20181013_023504.wav,3,4,21,True
+slot_uniform,1234,corrected,BUK4_20160925_231604.wav,0,4,37,True
+slot_uniform,1234,corrected,BUK4_20161011_000804.wav,0,232,47,True
+slot_uniform,1234,corrected,BUK4_20161031_232104a.wav,22,52,155,True
+slot_uniform,1234,corrected,BUK4_20171022_004304a.wav,6,9,11,True
+slot_uniform,1234,corrected,BUK5_20161101_002104a.wav,19,246,69,True
+slot_uniform,1234,corrected,BUK5_20180921_015906a.wav,4,38,19,True
+slot_uniform,1234,corrected,BUK5_20181007_011905.wav,5,12,61,True
+slot_uniform,1234,corrected,ME1.wav,7,313,4,True
+slot_uniform,1234,corrected,ME2.wav,34,24,7,True
+slot_uniform,1234,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+slot_uniform,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+slot_uniform,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+slot_uniform,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+slot_uniform,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,61,5,3,True
+slot_uniform,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,7,4,True
+slot_uniform,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+slot_uniform,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+slot_uniform,1234,corrected,RD_01.wav,75,1118,16,True
+slot_uniform,1234,corrected,RD_02.wav,323,396,175,True
+slot_uniform,1234,corrected,RD_03.wav,3,48,2,True
+slot_uniform,1234,corrected,RD_04.wav,77,1133,149,True
+slot_uniform,1234,corrected,RD_05.wav,82,100,79,True
+slot_uniform,1234,corrected,RD_06.wav,241,339,120,True
+slot_uniform,1234,corrected,file_423_487.wav,57,0,0,True
+slot_uniform,1234,corrected,file_97_113.wav,11,42,109,True
+slot_uniform,1234,corrected,pw1.wav,26,652,3,True
+slot_uniform,1234,corrected,pw10.wav,33,461,15,True
+slot_uniform,1234,corrected,pw11.wav,39,427,0,True
+slot_uniform,1234,corrected,pw12.wav,32,476,10,True
+slot_uniform,1234,corrected,pw13.wav,40,369,0,True
+slot_uniform,1234,corrected,pw14.wav,44,352,6,True
+slot_uniform,1234,corrected,pw15.wav,34,733,7,True
+slot_uniform,1234,corrected,pw2.wav,21,918,15,True
+slot_uniform,1234,corrected,pw3.wav,36,352,9,True
+slot_uniform,1234,corrected,pw4.wav,16,1405,28,True
+slot_uniform,1234,corrected,pw5.wav,27,1367,4,True
+slot_uniform,1234,corrected,pw6.wav,41,1300,0,True
+slot_uniform,1234,corrected,pw7.wav,33,369,8,True
+slot_uniform,1234,corrected,pw8.wav,50,448,0,True
+slot_uniform,1234,corrected,pw9.wav,31,388,22,True
+phase2_energy,1234,released,BUK1_20181011_001004.wav,5,26,26,True
+phase2_energy,1234,released,BUK1_20181013_023504.wav,3,4,21,True
+phase2_energy,1234,released,BUK4_20160925_231604.wav,1,4,36,True
+phase2_energy,1234,released,BUK4_20161011_000804.wav,0,234,47,True
+phase2_energy,1234,released,BUK4_20161031_232104a.wav,23,58,154,True
+phase2_energy,1234,released,BUK4_20171022_004304a.wav,6,9,11,True
+phase2_energy,1234,released,BUK5_20161101_002104a.wav,19,261,69,True
+phase2_energy,1234,released,BUK5_20180921_015906a.wav,4,28,19,True
+phase2_energy,1234,released,BUK5_20181007_011905.wav,5,12,61,True
+phase2_energy,1234,released,ME1.wav,7,309,4,True
+phase2_energy,1234,released,ME2.wav,34,22,7,True
+phase2_energy,1234,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase2_energy,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase2_energy,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase2_energy,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase2_energy,1234,released,R4_cleaned recording_TEL_20-10-17.wav,60,5,4,True
+phase2_energy,1234,released,R4_cleaned recording_TEL_23-10-17.wav,80,7,4,True
+phase2_energy,1234,released,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase2_energy,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase2_energy,1234,released,RD_01.wav,75,1120,16,True
+phase2_energy,1234,released,RD_02.wav,321,412,177,True
+phase2_energy,1234,released,RD_03.wav,3,48,2,True
+phase2_energy,1234,released,RD_04.wav,80,1439,146,True
+phase2_energy,1234,released,RD_05.wav,83,104,78,True
+phase2_energy,1234,released,RD_06.wav,257,385,104,True
+phase2_energy,1234,released,file_423_487.wav,57,0,0,True
+phase2_energy,1234,released,file_97_113.wav,11,41,109,True
+phase2_energy,1234,released,pw1.wav,26,659,3,True
+phase2_energy,1234,released,pw10.wav,33,467,15,True
+phase2_energy,1234,released,pw11.wav,39,431,0,True
+phase2_energy,1234,released,pw12.wav,32,474,10,True
+phase2_energy,1234,released,pw13.wav,40,370,0,True
+phase2_energy,1234,released,pw14.wav,43,360,7,True
+phase2_energy,1234,released,pw15.wav,34,725,7,True
+phase2_energy,1234,released,pw2.wav,22,958,14,True
+phase2_energy,1234,released,pw3.wav,38,360,7,True
+phase2_energy,1234,released,pw4.wav,16,1411,28,True
+phase2_energy,1234,released,pw5.wav,27,1394,4,True
+phase2_energy,1234,released,pw6.wav,39,1324,2,True
+phase2_energy,1234,released,pw7.wav,33,366,8,True
+phase2_energy,1234,released,pw8.wav,50,452,0,True
+phase2_energy,1234,released,pw9.wav,31,394,22,True
+phase2_energy,1234,corrected,BUK1_20181011_001004.wav,5,26,26,True
+phase2_energy,1234,corrected,BUK1_20181013_023504.wav,3,4,21,True
+phase2_energy,1234,corrected,BUK4_20160925_231604.wav,1,4,36,True
+phase2_energy,1234,corrected,BUK4_20161011_000804.wav,0,234,47,True
+phase2_energy,1234,corrected,BUK4_20161031_232104a.wav,23,58,154,True
+phase2_energy,1234,corrected,BUK4_20171022_004304a.wav,6,9,11,True
+phase2_energy,1234,corrected,BUK5_20161101_002104a.wav,19,261,69,True
+phase2_energy,1234,corrected,BUK5_20180921_015906a.wav,4,28,19,True
+phase2_energy,1234,corrected,BUK5_20181007_011905.wav,5,12,61,True
+phase2_energy,1234,corrected,ME1.wav,7,309,4,True
+phase2_energy,1234,corrected,ME2.wav,34,22,7,True
+phase2_energy,1234,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase2_energy,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase2_energy,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase2_energy,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase2_energy,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,60,5,4,True
+phase2_energy,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,7,4,True
+phase2_energy,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase2_energy,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase2_energy,1234,corrected,RD_01.wav,75,1120,16,True
+phase2_energy,1234,corrected,RD_02.wav,321,412,177,True
+phase2_energy,1234,corrected,RD_03.wav,3,48,2,True
+phase2_energy,1234,corrected,RD_04.wav,80,1439,146,True
+phase2_energy,1234,corrected,RD_05.wav,83,104,78,True
+phase2_energy,1234,corrected,RD_06.wav,257,385,104,True
+phase2_energy,1234,corrected,file_423_487.wav,57,0,0,True
+phase2_energy,1234,corrected,file_97_113.wav,11,41,109,True
+phase2_energy,1234,corrected,pw1.wav,26,659,3,True
+phase2_energy,1234,corrected,pw10.wav,33,467,15,True
+phase2_energy,1234,corrected,pw11.wav,39,431,0,True
+phase2_energy,1234,corrected,pw12.wav,32,474,10,True
+phase2_energy,1234,corrected,pw13.wav,40,370,0,True
+phase2_energy,1234,corrected,pw14.wav,43,360,7,True
+phase2_energy,1234,corrected,pw15.wav,34,725,7,True
+phase2_energy,1234,corrected,pw2.wav,22,958,14,True
+phase2_energy,1234,corrected,pw3.wav,38,360,7,True
+phase2_energy,1234,corrected,pw4.wav,16,1411,28,True
+phase2_energy,1234,corrected,pw5.wav,27,1394,4,True
+phase2_energy,1234,corrected,pw6.wav,39,1324,2,True
+phase2_energy,1234,corrected,pw7.wav,33,366,8,True
+phase2_energy,1234,corrected,pw8.wav,50,452,0,True
+phase2_energy,1234,corrected,pw9.wav,31,394,22,True
+phase3_activation,1234,released,BUK1_20181011_001004.wav,5,21,26,True
+phase3_activation,1234,released,BUK1_20181013_023504.wav,0,1,24,True
+phase3_activation,1234,released,BUK4_20160925_231604.wav,0,1,37,True
+phase3_activation,1234,released,BUK4_20161011_000804.wav,0,145,47,True
+phase3_activation,1234,released,BUK4_20161031_232104a.wav,16,20,161,True
+phase3_activation,1234,released,BUK4_20171022_004304a.wav,4,7,13,True
+phase3_activation,1234,released,BUK5_20161101_002104a.wav,14,136,74,True
+phase3_activation,1234,released,BUK5_20180921_015906a.wav,4,42,19,True
+phase3_activation,1234,released,BUK5_20181007_011905.wav,5,12,61,True
+phase3_activation,1234,released,ME1.wav,5,251,6,True
+phase3_activation,1234,released,ME2.wav,34,24,7,True
+phase3_activation,1234,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase3_activation,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase3_activation,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase3_activation,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase3_activation,1234,released,R4_cleaned recording_TEL_20-10-17.wav,62,4,2,True
+phase3_activation,1234,released,R4_cleaned recording_TEL_23-10-17.wav,81,6,3,True
+phase3_activation,1234,released,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+phase3_activation,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase3_activation,1234,released,RD_01.wav,75,1124,16,True
+phase3_activation,1234,released,RD_02.wav,323,384,175,True
+phase3_activation,1234,released,RD_03.wav,3,46,2,True
+phase3_activation,1234,released,RD_04.wav,76,1099,150,True
+phase3_activation,1234,released,RD_05.wav,82,99,79,True
+phase3_activation,1234,released,RD_06.wav,241,342,120,True
+phase3_activation,1234,released,file_423_487.wav,57,0,0,True
+phase3_activation,1234,released,file_97_113.wav,11,42,109,True
+phase3_activation,1234,released,pw1.wav,26,648,3,True
+phase3_activation,1234,released,pw10.wav,33,456,15,True
+phase3_activation,1234,released,pw11.wav,39,428,0,True
+phase3_activation,1234,released,pw12.wav,32,479,10,True
+phase3_activation,1234,released,pw13.wav,40,363,0,True
+phase3_activation,1234,released,pw14.wav,44,348,6,True
+phase3_activation,1234,released,pw15.wav,34,732,7,True
+phase3_activation,1234,released,pw2.wav,21,884,15,True
+phase3_activation,1234,released,pw3.wav,36,343,9,True
+phase3_activation,1234,released,pw4.wav,16,1404,28,True
+phase3_activation,1234,released,pw5.wav,27,1367,4,True
+phase3_activation,1234,released,pw6.wav,41,1005,0,True
+phase3_activation,1234,released,pw7.wav,33,369,8,True
+phase3_activation,1234,released,pw8.wav,50,445,0,True
+phase3_activation,1234,released,pw9.wav,31,389,22,True
+phase3_activation,1234,corrected,BUK1_20181011_001004.wav,5,21,26,True
+phase3_activation,1234,corrected,BUK1_20181013_023504.wav,0,1,24,True
+phase3_activation,1234,corrected,BUK4_20160925_231604.wav,0,1,37,True
+phase3_activation,1234,corrected,BUK4_20161011_000804.wav,0,145,47,True
+phase3_activation,1234,corrected,BUK4_20161031_232104a.wav,16,20,161,True
+phase3_activation,1234,corrected,BUK4_20171022_004304a.wav,4,7,13,True
+phase3_activation,1234,corrected,BUK5_20161101_002104a.wav,14,136,74,True
+phase3_activation,1234,corrected,BUK5_20180921_015906a.wav,4,42,19,True
+phase3_activation,1234,corrected,BUK5_20181007_011905.wav,5,12,61,True
+phase3_activation,1234,corrected,ME1.wav,5,251,6,True
+phase3_activation,1234,corrected,ME2.wav,34,24,7,True
+phase3_activation,1234,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase3_activation,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase3_activation,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase3_activation,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase3_activation,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,4,2,True
+phase3_activation,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,6,3,True
+phase3_activation,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+phase3_activation,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+phase3_activation,1234,corrected,RD_01.wav,75,1124,16,True
+phase3_activation,1234,corrected,RD_02.wav,323,384,175,True
+phase3_activation,1234,corrected,RD_03.wav,3,46,2,True
+phase3_activation,1234,corrected,RD_04.wav,76,1099,150,True
+phase3_activation,1234,corrected,RD_05.wav,82,99,79,True
+phase3_activation,1234,corrected,RD_06.wav,241,342,120,True
+phase3_activation,1234,corrected,file_423_487.wav,57,0,0,True
+phase3_activation,1234,corrected,file_97_113.wav,11,42,109,True
+phase3_activation,1234,corrected,pw1.wav,26,648,3,True
+phase3_activation,1234,corrected,pw10.wav,33,456,15,True
+phase3_activation,1234,corrected,pw11.wav,39,428,0,True
+phase3_activation,1234,corrected,pw12.wav,32,479,10,True
+phase3_activation,1234,corrected,pw13.wav,40,363,0,True
+phase3_activation,1234,corrected,pw14.wav,44,348,6,True
+phase3_activation,1234,corrected,pw15.wav,34,732,7,True
+phase3_activation,1234,corrected,pw2.wav,21,884,15,True
+phase3_activation,1234,corrected,pw3.wav,36,343,9,True
+phase3_activation,1234,corrected,pw4.wav,16,1404,28,True
+phase3_activation,1234,corrected,pw5.wav,27,1367,4,True
+phase3_activation,1234,corrected,pw6.wav,41,1005,0,True
+phase3_activation,1234,corrected,pw7.wav,33,369,8,True
+phase3_activation,1234,corrected,pw8.wav,50,445,0,True
+phase3_activation,1234,corrected,pw9.wav,31,389,22,True
+afri_direct,1234,released,BUK1_20181011_001004.wav,6,41,25,True
+afri_direct,1234,released,BUK1_20181013_023504.wav,0,1,24,True
+afri_direct,1234,released,BUK4_20160925_231604.wav,0,1,37,True
+afri_direct,1234,released,BUK4_20161011_000804.wav,0,185,47,True
+afri_direct,1234,released,BUK4_20161031_232104a.wav,21,37,156,True
+afri_direct,1234,released,BUK4_20171022_004304a.wav,5,7,12,True
+afri_direct,1234,released,BUK5_20161101_002104a.wav,15,175,73,True
+afri_direct,1234,released,BUK5_20180921_015906a.wav,4,44,19,True
+afri_direct,1234,released,BUK5_20181007_011905.wav,6,18,60,True
+afri_direct,1234,released,ME1.wav,6,220,5,True
+afri_direct,1234,released,ME2.wav,34,22,7,True
+afri_direct,1234,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+afri_direct,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_direct,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_direct,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+afri_direct,1234,released,R4_cleaned recording_TEL_20-10-17.wav,60,7,4,True
+afri_direct,1234,released,R4_cleaned recording_TEL_23-10-17.wav,80,8,4,True
+afri_direct,1234,released,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+afri_direct,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_direct,1234,released,RD_01.wav,75,1153,16,True
+afri_direct,1234,released,RD_02.wav,316,472,182,True
+afri_direct,1234,released,RD_03.wav,3,55,2,True
+afri_direct,1234,released,RD_04.wav,96,1814,130,True
+afri_direct,1234,released,RD_05.wav,88,106,73,True
+afri_direct,1234,released,RD_06.wav,290,472,71,True
+afri_direct,1234,released,file_423_487.wav,57,0,0,True
+afri_direct,1234,released,file_97_113.wav,10,40,110,True
+afri_direct,1234,released,pw1.wav,26,664,3,True
+afri_direct,1234,released,pw10.wav,32,464,16,True
+afri_direct,1234,released,pw11.wav,39,452,0,True
+afri_direct,1234,released,pw12.wav,31,426,11,True
+afri_direct,1234,released,pw13.wav,40,368,0,True
+afri_direct,1234,released,pw14.wav,43,363,7,True
+afri_direct,1234,released,pw15.wav,33,733,8,True
+afri_direct,1234,released,pw2.wav,24,807,12,True
+afri_direct,1234,released,pw3.wav,37,370,8,True
+afri_direct,1234,released,pw4.wav,16,1399,28,True
+afri_direct,1234,released,pw5.wav,27,1357,4,True
+afri_direct,1234,released,pw6.wav,38,1037,3,True
+afri_direct,1234,released,pw7.wav,33,376,8,True
+afri_direct,1234,released,pw8.wav,50,492,0,True
+afri_direct,1234,released,pw9.wav,31,394,22,True
+afri_direct,1234,corrected,BUK1_20181011_001004.wav,6,41,25,True
+afri_direct,1234,corrected,BUK1_20181013_023504.wav,0,1,24,True
+afri_direct,1234,corrected,BUK4_20160925_231604.wav,0,1,37,True
+afri_direct,1234,corrected,BUK4_20161011_000804.wav,0,185,47,True
+afri_direct,1234,corrected,BUK4_20161031_232104a.wav,21,37,156,True
+afri_direct,1234,corrected,BUK4_20171022_004304a.wav,5,7,12,True
+afri_direct,1234,corrected,BUK5_20161101_002104a.wav,15,175,73,True
+afri_direct,1234,corrected,BUK5_20180921_015906a.wav,4,44,19,True
+afri_direct,1234,corrected,BUK5_20181007_011905.wav,6,18,60,True
+afri_direct,1234,corrected,ME1.wav,6,220,5,True
+afri_direct,1234,corrected,ME2.wav,34,22,7,True
+afri_direct,1234,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+afri_direct,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_direct,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_direct,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+afri_direct,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,60,7,4,True
+afri_direct,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,8,4,True
+afri_direct,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+afri_direct,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_direct,1234,corrected,RD_01.wav,75,1153,16,True
+afri_direct,1234,corrected,RD_02.wav,316,472,182,True
+afri_direct,1234,corrected,RD_03.wav,3,55,2,True
+afri_direct,1234,corrected,RD_04.wav,96,1814,130,True
+afri_direct,1234,corrected,RD_05.wav,88,106,73,True
+afri_direct,1234,corrected,RD_06.wav,290,472,71,True
+afri_direct,1234,corrected,file_423_487.wav,57,0,0,True
+afri_direct,1234,corrected,file_97_113.wav,10,40,110,True
+afri_direct,1234,corrected,pw1.wav,26,664,3,True
+afri_direct,1234,corrected,pw10.wav,32,464,16,True
+afri_direct,1234,corrected,pw11.wav,39,452,0,True
+afri_direct,1234,corrected,pw12.wav,31,426,11,True
+afri_direct,1234,corrected,pw13.wav,40,368,0,True
+afri_direct,1234,corrected,pw14.wav,43,363,7,True
+afri_direct,1234,corrected,pw15.wav,33,733,8,True
+afri_direct,1234,corrected,pw2.wav,24,807,12,True
+afri_direct,1234,corrected,pw3.wav,37,370,8,True
+afri_direct,1234,corrected,pw4.wav,16,1399,28,True
+afri_direct,1234,corrected,pw5.wav,27,1357,4,True
+afri_direct,1234,corrected,pw6.wav,38,1037,3,True
+afri_direct,1234,corrected,pw7.wav,33,376,8,True
+afri_direct,1234,corrected,pw8.wav,50,492,0,True
+afri_direct,1234,corrected,pw9.wav,31,394,22,True
+afri_inverse,1234,released,BUK1_20181011_001004.wav,3,34,28,True
+afri_inverse,1234,released,BUK1_20181013_023504.wav,2,5,22,True
+afri_inverse,1234,released,BUK4_20160925_231604.wav,0,3,37,True
+afri_inverse,1234,released,BUK4_20161011_000804.wav,0,257,47,True
+afri_inverse,1234,released,BUK4_20161031_232104a.wav,23,58,154,True
+afri_inverse,1234,released,BUK4_20171022_004304a.wav,7,9,10,True
+afri_inverse,1234,released,BUK5_20161101_002104a.wav,22,251,66,True
+afri_inverse,1234,released,BUK5_20180921_015906a.wav,4,28,19,True
+afri_inverse,1234,released,BUK5_20181007_011905.wav,5,10,61,True
+afri_inverse,1234,released,ME1.wav,6,321,5,True
+afri_inverse,1234,released,ME2.wav,34,23,7,True
+afri_inverse,1234,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+afri_inverse,1234,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_inverse,1234,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_inverse,1234,released,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+afri_inverse,1234,released,R4_cleaned recording_TEL_20-10-17.wav,61,6,3,True
+afri_inverse,1234,released,R4_cleaned recording_TEL_23-10-17.wav,81,3,3,True
+afri_inverse,1234,released,R4_cleaned recording_TEL_24-10-17.wav,90,7,9,True
+afri_inverse,1234,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_inverse,1234,released,RD_01.wav,72,1140,19,True
+afri_inverse,1234,released,RD_02.wav,326,326,172,True
+afri_inverse,1234,released,RD_03.wav,2,51,3,True
+afri_inverse,1234,released,RD_04.wav,72,1605,154,True
+afri_inverse,1234,released,RD_05.wav,82,96,79,True
+afri_inverse,1234,released,RD_06.wav,250,349,111,True
+afri_inverse,1234,released,file_423_487.wav,57,0,0,True
+afri_inverse,1234,released,file_97_113.wav,11,41,109,True
+afri_inverse,1234,released,pw1.wav,25,624,4,True
+afri_inverse,1234,released,pw10.wav,33,464,15,True
+afri_inverse,1234,released,pw11.wav,39,407,0,True
+afri_inverse,1234,released,pw12.wav,34,449,8,True
+afri_inverse,1234,released,pw13.wav,39,357,1,True
+afri_inverse,1234,released,pw14.wav,44,308,6,True
+afri_inverse,1234,released,pw15.wav,33,719,8,True
+afri_inverse,1234,released,pw2.wav,19,734,17,True
+afri_inverse,1234,released,pw3.wav,39,331,6,True
+afri_inverse,1234,released,pw4.wav,15,1405,29,True
+afri_inverse,1234,released,pw5.wav,29,1196,2,True
+afri_inverse,1234,released,pw6.wav,41,1044,0,True
+afri_inverse,1234,released,pw7.wav,34,346,7,True
+afri_inverse,1234,released,pw8.wav,49,431,1,True
+afri_inverse,1234,released,pw9.wav,31,374,22,True
+afri_inverse,1234,corrected,BUK1_20181011_001004.wav,3,34,28,True
+afri_inverse,1234,corrected,BUK1_20181013_023504.wav,2,5,22,True
+afri_inverse,1234,corrected,BUK4_20160925_231604.wav,0,3,37,True
+afri_inverse,1234,corrected,BUK4_20161011_000804.wav,0,257,47,True
+afri_inverse,1234,corrected,BUK4_20161031_232104a.wav,23,58,154,True
+afri_inverse,1234,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+afri_inverse,1234,corrected,BUK5_20161101_002104a.wav,22,251,66,True
+afri_inverse,1234,corrected,BUK5_20180921_015906a.wav,4,28,19,True
+afri_inverse,1234,corrected,BUK5_20181007_011905.wav,5,10,61,True
+afri_inverse,1234,corrected,ME1.wav,6,321,5,True
+afri_inverse,1234,corrected,ME2.wav,34,23,7,True
+afri_inverse,1234,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+afri_inverse,1234,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_inverse,1234,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_inverse,1234,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+afri_inverse,1234,corrected,R4_cleaned recording_TEL_20-10-17.wav,61,6,3,True
+afri_inverse,1234,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,3,3,True
+afri_inverse,1234,corrected,R4_cleaned recording_TEL_24-10-17.wav,90,7,9,True
+afri_inverse,1234,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_inverse,1234,corrected,RD_01.wav,72,1140,19,True
+afri_inverse,1234,corrected,RD_02.wav,326,326,172,True
+afri_inverse,1234,corrected,RD_03.wav,2,51,3,True
+afri_inverse,1234,corrected,RD_04.wav,72,1605,154,True
+afri_inverse,1234,corrected,RD_05.wav,82,96,79,True
+afri_inverse,1234,corrected,RD_06.wav,250,349,111,True
+afri_inverse,1234,corrected,file_423_487.wav,57,0,0,True
+afri_inverse,1234,corrected,file_97_113.wav,11,41,109,True
+afri_inverse,1234,corrected,pw1.wav,25,624,4,True
+afri_inverse,1234,corrected,pw10.wav,33,464,15,True
+afri_inverse,1234,corrected,pw11.wav,39,407,0,True
+afri_inverse,1234,corrected,pw12.wav,34,449,8,True
+afri_inverse,1234,corrected,pw13.wav,39,357,1,True
+afri_inverse,1234,corrected,pw14.wav,44,308,6,True
+afri_inverse,1234,corrected,pw15.wav,33,719,8,True
+afri_inverse,1234,corrected,pw2.wav,19,734,17,True
+afri_inverse,1234,corrected,pw3.wav,39,331,6,True
+afri_inverse,1234,corrected,pw4.wav,15,1405,29,True
+afri_inverse,1234,corrected,pw5.wav,29,1196,2,True
+afri_inverse,1234,corrected,pw6.wav,41,1044,0,True
+afri_inverse,1234,corrected,pw7.wav,34,346,7,True
+afri_inverse,1234,corrected,pw8.wav,49,431,1,True
+afri_inverse,1234,corrected,pw9.wav,31,374,22,True
+baseline,2026,released,BUK1_20181011_001004.wav,1,23,30,True
+baseline,2026,released,BUK1_20181013_023504.wav,2,3,22,True
+baseline,2026,released,BUK4_20160925_231604.wav,1,3,36,True
+baseline,2026,released,BUK4_20161011_000804.wav,0,118,47,True
+baseline,2026,released,BUK4_20161031_232104a.wav,11,12,166,True
+baseline,2026,released,BUK4_20171022_004304a.wav,4,10,13,True
+baseline,2026,released,BUK5_20161101_002104a.wav,25,213,63,True
+baseline,2026,released,BUK5_20180921_015906a.wav,3,13,20,True
+baseline,2026,released,BUK5_20181007_011905.wav,7,13,59,True
+baseline,2026,released,ME1.wav,10,81,1,True
+baseline,2026,released,ME2.wav,34,27,7,True
+baseline,2026,released,R4_cleaned recording_13-10-17.wav,19,1,0,True
+baseline,2026,released,R4_cleaned recording_16-10-17.wav,28,6,2,True
+baseline,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,2026,released,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+baseline,2026,released,R4_cleaned recording_TEL_20-10-17.wav,57,25,7,True
+baseline,2026,released,R4_cleaned recording_TEL_23-10-17.wav,75,22,9,True
+baseline,2026,released,R4_cleaned recording_TEL_24-10-17.wav,91,14,8,True
+baseline,2026,released,R4_cleaned recording_TEL_25-10-17.wav,92,20,7,True
+baseline,2026,released,RD_01.wav,68,818,23,True
+baseline,2026,released,RD_02.wav,332,628,166,True
+baseline,2026,released,RD_03.wav,5,44,0,True
+baseline,2026,released,RD_04.wav,93,608,133,True
+baseline,2026,released,RD_05.wav,87,104,74,True
+baseline,2026,released,RD_06.wav,279,436,82,True
+baseline,2026,released,file_423_487.wav,57,1,0,True
+baseline,2026,released,file_97_113.wav,11,31,109,True
+baseline,2026,released,pw1.wav,26,849,3,True
+baseline,2026,released,pw10.wav,37,619,11,True
+baseline,2026,released,pw11.wav,35,905,4,True
+baseline,2026,released,pw12.wav,31,371,11,True
+baseline,2026,released,pw13.wav,39,312,1,True
+baseline,2026,released,pw14.wav,38,511,12,True
+baseline,2026,released,pw15.wav,34,704,7,True
+baseline,2026,released,pw2.wav,20,639,16,True
+baseline,2026,released,pw3.wav,45,1022,0,True
+baseline,2026,released,pw4.wav,21,1415,23,True
+baseline,2026,released,pw5.wav,28,1014,3,True
+baseline,2026,released,pw6.wav,35,1024,6,True
+baseline,2026,released,pw7.wav,32,210,9,True
+baseline,2026,released,pw8.wav,38,831,12,True
+baseline,2026,released,pw9.wav,42,496,11,True
+baseline,2026,corrected,BUK1_20181011_001004.wav,1,23,30,True
+baseline,2026,corrected,BUK1_20181013_023504.wav,2,3,22,True
+baseline,2026,corrected,BUK4_20160925_231604.wav,1,3,36,True
+baseline,2026,corrected,BUK4_20161011_000804.wav,0,118,47,True
+baseline,2026,corrected,BUK4_20161031_232104a.wav,11,12,166,True
+baseline,2026,corrected,BUK4_20171022_004304a.wav,4,10,13,True
+baseline,2026,corrected,BUK5_20161101_002104a.wav,25,213,63,True
+baseline,2026,corrected,BUK5_20180921_015906a.wav,3,13,20,True
+baseline,2026,corrected,BUK5_20181007_011905.wav,7,13,59,True
+baseline,2026,corrected,ME1.wav,10,81,1,True
+baseline,2026,corrected,ME2.wav,34,27,7,True
+baseline,2026,corrected,R4_cleaned recording_13-10-17.wav,19,1,0,True
+baseline,2026,corrected,R4_cleaned recording_16-10-17.wav,28,6,2,True
+baseline,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+baseline,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,57,25,7,True
+baseline,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,75,22,9,True
+baseline,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,91,14,8,True
+baseline,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,92,20,7,True
+baseline,2026,corrected,RD_01.wav,68,818,23,True
+baseline,2026,corrected,RD_02.wav,332,628,166,True
+baseline,2026,corrected,RD_03.wav,5,44,0,True
+baseline,2026,corrected,RD_04.wav,93,608,133,True
+baseline,2026,corrected,RD_05.wav,87,104,74,True
+baseline,2026,corrected,RD_06.wav,279,436,82,True
+baseline,2026,corrected,file_423_487.wav,57,1,0,True
+baseline,2026,corrected,file_97_113.wav,11,31,109,True
+baseline,2026,corrected,pw1.wav,26,849,3,True
+baseline,2026,corrected,pw10.wav,37,619,11,True
+baseline,2026,corrected,pw11.wav,35,905,4,True
+baseline,2026,corrected,pw12.wav,31,371,11,True
+baseline,2026,corrected,pw13.wav,39,312,1,True
+baseline,2026,corrected,pw14.wav,38,511,12,True
+baseline,2026,corrected,pw15.wav,34,704,7,True
+baseline,2026,corrected,pw2.wav,20,639,16,True
+baseline,2026,corrected,pw3.wav,45,1022,0,True
+baseline,2026,corrected,pw4.wav,21,1415,23,True
+baseline,2026,corrected,pw5.wav,28,1014,3,True
+baseline,2026,corrected,pw6.wav,35,1024,6,True
+baseline,2026,corrected,pw7.wav,32,210,9,True
+baseline,2026,corrected,pw8.wav,38,831,12,True
+baseline,2026,corrected,pw9.wav,42,496,11,True
+cife,2026,released,BUK1_20181011_001004.wav,0,2,31,True
+cife,2026,released,BUK1_20181013_023504.wav,6,0,18,True
+cife,2026,released,BUK4_20160925_231604.wav,1,1,36,True
+cife,2026,released,BUK4_20161011_000804.wav,0,133,47,True
+cife,2026,released,BUK4_20161031_232104a.wav,13,13,164,True
+cife,2026,released,BUK4_20171022_004304a.wav,5,11,12,True
+cife,2026,released,BUK5_20161101_002104a.wav,19,24,69,True
+cife,2026,released,BUK5_20180921_015906a.wav,4,14,19,True
+cife,2026,released,BUK5_20181007_011905.wav,8,3,58,True
+cife,2026,released,ME1.wav,7,284,4,True
+cife,2026,released,ME2.wav,35,52,6,True
+cife,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,2026,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+cife,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,2026,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,2026,released,R4_cleaned recording_TEL_20-10-17.wav,59,13,5,True
+cife,2026,released,R4_cleaned recording_TEL_23-10-17.wav,81,9,3,True
+cife,2026,released,R4_cleaned recording_TEL_24-10-17.wav,93,6,6,True
+cife,2026,released,R4_cleaned recording_TEL_25-10-17.wav,95,5,4,True
+cife,2026,released,RD_01.wav,66,1026,25,True
+cife,2026,released,RD_02.wav,338,264,160,True
+cife,2026,released,RD_03.wav,3,54,2,True
+cife,2026,released,RD_04.wav,50,1321,176,True
+cife,2026,released,RD_05.wav,68,96,93,True
+cife,2026,released,RD_06.wav,182,349,179,True
+cife,2026,released,file_423_487.wav,57,1,0,True
+cife,2026,released,file_97_113.wav,12,43,108,True
+cife,2026,released,pw1.wav,26,733,3,True
+cife,2026,released,pw10.wav,37,559,11,True
+cife,2026,released,pw11.wav,37,455,2,True
+cife,2026,released,pw12.wav,30,376,12,True
+cife,2026,released,pw13.wav,38,351,2,True
+cife,2026,released,pw14.wav,42,312,8,True
+cife,2026,released,pw15.wav,36,667,5,True
+cife,2026,released,pw2.wav,19,698,17,True
+cife,2026,released,pw3.wav,43,410,2,True
+cife,2026,released,pw4.wav,17,1463,27,True
+cife,2026,released,pw5.wav,28,1179,3,True
+cife,2026,released,pw6.wav,35,1396,6,True
+cife,2026,released,pw7.wav,31,354,10,True
+cife,2026,released,pw8.wav,49,538,1,True
+cife,2026,released,pw9.wav,43,457,10,True
+cife,2026,corrected,BUK1_20181011_001004.wav,0,2,31,True
+cife,2026,corrected,BUK1_20181013_023504.wav,6,0,18,True
+cife,2026,corrected,BUK4_20160925_231604.wav,1,1,36,True
+cife,2026,corrected,BUK4_20161011_000804.wav,0,133,47,True
+cife,2026,corrected,BUK4_20161031_232104a.wav,13,13,164,True
+cife,2026,corrected,BUK4_20171022_004304a.wav,5,11,12,True
+cife,2026,corrected,BUK5_20161101_002104a.wav,19,24,69,True
+cife,2026,corrected,BUK5_20180921_015906a.wav,4,14,19,True
+cife,2026,corrected,BUK5_20181007_011905.wav,8,3,58,True
+cife,2026,corrected,ME1.wav,7,284,4,True
+cife,2026,corrected,ME2.wav,35,52,6,True
+cife,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,2026,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+cife,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,59,13,5,True
+cife,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,9,3,True
+cife,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,93,6,6,True
+cife,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,95,5,4,True
+cife,2026,corrected,RD_01.wav,66,1026,25,True
+cife,2026,corrected,RD_02.wav,338,264,160,True
+cife,2026,corrected,RD_03.wav,3,54,2,True
+cife,2026,corrected,RD_04.wav,50,1321,176,True
+cife,2026,corrected,RD_05.wav,68,96,93,True
+cife,2026,corrected,RD_06.wav,182,349,179,True
+cife,2026,corrected,file_423_487.wav,57,1,0,True
+cife,2026,corrected,file_97_113.wav,12,43,108,True
+cife,2026,corrected,pw1.wav,26,733,3,True
+cife,2026,corrected,pw10.wav,37,559,11,True
+cife,2026,corrected,pw11.wav,37,455,2,True
+cife,2026,corrected,pw12.wav,30,376,12,True
+cife,2026,corrected,pw13.wav,38,351,2,True
+cife,2026,corrected,pw14.wav,42,312,8,True
+cife,2026,corrected,pw15.wav,36,667,5,True
+cife,2026,corrected,pw2.wav,19,698,17,True
+cife,2026,corrected,pw3.wav,43,410,2,True
+cife,2026,corrected,pw4.wav,17,1463,27,True
+cife,2026,corrected,pw5.wav,28,1179,3,True
+cife,2026,corrected,pw6.wav,35,1396,6,True
+cife,2026,corrected,pw7.wav,31,354,10,True
+cife,2026,corrected,pw8.wav,49,538,1,True
+cife,2026,corrected,pw9.wav,43,457,10,True
+phase1_random,2026,released,BUK1_20181011_001004.wav,1,29,30,True
+phase1_random,2026,released,BUK1_20181013_023504.wav,1,0,23,True
+phase1_random,2026,released,BUK4_20160925_231604.wav,0,0,42,False
+phase1_random,2026,released,BUK4_20161011_000804.wav,0,52,47,True
+phase1_random,2026,released,BUK4_20161031_232104a.wav,15,2,162,True
+phase1_random,2026,released,BUK4_20171022_004304a.wav,4,6,13,True
+phase1_random,2026,released,BUK5_20161101_002104a.wav,16,101,72,True
+phase1_random,2026,released,BUK5_20180921_015906a.wav,4,26,19,True
+phase1_random,2026,released,BUK5_20181007_011905.wav,6,10,60,True
+phase1_random,2026,released,ME1.wav,9,91,2,True
+phase1_random,2026,released,ME2.wav,34,31,7,True
+phase1_random,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase1_random,2026,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase1_random,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase1_random,2026,released,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+phase1_random,2026,released,R4_cleaned recording_TEL_20-10-17.wav,57,24,7,True
+phase1_random,2026,released,R4_cleaned recording_TEL_23-10-17.wav,77,20,7,True
+phase1_random,2026,released,R4_cleaned recording_TEL_24-10-17.wav,89,11,10,True
+phase1_random,2026,released,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+phase1_random,2026,released,RD_01.wav,68,1010,23,True
+phase1_random,2026,released,RD_02.wav,332,564,166,True
+phase1_random,2026,released,RD_03.wav,3,38,2,True
+phase1_random,2026,released,RD_04.wav,99,761,127,True
+phase1_random,2026,released,RD_05.wav,81,104,80,True
+phase1_random,2026,released,RD_06.wav,261,418,100,True
+phase1_random,2026,released,file_423_487.wav,57,1,0,True
+phase1_random,2026,released,file_97_113.wav,12,32,108,True
+phase1_random,2026,released,pw1.wav,26,785,3,True
+phase1_random,2026,released,pw10.wav,37,605,11,True
+phase1_random,2026,released,pw11.wav,36,654,3,True
+phase1_random,2026,released,pw12.wav,30,379,12,True
+phase1_random,2026,released,pw13.wav,39,312,1,True
+phase1_random,2026,released,pw14.wav,39,413,11,True
+phase1_random,2026,released,pw15.wav,34,696,7,True
+phase1_random,2026,released,pw2.wav,21,683,15,True
+phase1_random,2026,released,pw3.wav,45,673,0,True
+phase1_random,2026,released,pw4.wav,20,1419,24,True
+phase1_random,2026,released,pw5.wav,29,1354,2,True
+phase1_random,2026,released,pw6.wav,35,972,6,True
+phase1_random,2026,released,pw7.wav,31,388,10,True
+phase1_random,2026,released,pw8.wav,41,734,9,True
+phase1_random,2026,released,pw9.wav,41,457,12,True
+phase1_random,2026,corrected,BUK1_20181011_001004.wav,1,29,30,True
+phase1_random,2026,corrected,BUK1_20181013_023504.wav,1,0,23,True
+phase1_random,2026,corrected,BUK4_20160925_231604.wav,0,0,37,False
+phase1_random,2026,corrected,BUK4_20161011_000804.wav,0,52,47,True
+phase1_random,2026,corrected,BUK4_20161031_232104a.wav,15,2,162,True
+phase1_random,2026,corrected,BUK4_20171022_004304a.wav,4,6,13,True
+phase1_random,2026,corrected,BUK5_20161101_002104a.wav,16,101,72,True
+phase1_random,2026,corrected,BUK5_20180921_015906a.wav,4,26,19,True
+phase1_random,2026,corrected,BUK5_20181007_011905.wav,6,10,60,True
+phase1_random,2026,corrected,ME1.wav,9,91,2,True
+phase1_random,2026,corrected,ME2.wav,34,31,7,True
+phase1_random,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase1_random,2026,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase1_random,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase1_random,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+phase1_random,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,57,24,7,True
+phase1_random,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,77,20,7,True
+phase1_random,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,89,11,10,True
+phase1_random,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+phase1_random,2026,corrected,RD_01.wav,68,1010,23,True
+phase1_random,2026,corrected,RD_02.wav,332,564,166,True
+phase1_random,2026,corrected,RD_03.wav,3,38,2,True
+phase1_random,2026,corrected,RD_04.wav,99,761,127,True
+phase1_random,2026,corrected,RD_05.wav,81,104,80,True
+phase1_random,2026,corrected,RD_06.wav,261,418,100,True
+phase1_random,2026,corrected,file_423_487.wav,57,1,0,True
+phase1_random,2026,corrected,file_97_113.wav,12,32,108,True
+phase1_random,2026,corrected,pw1.wav,26,785,3,True
+phase1_random,2026,corrected,pw10.wav,37,605,11,True
+phase1_random,2026,corrected,pw11.wav,36,654,3,True
+phase1_random,2026,corrected,pw12.wav,30,379,12,True
+phase1_random,2026,corrected,pw13.wav,39,312,1,True
+phase1_random,2026,corrected,pw14.wav,39,413,11,True
+phase1_random,2026,corrected,pw15.wav,34,696,7,True
+phase1_random,2026,corrected,pw2.wav,21,683,15,True
+phase1_random,2026,corrected,pw3.wav,45,673,0,True
+phase1_random,2026,corrected,pw4.wav,20,1419,24,True
+phase1_random,2026,corrected,pw5.wav,29,1354,2,True
+phase1_random,2026,corrected,pw6.wav,35,972,6,True
+phase1_random,2026,corrected,pw7.wav,31,388,10,True
+phase1_random,2026,corrected,pw8.wav,41,734,9,True
+phase1_random,2026,corrected,pw9.wav,41,457,12,True
+slot_uniform,2026,released,BUK1_20181011_001004.wav,1,29,30,True
+slot_uniform,2026,released,BUK1_20181013_023504.wav,2,0,22,True
+slot_uniform,2026,released,BUK4_20160925_231604.wav,1,3,36,True
+slot_uniform,2026,released,BUK4_20161011_000804.wav,0,96,47,True
+slot_uniform,2026,released,BUK4_20161031_232104a.wav,19,14,158,True
+slot_uniform,2026,released,BUK4_20171022_004304a.wav,4,10,13,True
+slot_uniform,2026,released,BUK5_20161101_002104a.wav,22,186,66,True
+slot_uniform,2026,released,BUK5_20180921_015906a.wav,4,22,19,True
+slot_uniform,2026,released,BUK5_20181007_011905.wav,6,10,60,True
+slot_uniform,2026,released,ME1.wav,9,143,2,True
+slot_uniform,2026,released,ME2.wav,34,31,7,True
+slot_uniform,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+slot_uniform,2026,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+slot_uniform,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+slot_uniform,2026,released,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+slot_uniform,2026,released,R4_cleaned recording_TEL_20-10-17.wav,58,25,6,True
+slot_uniform,2026,released,R4_cleaned recording_TEL_23-10-17.wav,77,20,7,True
+slot_uniform,2026,released,R4_cleaned recording_TEL_24-10-17.wav,89,12,10,True
+slot_uniform,2026,released,R4_cleaned recording_TEL_25-10-17.wav,92,17,7,True
+slot_uniform,2026,released,RD_01.wav,68,1008,23,True
+slot_uniform,2026,released,RD_02.wav,338,483,160,True
+slot_uniform,2026,released,RD_03.wav,3,37,2,True
+slot_uniform,2026,released,RD_04.wav,97,684,129,True
+slot_uniform,2026,released,RD_05.wav,81,102,80,True
+slot_uniform,2026,released,RD_06.wav,253,376,108,True
+slot_uniform,2026,released,file_423_487.wav,57,1,0,True
+slot_uniform,2026,released,file_97_113.wav,0,0,125,False
+slot_uniform,2026,released,pw1.wav,26,727,3,True
+slot_uniform,2026,released,pw10.wav,37,583,11,True
+slot_uniform,2026,released,pw11.wav,37,581,2,True
+slot_uniform,2026,released,pw12.wav,30,395,12,True
+slot_uniform,2026,released,pw13.wav,39,311,1,True
+slot_uniform,2026,released,pw14.wav,40,411,10,True
+slot_uniform,2026,released,pw15.wav,34,714,7,True
+slot_uniform,2026,released,pw2.wav,21,676,15,True
+slot_uniform,2026,released,pw3.wav,45,563,0,True
+slot_uniform,2026,released,pw4.wav,19,1425,25,True
+slot_uniform,2026,released,pw5.wav,29,1406,2,True
+slot_uniform,2026,released,pw6.wav,35,1297,6,True
+slot_uniform,2026,released,pw7.wav,31,411,10,True
+slot_uniform,2026,released,pw8.wav,45,708,5,True
+slot_uniform,2026,released,pw9.wav,40,440,13,True
+slot_uniform,2026,corrected,BUK1_20181011_001004.wav,1,29,30,True
+slot_uniform,2026,corrected,BUK1_20181013_023504.wav,2,0,22,True
+slot_uniform,2026,corrected,BUK4_20160925_231604.wav,1,3,36,True
+slot_uniform,2026,corrected,BUK4_20161011_000804.wav,0,96,47,True
+slot_uniform,2026,corrected,BUK4_20161031_232104a.wav,19,14,158,True
+slot_uniform,2026,corrected,BUK4_20171022_004304a.wav,4,10,13,True
+slot_uniform,2026,corrected,BUK5_20161101_002104a.wav,22,186,66,True
+slot_uniform,2026,corrected,BUK5_20180921_015906a.wav,4,22,19,True
+slot_uniform,2026,corrected,BUK5_20181007_011905.wav,6,10,60,True
+slot_uniform,2026,corrected,ME1.wav,9,143,2,True
+slot_uniform,2026,corrected,ME2.wav,34,31,7,True
+slot_uniform,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+slot_uniform,2026,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+slot_uniform,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+slot_uniform,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+slot_uniform,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,58,25,6,True
+slot_uniform,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,77,20,7,True
+slot_uniform,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,89,12,10,True
+slot_uniform,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,92,17,7,True
+slot_uniform,2026,corrected,RD_01.wav,68,1008,23,True
+slot_uniform,2026,corrected,RD_02.wav,338,483,160,True
+slot_uniform,2026,corrected,RD_03.wav,3,37,2,True
+slot_uniform,2026,corrected,RD_04.wav,97,684,129,True
+slot_uniform,2026,corrected,RD_05.wav,81,102,80,True
+slot_uniform,2026,corrected,RD_06.wav,253,376,108,True
+slot_uniform,2026,corrected,file_423_487.wav,57,1,0,True
+slot_uniform,2026,corrected,file_97_113.wav,0,0,120,False
+slot_uniform,2026,corrected,pw1.wav,26,727,3,True
+slot_uniform,2026,corrected,pw10.wav,37,583,11,True
+slot_uniform,2026,corrected,pw11.wav,37,581,2,True
+slot_uniform,2026,corrected,pw12.wav,30,395,12,True
+slot_uniform,2026,corrected,pw13.wav,39,311,1,True
+slot_uniform,2026,corrected,pw14.wav,40,411,10,True
+slot_uniform,2026,corrected,pw15.wav,34,714,7,True
+slot_uniform,2026,corrected,pw2.wav,21,676,15,True
+slot_uniform,2026,corrected,pw3.wav,45,563,0,True
+slot_uniform,2026,corrected,pw4.wav,19,1425,25,True
+slot_uniform,2026,corrected,pw5.wav,29,1406,2,True
+slot_uniform,2026,corrected,pw6.wav,35,1297,6,True
+slot_uniform,2026,corrected,pw7.wav,31,411,10,True
+slot_uniform,2026,corrected,pw8.wav,45,708,5,True
+slot_uniform,2026,corrected,pw9.wav,40,440,13,True
+phase2_energy,2026,released,BUK1_20181011_001004.wav,1,27,30,True
+phase2_energy,2026,released,BUK1_20181013_023504.wav,2,0,22,True
+phase2_energy,2026,released,BUK4_20160925_231604.wav,1,3,36,True
+phase2_energy,2026,released,BUK4_20161011_000804.wav,0,92,47,True
+phase2_energy,2026,released,BUK4_20161031_232104a.wav,16,11,161,True
+phase2_energy,2026,released,BUK4_20171022_004304a.wav,5,10,12,True
+phase2_energy,2026,released,BUK5_20161101_002104a.wav,22,192,66,True
+phase2_energy,2026,released,BUK5_20180921_015906a.wav,3,19,20,True
+phase2_energy,2026,released,BUK5_20181007_011905.wav,6,10,60,True
+phase2_energy,2026,released,ME1.wav,10,121,1,True
+phase2_energy,2026,released,ME2.wav,34,30,7,True
+phase2_energy,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase2_energy,2026,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase2_energy,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase2_energy,2026,released,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+phase2_energy,2026,released,R4_cleaned recording_TEL_20-10-17.wav,57,26,7,True
+phase2_energy,2026,released,R4_cleaned recording_TEL_23-10-17.wav,76,20,8,True
+phase2_energy,2026,released,R4_cleaned recording_TEL_24-10-17.wav,90,11,9,True
+phase2_energy,2026,released,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+phase2_energy,2026,released,RD_01.wav,68,961,23,True
+phase2_energy,2026,released,RD_02.wav,331,581,167,True
+phase2_energy,2026,released,RD_03.wav,3,42,2,True
+phase2_energy,2026,released,RD_04.wav,94,711,132,True
+phase2_energy,2026,released,RD_05.wav,80,107,81,True
+phase2_energy,2026,released,RD_06.wav,265,405,96,True
+phase2_energy,2026,released,file_423_487.wav,57,1,0,True
+phase2_energy,2026,released,file_97_113.wav,12,34,108,True
+phase2_energy,2026,released,pw1.wav,26,795,3,True
+phase2_energy,2026,released,pw10.wav,37,604,11,True
+phase2_energy,2026,released,pw11.wav,36,712,3,True
+phase2_energy,2026,released,pw12.wav,30,395,12,True
+phase2_energy,2026,released,pw13.wav,39,312,1,True
+phase2_energy,2026,released,pw14.wav,39,426,11,True
+phase2_energy,2026,released,pw15.wav,34,706,7,True
+phase2_energy,2026,released,pw2.wav,20,686,16,True
+phase2_energy,2026,released,pw3.wav,45,828,0,True
+phase2_energy,2026,released,pw4.wav,20,1428,24,True
+phase2_energy,2026,released,pw5.wav,29,1286,2,True
+phase2_energy,2026,released,pw6.wav,35,1272,6,True
+phase2_energy,2026,released,pw7.wav,32,355,9,True
+phase2_energy,2026,released,pw8.wav,41,753,9,True
+phase2_energy,2026,released,pw9.wav,41,468,12,True
+phase2_energy,2026,corrected,BUK1_20181011_001004.wav,1,27,30,True
+phase2_energy,2026,corrected,BUK1_20181013_023504.wav,2,0,22,True
+phase2_energy,2026,corrected,BUK4_20160925_231604.wav,1,3,36,True
+phase2_energy,2026,corrected,BUK4_20161011_000804.wav,0,92,47,True
+phase2_energy,2026,corrected,BUK4_20161031_232104a.wav,16,11,161,True
+phase2_energy,2026,corrected,BUK4_20171022_004304a.wav,5,10,12,True
+phase2_energy,2026,corrected,BUK5_20161101_002104a.wav,22,192,66,True
+phase2_energy,2026,corrected,BUK5_20180921_015906a.wav,3,19,20,True
+phase2_energy,2026,corrected,BUK5_20181007_011905.wav,6,10,60,True
+phase2_energy,2026,corrected,ME1.wav,10,121,1,True
+phase2_energy,2026,corrected,ME2.wav,34,30,7,True
+phase2_energy,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase2_energy,2026,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase2_energy,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase2_energy,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+phase2_energy,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,57,26,7,True
+phase2_energy,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,76,20,8,True
+phase2_energy,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,90,11,9,True
+phase2_energy,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+phase2_energy,2026,corrected,RD_01.wav,68,961,23,True
+phase2_energy,2026,corrected,RD_02.wav,331,581,167,True
+phase2_energy,2026,corrected,RD_03.wav,3,42,2,True
+phase2_energy,2026,corrected,RD_04.wav,94,711,132,True
+phase2_energy,2026,corrected,RD_05.wav,80,107,81,True
+phase2_energy,2026,corrected,RD_06.wav,265,405,96,True
+phase2_energy,2026,corrected,file_423_487.wav,57,1,0,True
+phase2_energy,2026,corrected,file_97_113.wav,12,34,108,True
+phase2_energy,2026,corrected,pw1.wav,26,795,3,True
+phase2_energy,2026,corrected,pw10.wav,37,604,11,True
+phase2_energy,2026,corrected,pw11.wav,36,712,3,True
+phase2_energy,2026,corrected,pw12.wav,30,395,12,True
+phase2_energy,2026,corrected,pw13.wav,39,312,1,True
+phase2_energy,2026,corrected,pw14.wav,39,426,11,True
+phase2_energy,2026,corrected,pw15.wav,34,706,7,True
+phase2_energy,2026,corrected,pw2.wav,20,686,16,True
+phase2_energy,2026,corrected,pw3.wav,45,828,0,True
+phase2_energy,2026,corrected,pw4.wav,20,1428,24,True
+phase2_energy,2026,corrected,pw5.wav,29,1286,2,True
+phase2_energy,2026,corrected,pw6.wav,35,1272,6,True
+phase2_energy,2026,corrected,pw7.wav,32,355,9,True
+phase2_energy,2026,corrected,pw8.wav,41,753,9,True
+phase2_energy,2026,corrected,pw9.wav,41,468,12,True
+phase3_activation,2026,released,BUK1_20181011_001004.wav,1,29,30,True
+phase3_activation,2026,released,BUK1_20181013_023504.wav,1,0,23,True
+phase3_activation,2026,released,BUK4_20160925_231604.wav,0,0,42,False
+phase3_activation,2026,released,BUK4_20161011_000804.wav,0,54,47,True
+phase3_activation,2026,released,BUK4_20161031_232104a.wav,15,2,162,True
+phase3_activation,2026,released,BUK4_20171022_004304a.wav,4,6,13,True
+phase3_activation,2026,released,BUK5_20161101_002104a.wav,17,104,71,True
+phase3_activation,2026,released,BUK5_20180921_015906a.wav,4,28,19,True
+phase3_activation,2026,released,BUK5_20181007_011905.wav,6,10,60,True
+phase3_activation,2026,released,ME1.wav,9,99,2,True
+phase3_activation,2026,released,ME2.wav,34,32,7,True
+phase3_activation,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase3_activation,2026,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase3_activation,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase3_activation,2026,released,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+phase3_activation,2026,released,R4_cleaned recording_TEL_20-10-17.wav,58,25,6,True
+phase3_activation,2026,released,R4_cleaned recording_TEL_23-10-17.wav,78,20,6,True
+phase3_activation,2026,released,R4_cleaned recording_TEL_24-10-17.wav,90,9,9,True
+phase3_activation,2026,released,R4_cleaned recording_TEL_25-10-17.wav,92,17,7,True
+phase3_activation,2026,released,RD_01.wav,68,1026,23,True
+phase3_activation,2026,released,RD_02.wav,343,476,155,True
+phase3_activation,2026,released,RD_03.wav,3,37,2,True
+phase3_activation,2026,released,RD_04.wav,97,695,129,True
+phase3_activation,2026,released,RD_05.wav,82,101,79,True
+phase3_activation,2026,released,RD_06.wav,253,378,108,True
+phase3_activation,2026,released,file_423_487.wav,57,1,0,True
+phase3_activation,2026,released,file_97_113.wav,12,33,108,True
+phase3_activation,2026,released,pw1.wav,26,708,3,True
+phase3_activation,2026,released,pw10.wav,37,583,11,True
+phase3_activation,2026,released,pw11.wav,37,573,2,True
+phase3_activation,2026,released,pw12.wav,30,392,12,True
+phase3_activation,2026,released,pw13.wav,39,313,1,True
+phase3_activation,2026,released,pw14.wav,40,403,10,True
+phase3_activation,2026,released,pw15.wav,34,725,7,True
+phase3_activation,2026,released,pw2.wav,21,684,15,True
+phase3_activation,2026,released,pw3.wav,45,551,0,True
+phase3_activation,2026,released,pw4.wav,19,1419,25,True
+phase3_activation,2026,released,pw5.wav,29,1404,2,True
+phase3_activation,2026,released,pw6.wav,35,1003,6,True
+phase3_activation,2026,released,pw7.wav,31,416,10,True
+phase3_activation,2026,released,pw8.wav,46,675,4,True
+phase3_activation,2026,released,pw9.wav,40,437,13,True
+phase3_activation,2026,corrected,BUK1_20181011_001004.wav,1,29,30,True
+phase3_activation,2026,corrected,BUK1_20181013_023504.wav,1,0,23,True
+phase3_activation,2026,corrected,BUK4_20160925_231604.wav,0,0,37,False
+phase3_activation,2026,corrected,BUK4_20161011_000804.wav,0,54,47,True
+phase3_activation,2026,corrected,BUK4_20161031_232104a.wav,15,2,162,True
+phase3_activation,2026,corrected,BUK4_20171022_004304a.wav,4,6,13,True
+phase3_activation,2026,corrected,BUK5_20161101_002104a.wav,17,104,71,True
+phase3_activation,2026,corrected,BUK5_20180921_015906a.wav,4,28,19,True
+phase3_activation,2026,corrected,BUK5_20181007_011905.wav,6,10,60,True
+phase3_activation,2026,corrected,ME1.wav,9,99,2,True
+phase3_activation,2026,corrected,ME2.wav,34,32,7,True
+phase3_activation,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+phase3_activation,2026,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+phase3_activation,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+phase3_activation,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+phase3_activation,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,58,25,6,True
+phase3_activation,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,78,20,6,True
+phase3_activation,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,90,9,9,True
+phase3_activation,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,92,17,7,True
+phase3_activation,2026,corrected,RD_01.wav,68,1026,23,True
+phase3_activation,2026,corrected,RD_02.wav,343,476,155,True
+phase3_activation,2026,corrected,RD_03.wav,3,37,2,True
+phase3_activation,2026,corrected,RD_04.wav,97,695,129,True
+phase3_activation,2026,corrected,RD_05.wav,82,101,79,True
+phase3_activation,2026,corrected,RD_06.wav,253,378,108,True
+phase3_activation,2026,corrected,file_423_487.wav,57,1,0,True
+phase3_activation,2026,corrected,file_97_113.wav,12,33,108,True
+phase3_activation,2026,corrected,pw1.wav,26,708,3,True
+phase3_activation,2026,corrected,pw10.wav,37,583,11,True
+phase3_activation,2026,corrected,pw11.wav,37,573,2,True
+phase3_activation,2026,corrected,pw12.wav,30,392,12,True
+phase3_activation,2026,corrected,pw13.wav,39,313,1,True
+phase3_activation,2026,corrected,pw14.wav,40,403,10,True
+phase3_activation,2026,corrected,pw15.wav,34,725,7,True
+phase3_activation,2026,corrected,pw2.wav,21,684,15,True
+phase3_activation,2026,corrected,pw3.wav,45,551,0,True
+phase3_activation,2026,corrected,pw4.wav,19,1419,25,True
+phase3_activation,2026,corrected,pw5.wav,29,1404,2,True
+phase3_activation,2026,corrected,pw6.wav,35,1003,6,True
+phase3_activation,2026,corrected,pw7.wav,31,416,10,True
+phase3_activation,2026,corrected,pw8.wav,46,675,4,True
+phase3_activation,2026,corrected,pw9.wav,40,437,13,True
+afri_direct,2026,released,BUK1_20181011_001004.wav,1,24,30,True
+afri_direct,2026,released,BUK1_20181013_023504.wav,2,0,22,True
+afri_direct,2026,released,BUK4_20160925_231604.wav,1,3,36,True
+afri_direct,2026,released,BUK4_20161011_000804.wav,0,86,47,True
+afri_direct,2026,released,BUK4_20161031_232104a.wav,14,13,163,True
+afri_direct,2026,released,BUK4_20171022_004304a.wav,5,10,12,True
+afri_direct,2026,released,BUK5_20161101_002104a.wav,21,178,67,True
+afri_direct,2026,released,BUK5_20180921_015906a.wav,3,17,20,True
+afri_direct,2026,released,BUK5_20181007_011905.wav,6,11,60,True
+afri_direct,2026,released,ME1.wav,10,107,1,True
+afri_direct,2026,released,ME2.wav,34,30,7,True
+afri_direct,2026,released,R4_cleaned recording_13-10-17.wav,19,1,0,True
+afri_direct,2026,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_direct,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_direct,2026,released,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+afri_direct,2026,released,R4_cleaned recording_TEL_20-10-17.wav,57,25,7,True
+afri_direct,2026,released,R4_cleaned recording_TEL_23-10-17.wav,75,21,9,True
+afri_direct,2026,released,R4_cleaned recording_TEL_24-10-17.wav,91,11,8,True
+afri_direct,2026,released,R4_cleaned recording_TEL_25-10-17.wav,91,20,8,True
+afri_direct,2026,released,RD_01.wav,69,961,22,True
+afri_direct,2026,released,RD_02.wav,323,617,175,True
+afri_direct,2026,released,RD_03.wav,3,42,2,True
+afri_direct,2026,released,RD_04.wav,92,619,134,True
+afri_direct,2026,released,RD_05.wav,81,104,80,True
+afri_direct,2026,released,RD_06.wav,262,397,99,True
+afri_direct,2026,released,file_423_487.wav,57,1,0,True
+afri_direct,2026,released,file_97_113.wav,12,33,108,True
+afri_direct,2026,released,pw1.wav,26,796,3,True
+afri_direct,2026,released,pw10.wav,37,629,11,True
+afri_direct,2026,released,pw11.wav,36,883,3,True
+afri_direct,2026,released,pw12.wav,31,439,11,True
+afri_direct,2026,released,pw13.wav,39,304,1,True
+afri_direct,2026,released,pw14.wav,38,461,12,True
+afri_direct,2026,released,pw15.wav,34,740,7,True
+afri_direct,2026,released,pw2.wav,20,700,16,True
+afri_direct,2026,released,pw3.wav,45,828,0,True
+afri_direct,2026,released,pw4.wav,20,1416,24,True
+afri_direct,2026,released,pw5.wav,29,1145,2,True
+afri_direct,2026,released,pw6.wav,35,1241,6,True
+afri_direct,2026,released,pw7.wav,32,289,9,True
+afri_direct,2026,released,pw8.wav,38,778,12,True
+afri_direct,2026,released,pw9.wav,40,482,13,True
+afri_direct,2026,corrected,BUK1_20181011_001004.wav,1,24,30,True
+afri_direct,2026,corrected,BUK1_20181013_023504.wav,2,0,22,True
+afri_direct,2026,corrected,BUK4_20160925_231604.wav,1,3,36,True
+afri_direct,2026,corrected,BUK4_20161011_000804.wav,0,86,47,True
+afri_direct,2026,corrected,BUK4_20161031_232104a.wav,14,13,163,True
+afri_direct,2026,corrected,BUK4_20171022_004304a.wav,5,10,12,True
+afri_direct,2026,corrected,BUK5_20161101_002104a.wav,21,178,67,True
+afri_direct,2026,corrected,BUK5_20180921_015906a.wav,3,17,20,True
+afri_direct,2026,corrected,BUK5_20181007_011905.wav,6,11,60,True
+afri_direct,2026,corrected,ME1.wav,10,107,1,True
+afri_direct,2026,corrected,ME2.wav,34,30,7,True
+afri_direct,2026,corrected,R4_cleaned recording_13-10-17.wav,19,1,0,True
+afri_direct,2026,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_direct,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_direct,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,2,4,True
+afri_direct,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,57,25,7,True
+afri_direct,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,75,21,9,True
+afri_direct,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,91,11,8,True
+afri_direct,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,91,20,8,True
+afri_direct,2026,corrected,RD_01.wav,69,961,22,True
+afri_direct,2026,corrected,RD_02.wav,323,617,175,True
+afri_direct,2026,corrected,RD_03.wav,3,42,2,True
+afri_direct,2026,corrected,RD_04.wav,92,619,134,True
+afri_direct,2026,corrected,RD_05.wav,81,104,80,True
+afri_direct,2026,corrected,RD_06.wav,262,397,99,True
+afri_direct,2026,corrected,file_423_487.wav,57,1,0,True
+afri_direct,2026,corrected,file_97_113.wav,12,33,108,True
+afri_direct,2026,corrected,pw1.wav,26,796,3,True
+afri_direct,2026,corrected,pw10.wav,37,629,11,True
+afri_direct,2026,corrected,pw11.wav,36,883,3,True
+afri_direct,2026,corrected,pw12.wav,31,439,11,True
+afri_direct,2026,corrected,pw13.wav,39,304,1,True
+afri_direct,2026,corrected,pw14.wav,38,461,12,True
+afri_direct,2026,corrected,pw15.wav,34,740,7,True
+afri_direct,2026,corrected,pw2.wav,20,700,16,True
+afri_direct,2026,corrected,pw3.wav,45,828,0,True
+afri_direct,2026,corrected,pw4.wav,20,1416,24,True
+afri_direct,2026,corrected,pw5.wav,29,1145,2,True
+afri_direct,2026,corrected,pw6.wav,35,1241,6,True
+afri_direct,2026,corrected,pw7.wav,32,289,9,True
+afri_direct,2026,corrected,pw8.wav,38,778,12,True
+afri_direct,2026,corrected,pw9.wav,40,482,13,True
+afri_inverse,2026,released,BUK1_20181011_001004.wav,1,20,30,True
+afri_inverse,2026,released,BUK1_20181013_023504.wav,1,0,23,True
+afri_inverse,2026,released,BUK4_20160925_231604.wav,0,0,42,False
+afri_inverse,2026,released,BUK4_20161011_000804.wav,0,67,47,True
+afri_inverse,2026,released,BUK4_20161031_232104a.wav,10,3,167,True
+afri_inverse,2026,released,BUK4_20171022_004304a.wav,4,5,13,True
+afri_inverse,2026,released,BUK5_20161101_002104a.wav,18,93,70,True
+afri_inverse,2026,released,BUK5_20180921_015906a.wav,3,23,20,True
+afri_inverse,2026,released,BUK5_20181007_011905.wav,6,10,60,True
+afri_inverse,2026,released,ME1.wav,8,91,3,True
+afri_inverse,2026,released,ME2.wav,34,30,7,True
+afri_inverse,2026,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+afri_inverse,2026,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_inverse,2026,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_inverse,2026,released,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+afri_inverse,2026,released,R4_cleaned recording_TEL_20-10-17.wav,57,26,7,True
+afri_inverse,2026,released,R4_cleaned recording_TEL_23-10-17.wav,78,19,6,True
+afri_inverse,2026,released,R4_cleaned recording_TEL_24-10-17.wav,88,14,11,True
+afri_inverse,2026,released,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+afri_inverse,2026,released,RD_01.wav,68,934,23,True
+afri_inverse,2026,released,RD_02.wav,347,496,151,True
+afri_inverse,2026,released,RD_03.wav,3,40,2,True
+afri_inverse,2026,released,RD_04.wav,98,693,128,True
+afri_inverse,2026,released,RD_05.wav,82,97,79,True
+afri_inverse,2026,released,RD_06.wav,250,367,111,True
+afri_inverse,2026,released,file_423_487.wav,57,1,0,True
+afri_inverse,2026,released,file_97_113.wav,12,33,108,True
+afri_inverse,2026,released,pw1.wav,25,685,4,True
+afri_inverse,2026,released,pw10.wav,37,568,11,True
+afri_inverse,2026,released,pw11.wav,37,532,2,True
+afri_inverse,2026,released,pw12.wav,30,401,12,True
+afri_inverse,2026,released,pw13.wav,39,337,1,True
+afri_inverse,2026,released,pw14.wav,41,383,9,True
+afri_inverse,2026,released,pw15.wav,33,768,8,True
+afri_inverse,2026,released,pw2.wav,24,778,12,True
+afri_inverse,2026,released,pw3.wav,45,548,0,True
+afri_inverse,2026,released,pw4.wav,20,1411,24,True
+afri_inverse,2026,released,pw5.wav,29,1492,2,True
+afri_inverse,2026,released,pw6.wav,35,967,6,True
+afri_inverse,2026,released,pw7.wav,31,448,10,True
+afri_inverse,2026,released,pw8.wav,49,637,1,True
+afri_inverse,2026,released,pw9.wav,39,404,14,True
+afri_inverse,2026,corrected,BUK1_20181011_001004.wav,1,20,30,True
+afri_inverse,2026,corrected,BUK1_20181013_023504.wav,1,0,23,True
+afri_inverse,2026,corrected,BUK4_20160925_231604.wav,0,0,37,False
+afri_inverse,2026,corrected,BUK4_20161011_000804.wav,0,67,47,True
+afri_inverse,2026,corrected,BUK4_20161031_232104a.wav,10,3,167,True
+afri_inverse,2026,corrected,BUK4_20171022_004304a.wav,4,5,13,True
+afri_inverse,2026,corrected,BUK5_20161101_002104a.wav,18,93,70,True
+afri_inverse,2026,corrected,BUK5_20180921_015906a.wav,3,23,20,True
+afri_inverse,2026,corrected,BUK5_20181007_011905.wav,6,10,60,True
+afri_inverse,2026,corrected,ME1.wav,8,91,3,True
+afri_inverse,2026,corrected,ME2.wav,34,30,7,True
+afri_inverse,2026,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+afri_inverse,2026,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+afri_inverse,2026,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+afri_inverse,2026,corrected,R4_cleaned recording_TEL_19-10-17.wav,51,2,3,True
+afri_inverse,2026,corrected,R4_cleaned recording_TEL_20-10-17.wav,57,26,7,True
+afri_inverse,2026,corrected,R4_cleaned recording_TEL_23-10-17.wav,78,19,6,True
+afri_inverse,2026,corrected,R4_cleaned recording_TEL_24-10-17.wav,88,14,11,True
+afri_inverse,2026,corrected,R4_cleaned recording_TEL_25-10-17.wav,91,18,8,True
+afri_inverse,2026,corrected,RD_01.wav,68,934,23,True
+afri_inverse,2026,corrected,RD_02.wav,347,496,151,True
+afri_inverse,2026,corrected,RD_03.wav,3,40,2,True
+afri_inverse,2026,corrected,RD_04.wav,98,693,128,True
+afri_inverse,2026,corrected,RD_05.wav,82,97,79,True
+afri_inverse,2026,corrected,RD_06.wav,250,367,111,True
+afri_inverse,2026,corrected,file_423_487.wav,57,1,0,True
+afri_inverse,2026,corrected,file_97_113.wav,12,33,108,True
+afri_inverse,2026,corrected,pw1.wav,25,685,4,True
+afri_inverse,2026,corrected,pw10.wav,37,568,11,True
+afri_inverse,2026,corrected,pw11.wav,37,532,2,True
+afri_inverse,2026,corrected,pw12.wav,30,401,12,True
+afri_inverse,2026,corrected,pw13.wav,39,337,1,True
+afri_inverse,2026,corrected,pw14.wav,41,383,9,True
+afri_inverse,2026,corrected,pw15.wav,33,768,8,True
+afri_inverse,2026,corrected,pw2.wav,24,778,12,True
+afri_inverse,2026,corrected,pw3.wav,45,548,0,True
+afri_inverse,2026,corrected,pw4.wav,20,1411,24,True
+afri_inverse,2026,corrected,pw5.wav,29,1492,2,True
+afri_inverse,2026,corrected,pw6.wav,35,967,6,True
+afri_inverse,2026,corrected,pw7.wav,31,448,10,True
+afri_inverse,2026,corrected,pw8.wav,49,637,1,True
+afri_inverse,2026,corrected,pw9.wav,39,404,14,True
+baseline,3009,released,BUK1_20181011_001004.wav,2,4,29,True
+baseline,3009,released,BUK1_20181013_023504.wav,3,1,21,True
+baseline,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+baseline,3009,released,BUK4_20161011_000804.wav,0,217,47,True
+baseline,3009,released,BUK4_20161031_232104a.wav,31,32,146,True
+baseline,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+baseline,3009,released,BUK5_20161101_002104a.wav,20,120,68,True
+baseline,3009,released,BUK5_20180921_015906a.wav,3,19,20,True
+baseline,3009,released,BUK5_20181007_011905.wav,7,3,59,True
+baseline,3009,released,ME1.wav,10,112,1,True
+baseline,3009,released,ME2.wav,34,27,7,True
+baseline,3009,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+baseline,3009,released,R4_cleaned recording_16-10-17.wav,29,4,1,True
+baseline,3009,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+baseline,3009,released,R4_cleaned recording_TEL_20-10-17.wav,61,11,3,True
+baseline,3009,released,R4_cleaned recording_TEL_23-10-17.wav,81,4,3,True
+baseline,3009,released,R4_cleaned recording_TEL_24-10-17.wav,91,7,8,True
+baseline,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+baseline,3009,released,RD_01.wav,71,1290,20,True
+baseline,3009,released,RD_02.wav,346,320,152,True
+baseline,3009,released,RD_03.wav,2,53,3,True
+baseline,3009,released,RD_04.wav,55,1020,171,True
+baseline,3009,released,RD_05.wav,83,117,78,True
+baseline,3009,released,RD_06.wav,276,447,85,True
+baseline,3009,released,file_423_487.wav,57,0,0,True
+baseline,3009,released,file_97_113.wav,11,37,109,True
+baseline,3009,released,pw1.wav,22,673,7,True
+baseline,3009,released,pw10.wav,29,447,19,True
+baseline,3009,released,pw11.wav,39,380,0,True
+baseline,3009,released,pw12.wav,31,511,11,True
+baseline,3009,released,pw13.wav,38,338,2,True
+baseline,3009,released,pw14.wav,43,292,7,True
+baseline,3009,released,pw15.wav,34,670,7,True
+baseline,3009,released,pw2.wav,24,958,12,True
+baseline,3009,released,pw3.wav,35,329,10,True
+baseline,3009,released,pw4.wav,14,1368,30,True
+baseline,3009,released,pw5.wav,27,1386,4,True
+baseline,3009,released,pw6.wav,38,1594,3,True
+baseline,3009,released,pw7.wav,35,452,6,True
+baseline,3009,released,pw8.wav,49,402,1,True
+baseline,3009,released,pw9.wav,30,386,23,True
+baseline,3009,corrected,BUK1_20181011_001004.wav,2,4,29,True
+baseline,3009,corrected,BUK1_20181013_023504.wav,3,1,21,True
+baseline,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+baseline,3009,corrected,BUK4_20161011_000804.wav,0,217,47,True
+baseline,3009,corrected,BUK4_20161031_232104a.wav,31,32,146,True
+baseline,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+baseline,3009,corrected,BUK5_20161101_002104a.wav,20,120,68,True
+baseline,3009,corrected,BUK5_20180921_015906a.wav,3,19,20,True
+baseline,3009,corrected,BUK5_20181007_011905.wav,7,3,59,True
+baseline,3009,corrected,ME1.wav,10,112,1,True
+baseline,3009,corrected,ME2.wav,34,27,7,True
+baseline,3009,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+baseline,3009,corrected,R4_cleaned recording_16-10-17.wav,29,4,1,True
+baseline,3009,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+baseline,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+baseline,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,61,11,3,True
+baseline,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,4,3,True
+baseline,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,91,7,8,True
+baseline,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+baseline,3009,corrected,RD_01.wav,71,1290,20,True
+baseline,3009,corrected,RD_02.wav,346,320,152,True
+baseline,3009,corrected,RD_03.wav,2,53,3,True
+baseline,3009,corrected,RD_04.wav,55,1020,171,True
+baseline,3009,corrected,RD_05.wav,83,117,78,True
+baseline,3009,corrected,RD_06.wav,276,447,85,True
+baseline,3009,corrected,file_423_487.wav,57,0,0,True
+baseline,3009,corrected,file_97_113.wav,11,37,109,True
+baseline,3009,corrected,pw1.wav,22,673,7,True
+baseline,3009,corrected,pw10.wav,29,447,19,True
+baseline,3009,corrected,pw11.wav,39,380,0,True
+baseline,3009,corrected,pw12.wav,31,511,11,True
+baseline,3009,corrected,pw13.wav,38,338,2,True
+baseline,3009,corrected,pw14.wav,43,292,7,True
+baseline,3009,corrected,pw15.wav,34,670,7,True
+baseline,3009,corrected,pw2.wav,24,958,12,True
+baseline,3009,corrected,pw3.wav,35,329,10,True
+baseline,3009,corrected,pw4.wav,14,1368,30,True
+baseline,3009,corrected,pw5.wav,27,1386,4,True
+baseline,3009,corrected,pw6.wav,38,1594,3,True
+baseline,3009,corrected,pw7.wav,35,452,6,True
+baseline,3009,corrected,pw8.wav,49,402,1,True
+baseline,3009,corrected,pw9.wav,30,386,23,True
+cife,3009,released,BUK1_20181011_001004.wav,3,3,28,True
+cife,3009,released,BUK1_20181013_023504.wav,0,0,29,False
+cife,3009,released,BUK4_20160925_231604.wav,0,0,42,False
+cife,3009,released,BUK4_20161011_000804.wav,0,47,47,True
+cife,3009,released,BUK4_20161031_232104a.wav,36,52,141,True
+cife,3009,released,BUK4_20171022_004304a.wav,4,8,13,True
+cife,3009,released,BUK5_20161101_002104a.wav,20,129,68,True
+cife,3009,released,BUK5_20180921_015906a.wav,4,58,19,True
+cife,3009,released,BUK5_20181007_011905.wav,8,13,58,True
+cife,3009,released,ME1.wav,9,77,2,True
+cife,3009,released,ME2.wav,30,35,11,True
+cife,3009,released,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+cife,3009,released,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,3009,released,R4_cleaned recording_TEL_20-10-17.wav,59,17,5,True
+cife,3009,released,R4_cleaned recording_TEL_23-10-17.wav,81,8,3,True
+cife,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+cife,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+cife,3009,released,RD_01.wav,75,688,16,True
+cife,3009,released,RD_02.wav,356,334,142,True
+cife,3009,released,RD_03.wav,2,44,3,True
+cife,3009,released,RD_04.wav,118,1441,108,True
+cife,3009,released,RD_05.wav,93,127,68,True
+cife,3009,released,RD_06.wav,300,475,61,True
+cife,3009,released,file_423_487.wav,57,0,0,True
+cife,3009,released,file_97_113.wav,12,35,108,True
+cife,3009,released,pw1.wav,25,579,4,True
+cife,3009,released,pw10.wav,27,401,21,True
+cife,3009,released,pw11.wav,39,363,0,True
+cife,3009,released,pw12.wav,33,483,9,True
+cife,3009,released,pw13.wav,39,404,1,True
+cife,3009,released,pw14.wav,44,289,6,True
+cife,3009,released,pw15.wav,36,754,5,True
+cife,3009,released,pw2.wav,23,1008,13,True
+cife,3009,released,pw3.wav,30,313,15,True
+cife,3009,released,pw4.wav,0,0,49,False
+cife,3009,released,pw5.wav,29,1118,2,True
+cife,3009,released,pw6.wav,41,858,0,True
+cife,3009,released,pw7.wav,35,368,6,True
+cife,3009,released,pw8.wav,50,431,0,True
+cife,3009,released,pw9.wav,0,1,53,True
+cife,3009,corrected,BUK1_20181011_001004.wav,3,3,28,True
+cife,3009,corrected,BUK1_20181013_023504.wav,0,0,24,False
+cife,3009,corrected,BUK4_20160925_231604.wav,0,0,37,False
+cife,3009,corrected,BUK4_20161011_000804.wav,0,47,47,True
+cife,3009,corrected,BUK4_20161031_232104a.wav,36,52,141,True
+cife,3009,corrected,BUK4_20171022_004304a.wav,4,8,13,True
+cife,3009,corrected,BUK5_20161101_002104a.wav,20,129,68,True
+cife,3009,corrected,BUK5_20180921_015906a.wav,4,58,19,True
+cife,3009,corrected,BUK5_20181007_011905.wav,8,13,58,True
+cife,3009,corrected,ME1.wav,9,77,2,True
+cife,3009,corrected,ME2.wav,30,35,11,True
+cife,3009,corrected,R4_cleaned recording_13-10-17.wav,19,2,0,True
+cife,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+cife,3009,corrected,R4_cleaned recording_17-10-17.wav,36,2,0,True
+cife,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+cife,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,59,17,5,True
+cife,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,8,3,True
+cife,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,7,7,True
+cife,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+cife,3009,corrected,RD_01.wav,75,688,16,True
+cife,3009,corrected,RD_02.wav,356,334,142,True
+cife,3009,corrected,RD_03.wav,2,44,3,True
+cife,3009,corrected,RD_04.wav,118,1441,108,True
+cife,3009,corrected,RD_05.wav,93,127,68,True
+cife,3009,corrected,RD_06.wav,300,475,61,True
+cife,3009,corrected,file_423_487.wav,57,0,0,True
+cife,3009,corrected,file_97_113.wav,12,35,108,True
+cife,3009,corrected,pw1.wav,25,579,4,True
+cife,3009,corrected,pw10.wav,27,401,21,True
+cife,3009,corrected,pw11.wav,39,363,0,True
+cife,3009,corrected,pw12.wav,33,483,9,True
+cife,3009,corrected,pw13.wav,39,404,1,True
+cife,3009,corrected,pw14.wav,44,289,6,True
+cife,3009,corrected,pw15.wav,36,754,5,True
+cife,3009,corrected,pw2.wav,23,1008,13,True
+cife,3009,corrected,pw3.wav,30,313,15,True
+cife,3009,corrected,pw4.wav,0,0,44,False
+cife,3009,corrected,pw5.wav,29,1118,2,True
+cife,3009,corrected,pw6.wav,41,858,0,True
+cife,3009,corrected,pw7.wav,35,368,6,True
+cife,3009,corrected,pw8.wav,50,431,0,True
+cife,3009,corrected,pw9.wav,0,1,53,True
+phase1_random,3009,released,BUK1_20181011_001004.wav,3,11,28,True
+phase1_random,3009,released,BUK1_20181013_023504.wav,0,0,29,False
+phase1_random,3009,released,BUK4_20160925_231604.wav,0,0,42,False
+phase1_random,3009,released,BUK4_20161011_000804.wav,0,0,52,False
+phase1_random,3009,released,BUK4_20161031_232104a.wav,34,30,143,True
+phase1_random,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+phase1_random,3009,released,BUK5_20161101_002104a.wav,24,187,64,True
+phase1_random,3009,released,BUK5_20180921_015906a.wav,3,43,20,True
+phase1_random,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+phase1_random,3009,released,ME1.wav,10,154,1,True
+phase1_random,3009,released,ME2.wav,34,32,7,True
+phase1_random,3009,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase1_random,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase1_random,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase1_random,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+phase1_random,3009,released,R4_cleaned recording_TEL_20-10-17.wav,62,5,2,True
+phase1_random,3009,released,R4_cleaned recording_TEL_23-10-17.wav,80,5,4,True
+phase1_random,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase1_random,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase1_random,3009,released,RD_01.wav,72,1379,19,True
+phase1_random,3009,released,RD_02.wav,348,310,150,True
+phase1_random,3009,released,RD_03.wav,2,48,3,True
+phase1_random,3009,released,RD_04.wav,57,1043,169,True
+phase1_random,3009,released,RD_05.wav,87,111,74,True
+phase1_random,3009,released,RD_06.wav,272,452,89,True
+phase1_random,3009,released,file_423_487.wav,57,0,0,True
+phase1_random,3009,released,file_97_113.wav,13,34,107,True
+phase1_random,3009,released,pw1.wav,22,625,7,True
+phase1_random,3009,released,pw10.wav,30,432,18,True
+phase1_random,3009,released,pw11.wav,39,380,0,True
+phase1_random,3009,released,pw12.wav,31,516,11,True
+phase1_random,3009,released,pw13.wav,38,337,2,True
+phase1_random,3009,released,pw14.wav,43,290,7,True
+phase1_random,3009,released,pw15.wav,34,645,7,True
+phase1_random,3009,released,pw2.wav,25,871,11,True
+phase1_random,3009,released,pw3.wav,36,324,9,True
+phase1_random,3009,released,pw4.wav,15,1356,29,True
+phase1_random,3009,released,pw5.wav,26,1247,5,True
+phase1_random,3009,released,pw6.wav,37,1467,4,True
+phase1_random,3009,released,pw7.wav,35,447,6,True
+phase1_random,3009,released,pw8.wav,49,409,1,True
+phase1_random,3009,released,pw9.wav,30,388,23,True
+phase1_random,3009,corrected,BUK1_20181011_001004.wav,3,11,28,True
+phase1_random,3009,corrected,BUK1_20181013_023504.wav,0,0,24,False
+phase1_random,3009,corrected,BUK4_20160925_231604.wav,0,0,37,False
+phase1_random,3009,corrected,BUK4_20161011_000804.wav,0,0,47,False
+phase1_random,3009,corrected,BUK4_20161031_232104a.wav,34,30,143,True
+phase1_random,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+phase1_random,3009,corrected,BUK5_20161101_002104a.wav,24,187,64,True
+phase1_random,3009,corrected,BUK5_20180921_015906a.wav,3,43,20,True
+phase1_random,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+phase1_random,3009,corrected,ME1.wav,10,154,1,True
+phase1_random,3009,corrected,ME2.wav,34,32,7,True
+phase1_random,3009,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase1_random,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase1_random,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase1_random,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+phase1_random,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,5,2,True
+phase1_random,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,5,4,True
+phase1_random,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase1_random,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase1_random,3009,corrected,RD_01.wav,72,1379,19,True
+phase1_random,3009,corrected,RD_02.wav,348,310,150,True
+phase1_random,3009,corrected,RD_03.wav,2,48,3,True
+phase1_random,3009,corrected,RD_04.wav,57,1043,169,True
+phase1_random,3009,corrected,RD_05.wav,87,111,74,True
+phase1_random,3009,corrected,RD_06.wav,272,452,89,True
+phase1_random,3009,corrected,file_423_487.wav,57,0,0,True
+phase1_random,3009,corrected,file_97_113.wav,13,34,107,True
+phase1_random,3009,corrected,pw1.wav,22,625,7,True
+phase1_random,3009,corrected,pw10.wav,30,432,18,True
+phase1_random,3009,corrected,pw11.wav,39,380,0,True
+phase1_random,3009,corrected,pw12.wav,31,516,11,True
+phase1_random,3009,corrected,pw13.wav,38,337,2,True
+phase1_random,3009,corrected,pw14.wav,43,290,7,True
+phase1_random,3009,corrected,pw15.wav,34,645,7,True
+phase1_random,3009,corrected,pw2.wav,25,871,11,True
+phase1_random,3009,corrected,pw3.wav,36,324,9,True
+phase1_random,3009,corrected,pw4.wav,15,1356,29,True
+phase1_random,3009,corrected,pw5.wav,26,1247,5,True
+phase1_random,3009,corrected,pw6.wav,37,1467,4,True
+phase1_random,3009,corrected,pw7.wav,35,447,6,True
+phase1_random,3009,corrected,pw8.wav,49,409,1,True
+phase1_random,3009,corrected,pw9.wav,30,388,23,True
+slot_uniform,3009,released,BUK1_20181011_001004.wav,4,15,27,True
+slot_uniform,3009,released,BUK1_20181013_023504.wav,3,2,21,True
+slot_uniform,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+slot_uniform,3009,released,BUK4_20161011_000804.wav,0,232,47,True
+slot_uniform,3009,released,BUK4_20161031_232104a.wav,36,37,141,True
+slot_uniform,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+slot_uniform,3009,released,BUK5_20161101_002104a.wav,25,200,63,True
+slot_uniform,3009,released,BUK5_20180921_015906a.wav,3,69,20,True
+slot_uniform,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+slot_uniform,3009,released,ME1.wav,10,154,1,True
+slot_uniform,3009,released,ME2.wav,34,32,7,True
+slot_uniform,3009,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+slot_uniform,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+slot_uniform,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+slot_uniform,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+slot_uniform,3009,released,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+slot_uniform,3009,released,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+slot_uniform,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+slot_uniform,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+slot_uniform,3009,released,RD_01.wav,73,1373,18,True
+slot_uniform,3009,released,RD_02.wav,346,305,152,True
+slot_uniform,3009,released,RD_03.wav,2,45,3,True
+slot_uniform,3009,released,RD_04.wav,66,1094,160,True
+slot_uniform,3009,released,RD_05.wav,89,111,72,True
+slot_uniform,3009,released,RD_06.wav,275,459,86,True
+slot_uniform,3009,released,file_423_487.wav,57,0,0,True
+slot_uniform,3009,released,file_97_113.wav,14,34,106,True
+slot_uniform,3009,released,pw1.wav,22,609,7,True
+slot_uniform,3009,released,pw10.wav,28,428,20,True
+slot_uniform,3009,released,pw11.wav,39,380,0,True
+slot_uniform,3009,released,pw12.wav,31,495,11,True
+slot_uniform,3009,released,pw13.wav,38,336,2,True
+slot_uniform,3009,released,pw14.wav,43,286,7,True
+slot_uniform,3009,released,pw15.wav,34,641,7,True
+slot_uniform,3009,released,pw2.wav,25,883,11,True
+slot_uniform,3009,released,pw3.wav,34,318,11,True
+slot_uniform,3009,released,pw4.wav,15,1352,29,True
+slot_uniform,3009,released,pw5.wav,26,1223,5,True
+slot_uniform,3009,released,pw6.wav,39,1496,2,True
+slot_uniform,3009,released,pw7.wav,35,438,6,True
+slot_uniform,3009,released,pw8.wav,49,407,1,True
+slot_uniform,3009,released,pw9.wav,29,383,24,True
+slot_uniform,3009,corrected,BUK1_20181011_001004.wav,4,15,27,True
+slot_uniform,3009,corrected,BUK1_20181013_023504.wav,3,2,21,True
+slot_uniform,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+slot_uniform,3009,corrected,BUK4_20161011_000804.wav,0,232,47,True
+slot_uniform,3009,corrected,BUK4_20161031_232104a.wav,36,37,141,True
+slot_uniform,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+slot_uniform,3009,corrected,BUK5_20161101_002104a.wav,25,200,63,True
+slot_uniform,3009,corrected,BUK5_20180921_015906a.wav,3,69,20,True
+slot_uniform,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+slot_uniform,3009,corrected,ME1.wav,10,154,1,True
+slot_uniform,3009,corrected,ME2.wav,34,32,7,True
+slot_uniform,3009,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+slot_uniform,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+slot_uniform,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+slot_uniform,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+slot_uniform,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+slot_uniform,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+slot_uniform,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+slot_uniform,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+slot_uniform,3009,corrected,RD_01.wav,73,1373,18,True
+slot_uniform,3009,corrected,RD_02.wav,346,305,152,True
+slot_uniform,3009,corrected,RD_03.wav,2,45,3,True
+slot_uniform,3009,corrected,RD_04.wav,66,1094,160,True
+slot_uniform,3009,corrected,RD_05.wav,89,111,72,True
+slot_uniform,3009,corrected,RD_06.wav,275,459,86,True
+slot_uniform,3009,corrected,file_423_487.wav,57,0,0,True
+slot_uniform,3009,corrected,file_97_113.wav,14,34,106,True
+slot_uniform,3009,corrected,pw1.wav,22,609,7,True
+slot_uniform,3009,corrected,pw10.wav,28,428,20,True
+slot_uniform,3009,corrected,pw11.wav,39,380,0,True
+slot_uniform,3009,corrected,pw12.wav,31,495,11,True
+slot_uniform,3009,corrected,pw13.wav,38,336,2,True
+slot_uniform,3009,corrected,pw14.wav,43,286,7,True
+slot_uniform,3009,corrected,pw15.wav,34,641,7,True
+slot_uniform,3009,corrected,pw2.wav,25,883,11,True
+slot_uniform,3009,corrected,pw3.wav,34,318,11,True
+slot_uniform,3009,corrected,pw4.wav,15,1352,29,True
+slot_uniform,3009,corrected,pw5.wav,26,1223,5,True
+slot_uniform,3009,corrected,pw6.wav,39,1496,2,True
+slot_uniform,3009,corrected,pw7.wav,35,438,6,True
+slot_uniform,3009,corrected,pw8.wav,49,407,1,True
+slot_uniform,3009,corrected,pw9.wav,29,383,24,True
+phase2_energy,3009,released,BUK1_20181011_001004.wav,3,14,28,True
+phase2_energy,3009,released,BUK1_20181013_023504.wav,3,2,21,True
+phase2_energy,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+phase2_energy,3009,released,BUK4_20161011_000804.wav,0,239,47,True
+phase2_energy,3009,released,BUK4_20161031_232104a.wav,35,30,142,True
+phase2_energy,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+phase2_energy,3009,released,BUK5_20161101_002104a.wav,25,193,63,True
+phase2_energy,3009,released,BUK5_20180921_015906a.wav,3,47,20,True
+phase2_energy,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+phase2_energy,3009,released,ME1.wav,10,152,1,True
+phase2_energy,3009,released,ME2.wav,34,31,7,True
+phase2_energy,3009,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase2_energy,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase2_energy,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase2_energy,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase2_energy,3009,released,R4_cleaned recording_TEL_20-10-17.wav,62,5,2,True
+phase2_energy,3009,released,R4_cleaned recording_TEL_23-10-17.wav,80,5,4,True
+phase2_energy,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase2_energy,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase2_energy,3009,released,RD_01.wav,72,1402,19,True
+phase2_energy,3009,released,RD_02.wav,347,319,151,True
+phase2_energy,3009,released,RD_03.wav,3,46,2,True
+phase2_energy,3009,released,RD_04.wav,58,1137,168,True
+phase2_energy,3009,released,RD_05.wav,87,120,74,True
+phase2_energy,3009,released,RD_06.wav,279,491,82,True
+phase2_energy,3009,released,file_423_487.wav,57,0,0,True
+phase2_energy,3009,released,file_97_113.wav,13,34,107,True
+phase2_energy,3009,released,pw1.wav,24,627,5,True
+phase2_energy,3009,released,pw10.wav,30,432,18,True
+phase2_energy,3009,released,pw11.wav,39,384,0,True
+phase2_energy,3009,released,pw12.wav,31,518,11,True
+phase2_energy,3009,released,pw13.wav,38,337,2,True
+phase2_energy,3009,released,pw14.wav,43,295,7,True
+phase2_energy,3009,released,pw15.wav,34,655,7,True
+phase2_energy,3009,released,pw2.wav,26,905,10,True
+phase2_energy,3009,released,pw3.wav,36,322,9,True
+phase2_energy,3009,released,pw4.wav,15,1359,29,True
+phase2_energy,3009,released,pw5.wav,26,1298,5,True
+phase2_energy,3009,released,pw6.wav,38,1466,3,True
+phase2_energy,3009,released,pw7.wav,35,450,6,True
+phase2_energy,3009,released,pw8.wav,49,408,1,True
+phase2_energy,3009,released,pw9.wav,30,385,23,True
+phase2_energy,3009,corrected,BUK1_20181011_001004.wav,3,14,28,True
+phase2_energy,3009,corrected,BUK1_20181013_023504.wav,3,2,21,True
+phase2_energy,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+phase2_energy,3009,corrected,BUK4_20161011_000804.wav,0,239,47,True
+phase2_energy,3009,corrected,BUK4_20161031_232104a.wav,35,30,142,True
+phase2_energy,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+phase2_energy,3009,corrected,BUK5_20161101_002104a.wav,25,193,63,True
+phase2_energy,3009,corrected,BUK5_20180921_015906a.wav,3,47,20,True
+phase2_energy,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+phase2_energy,3009,corrected,ME1.wav,10,152,1,True
+phase2_energy,3009,corrected,ME2.wav,34,31,7,True
+phase2_energy,3009,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase2_energy,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase2_energy,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase2_energy,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+phase2_energy,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,5,2,True
+phase2_energy,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,5,4,True
+phase2_energy,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,6,7,True
+phase2_energy,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase2_energy,3009,corrected,RD_01.wav,72,1402,19,True
+phase2_energy,3009,corrected,RD_02.wav,347,319,151,True
+phase2_energy,3009,corrected,RD_03.wav,3,46,2,True
+phase2_energy,3009,corrected,RD_04.wav,58,1137,168,True
+phase2_energy,3009,corrected,RD_05.wav,87,120,74,True
+phase2_energy,3009,corrected,RD_06.wav,279,491,82,True
+phase2_energy,3009,corrected,file_423_487.wav,57,0,0,True
+phase2_energy,3009,corrected,file_97_113.wav,13,34,107,True
+phase2_energy,3009,corrected,pw1.wav,24,627,5,True
+phase2_energy,3009,corrected,pw10.wav,30,432,18,True
+phase2_energy,3009,corrected,pw11.wav,39,384,0,True
+phase2_energy,3009,corrected,pw12.wav,31,518,11,True
+phase2_energy,3009,corrected,pw13.wav,38,337,2,True
+phase2_energy,3009,corrected,pw14.wav,43,295,7,True
+phase2_energy,3009,corrected,pw15.wav,34,655,7,True
+phase2_energy,3009,corrected,pw2.wav,26,905,10,True
+phase2_energy,3009,corrected,pw3.wav,36,322,9,True
+phase2_energy,3009,corrected,pw4.wav,15,1359,29,True
+phase2_energy,3009,corrected,pw5.wav,26,1298,5,True
+phase2_energy,3009,corrected,pw6.wav,38,1466,3,True
+phase2_energy,3009,corrected,pw7.wav,35,450,6,True
+phase2_energy,3009,corrected,pw8.wav,49,408,1,True
+phase2_energy,3009,corrected,pw9.wav,30,385,23,True
+phase3_activation,3009,released,BUK1_20181011_001004.wav,4,16,27,True
+phase3_activation,3009,released,BUK1_20181013_023504.wav,3,2,21,True
+phase3_activation,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+phase3_activation,3009,released,BUK4_20161011_000804.wav,0,231,47,True
+phase3_activation,3009,released,BUK4_20161031_232104a.wav,36,39,141,True
+phase3_activation,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+phase3_activation,3009,released,BUK5_20161101_002104a.wav,25,209,63,True
+phase3_activation,3009,released,BUK5_20180921_015906a.wav,3,73,20,True
+phase3_activation,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+phase3_activation,3009,released,ME1.wav,10,155,1,True
+phase3_activation,3009,released,ME2.wav,34,32,7,True
+phase3_activation,3009,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase3_activation,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase3_activation,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase3_activation,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+phase3_activation,3009,released,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+phase3_activation,3009,released,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+phase3_activation,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+phase3_activation,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase3_activation,3009,released,RD_01.wav,73,1370,18,True
+phase3_activation,3009,released,RD_02.wav,346,305,152,True
+phase3_activation,3009,released,RD_03.wav,2,44,3,True
+phase3_activation,3009,released,RD_04.wav,67,1112,159,True
+phase3_activation,3009,released,RD_05.wav,89,111,72,True
+phase3_activation,3009,released,RD_06.wav,278,454,83,True
+phase3_activation,3009,released,file_423_487.wav,57,0,0,True
+phase3_activation,3009,released,file_97_113.wav,14,34,106,True
+phase3_activation,3009,released,pw1.wav,22,608,7,True
+phase3_activation,3009,released,pw10.wav,28,424,20,True
+phase3_activation,3009,released,pw11.wav,39,382,0,True
+phase3_activation,3009,released,pw12.wav,31,495,11,True
+phase3_activation,3009,released,pw13.wav,38,338,2,True
+phase3_activation,3009,released,pw14.wav,43,283,7,True
+phase3_activation,3009,released,pw15.wav,34,638,7,True
+phase3_activation,3009,released,pw2.wav,25,875,11,True
+phase3_activation,3009,released,pw3.wav,34,319,11,True
+phase3_activation,3009,released,pw4.wav,15,1349,29,True
+phase3_activation,3009,released,pw5.wav,26,1221,5,True
+phase3_activation,3009,released,pw6.wav,39,1494,2,True
+phase3_activation,3009,released,pw7.wav,35,436,6,True
+phase3_activation,3009,released,pw8.wav,49,407,1,True
+phase3_activation,3009,released,pw9.wav,29,381,24,True
+phase3_activation,3009,corrected,BUK1_20181011_001004.wav,4,16,27,True
+phase3_activation,3009,corrected,BUK1_20181013_023504.wav,3,2,21,True
+phase3_activation,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+phase3_activation,3009,corrected,BUK4_20161011_000804.wav,0,231,47,True
+phase3_activation,3009,corrected,BUK4_20161031_232104a.wav,36,39,141,True
+phase3_activation,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+phase3_activation,3009,corrected,BUK5_20161101_002104a.wav,25,209,63,True
+phase3_activation,3009,corrected,BUK5_20180921_015906a.wav,3,73,20,True
+phase3_activation,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+phase3_activation,3009,corrected,ME1.wav,10,155,1,True
+phase3_activation,3009,corrected,ME2.wav,34,32,7,True
+phase3_activation,3009,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+phase3_activation,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+phase3_activation,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+phase3_activation,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+phase3_activation,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+phase3_activation,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+phase3_activation,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+phase3_activation,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+phase3_activation,3009,corrected,RD_01.wav,73,1370,18,True
+phase3_activation,3009,corrected,RD_02.wav,346,305,152,True
+phase3_activation,3009,corrected,RD_03.wav,2,44,3,True
+phase3_activation,3009,corrected,RD_04.wav,67,1112,159,True
+phase3_activation,3009,corrected,RD_05.wav,89,111,72,True
+phase3_activation,3009,corrected,RD_06.wav,278,454,83,True
+phase3_activation,3009,corrected,file_423_487.wav,57,0,0,True
+phase3_activation,3009,corrected,file_97_113.wav,14,34,106,True
+phase3_activation,3009,corrected,pw1.wav,22,608,7,True
+phase3_activation,3009,corrected,pw10.wav,28,424,20,True
+phase3_activation,3009,corrected,pw11.wav,39,382,0,True
+phase3_activation,3009,corrected,pw12.wav,31,495,11,True
+phase3_activation,3009,corrected,pw13.wav,38,338,2,True
+phase3_activation,3009,corrected,pw14.wav,43,283,7,True
+phase3_activation,3009,corrected,pw15.wav,34,638,7,True
+phase3_activation,3009,corrected,pw2.wav,25,875,11,True
+phase3_activation,3009,corrected,pw3.wav,34,319,11,True
+phase3_activation,3009,corrected,pw4.wav,15,1349,29,True
+phase3_activation,3009,corrected,pw5.wav,26,1221,5,True
+phase3_activation,3009,corrected,pw6.wav,39,1494,2,True
+phase3_activation,3009,corrected,pw7.wav,35,436,6,True
+phase3_activation,3009,corrected,pw8.wav,49,407,1,True
+phase3_activation,3009,corrected,pw9.wav,29,381,24,True
+afri_direct,3009,released,BUK1_20181011_001004.wav,4,13,27,True
+afri_direct,3009,released,BUK1_20181013_023504.wav,4,2,20,True
+afri_direct,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+afri_direct,3009,released,BUK4_20161011_000804.wav,0,276,47,True
+afri_direct,3009,released,BUK4_20161031_232104a.wav,36,35,141,True
+afri_direct,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+afri_direct,3009,released,BUK5_20161101_002104a.wav,25,217,63,True
+afri_direct,3009,released,BUK5_20180921_015906a.wav,3,43,20,True
+afri_direct,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+afri_direct,3009,released,ME1.wav,10,143,1,True
+afri_direct,3009,released,ME2.wav,34,30,7,True
+afri_direct,3009,released,R4_cleaned recording_13-10-17.wav,18,5,1,True
+afri_direct,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_direct,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+afri_direct,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+afri_direct,3009,released,R4_cleaned recording_TEL_20-10-17.wav,61,9,3,True
+afri_direct,3009,released,R4_cleaned recording_TEL_23-10-17.wav,81,3,3,True
+afri_direct,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+afri_direct,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+afri_direct,3009,released,RD_01.wav,73,1406,18,True
+afri_direct,3009,released,RD_02.wav,345,329,153,True
+afri_direct,3009,released,RD_03.wav,2,50,3,True
+afri_direct,3009,released,RD_04.wav,64,1243,162,True
+afri_direct,3009,released,RD_05.wav,86,124,75,True
+afri_direct,3009,released,RD_06.wav,285,522,76,True
+afri_direct,3009,released,file_423_487.wav,57,0,0,True
+afri_direct,3009,released,file_97_113.wav,13,34,107,True
+afri_direct,3009,released,pw1.wav,23,651,6,True
+afri_direct,3009,released,pw10.wav,30,437,18,True
+afri_direct,3009,released,pw11.wav,39,390,0,True
+afri_direct,3009,released,pw12.wav,31,524,11,True
+afri_direct,3009,released,pw13.wav,38,335,2,True
+afri_direct,3009,released,pw14.wav,43,303,7,True
+afri_direct,3009,released,pw15.wav,34,661,7,True
+afri_direct,3009,released,pw2.wav,23,797,13,True
+afri_direct,3009,released,pw3.wav,35,322,10,True
+afri_direct,3009,released,pw4.wav,15,1358,29,True
+afri_direct,3009,released,pw5.wav,27,1314,4,True
+afri_direct,3009,released,pw6.wav,35,1486,6,True
+afri_direct,3009,released,pw7.wav,35,440,6,True
+afri_direct,3009,released,pw8.wav,49,406,1,True
+afri_direct,3009,released,pw9.wav,30,388,23,True
+afri_direct,3009,corrected,BUK1_20181011_001004.wav,4,13,27,True
+afri_direct,3009,corrected,BUK1_20181013_023504.wav,4,2,20,True
+afri_direct,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+afri_direct,3009,corrected,BUK4_20161011_000804.wav,0,276,47,True
+afri_direct,3009,corrected,BUK4_20161031_232104a.wav,36,35,141,True
+afri_direct,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+afri_direct,3009,corrected,BUK5_20161101_002104a.wav,25,217,63,True
+afri_direct,3009,corrected,BUK5_20180921_015906a.wav,3,43,20,True
+afri_direct,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+afri_direct,3009,corrected,ME1.wav,10,143,1,True
+afri_direct,3009,corrected,ME2.wav,34,30,7,True
+afri_direct,3009,corrected,R4_cleaned recording_13-10-17.wav,18,5,1,True
+afri_direct,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_direct,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+afri_direct,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,0,4,True
+afri_direct,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,61,9,3,True
+afri_direct,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,81,3,3,True
+afri_direct,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,8,7,True
+afri_direct,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,3,3,True
+afri_direct,3009,corrected,RD_01.wav,73,1406,18,True
+afri_direct,3009,corrected,RD_02.wav,345,329,153,True
+afri_direct,3009,corrected,RD_03.wav,2,50,3,True
+afri_direct,3009,corrected,RD_04.wav,64,1243,162,True
+afri_direct,3009,corrected,RD_05.wav,86,124,75,True
+afri_direct,3009,corrected,RD_06.wav,285,522,76,True
+afri_direct,3009,corrected,file_423_487.wav,57,0,0,True
+afri_direct,3009,corrected,file_97_113.wav,13,34,107,True
+afri_direct,3009,corrected,pw1.wav,23,651,6,True
+afri_direct,3009,corrected,pw10.wav,30,437,18,True
+afri_direct,3009,corrected,pw11.wav,39,390,0,True
+afri_direct,3009,corrected,pw12.wav,31,524,11,True
+afri_direct,3009,corrected,pw13.wav,38,335,2,True
+afri_direct,3009,corrected,pw14.wav,43,303,7,True
+afri_direct,3009,corrected,pw15.wav,34,661,7,True
+afri_direct,3009,corrected,pw2.wav,23,797,13,True
+afri_direct,3009,corrected,pw3.wav,35,322,10,True
+afri_direct,3009,corrected,pw4.wav,15,1358,29,True
+afri_direct,3009,corrected,pw5.wav,27,1314,4,True
+afri_direct,3009,corrected,pw6.wav,35,1486,6,True
+afri_direct,3009,corrected,pw7.wav,35,440,6,True
+afri_direct,3009,corrected,pw8.wav,49,406,1,True
+afri_direct,3009,corrected,pw9.wav,30,388,23,True
+afri_inverse,3009,released,BUK1_20181011_001004.wav,4,12,27,True
+afri_inverse,3009,released,BUK1_20181013_023504.wav,3,1,21,True
+afri_inverse,3009,released,BUK4_20160925_231604.wav,0,1,37,True
+afri_inverse,3009,released,BUK4_20161011_000804.wav,0,245,47,True
+afri_inverse,3009,released,BUK4_20161031_232104a.wav,36,41,141,True
+afri_inverse,3009,released,BUK4_20171022_004304a.wav,7,9,10,True
+afri_inverse,3009,released,BUK5_20161101_002104a.wav,24,190,64,True
+afri_inverse,3009,released,BUK5_20180921_015906a.wav,3,67,20,True
+afri_inverse,3009,released,BUK5_20181007_011905.wav,8,4,58,True
+afri_inverse,3009,released,ME1.wav,10,144,1,True
+afri_inverse,3009,released,ME2.wav,34,31,7,True
+afri_inverse,3009,released,R4_cleaned recording_13-10-17.wav,18,4,1,True
+afri_inverse,3009,released,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_inverse,3009,released,R4_cleaned recording_17-10-17.wav,36,1,0,True
+afri_inverse,3009,released,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+afri_inverse,3009,released,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+afri_inverse,3009,released,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+afri_inverse,3009,released,R4_cleaned recording_TEL_24-10-17.wav,92,5,7,True
+afri_inverse,3009,released,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_inverse,3009,released,RD_01.wav,73,1339,18,True
+afri_inverse,3009,released,RD_02.wav,343,296,155,True
+afri_inverse,3009,released,RD_03.wav,2,47,3,True
+afri_inverse,3009,released,RD_04.wav,62,1053,164,True
+afri_inverse,3009,released,RD_05.wav,88,117,73,True
+afri_inverse,3009,released,RD_06.wav,278,450,83,True
+afri_inverse,3009,released,file_423_487.wav,57,0,0,True
+afri_inverse,3009,released,file_97_113.wav,13,34,107,True
+afri_inverse,3009,released,pw1.wav,23,606,6,True
+afri_inverse,3009,released,pw10.wav,28,407,20,True
+afri_inverse,3009,released,pw11.wav,39,369,0,True
+afri_inverse,3009,released,pw12.wav,31,460,11,True
+afri_inverse,3009,released,pw13.wav,38,342,2,True
+afri_inverse,3009,released,pw14.wav,43,275,7,True
+afri_inverse,3009,released,pw15.wav,34,649,7,True
+afri_inverse,3009,released,pw2.wav,20,894,16,True
+afri_inverse,3009,released,pw3.wav,35,305,10,True
+afri_inverse,3009,released,pw4.wav,14,1363,30,True
+afri_inverse,3009,released,pw5.wav,26,1301,5,True
+afri_inverse,3009,released,pw6.wav,41,1343,0,True
+afri_inverse,3009,released,pw7.wav,35,380,6,True
+afri_inverse,3009,released,pw8.wav,49,400,1,True
+afri_inverse,3009,released,pw9.wav,29,373,24,True
+afri_inverse,3009,corrected,BUK1_20181011_001004.wav,4,12,27,True
+afri_inverse,3009,corrected,BUK1_20181013_023504.wav,3,1,21,True
+afri_inverse,3009,corrected,BUK4_20160925_231604.wav,0,1,37,True
+afri_inverse,3009,corrected,BUK4_20161011_000804.wav,0,245,47,True
+afri_inverse,3009,corrected,BUK4_20161031_232104a.wav,36,41,141,True
+afri_inverse,3009,corrected,BUK4_20171022_004304a.wav,7,9,10,True
+afri_inverse,3009,corrected,BUK5_20161101_002104a.wav,24,190,64,True
+afri_inverse,3009,corrected,BUK5_20180921_015906a.wav,3,67,20,True
+afri_inverse,3009,corrected,BUK5_20181007_011905.wav,8,4,58,True
+afri_inverse,3009,corrected,ME1.wav,10,144,1,True
+afri_inverse,3009,corrected,ME2.wav,34,31,7,True
+afri_inverse,3009,corrected,R4_cleaned recording_13-10-17.wav,18,4,1,True
+afri_inverse,3009,corrected,R4_cleaned recording_16-10-17.wav,29,5,1,True
+afri_inverse,3009,corrected,R4_cleaned recording_17-10-17.wav,36,1,0,True
+afri_inverse,3009,corrected,R4_cleaned recording_TEL_19-10-17.wav,50,1,4,True
+afri_inverse,3009,corrected,R4_cleaned recording_TEL_20-10-17.wav,62,3,2,True
+afri_inverse,3009,corrected,R4_cleaned recording_TEL_23-10-17.wav,80,3,4,True
+afri_inverse,3009,corrected,R4_cleaned recording_TEL_24-10-17.wav,92,5,7,True
+afri_inverse,3009,corrected,R4_cleaned recording_TEL_25-10-17.wav,96,4,3,True
+afri_inverse,3009,corrected,RD_01.wav,73,1339,18,True
+afri_inverse,3009,corrected,RD_02.wav,343,296,155,True
+afri_inverse,3009,corrected,RD_03.wav,2,47,3,True
+afri_inverse,3009,corrected,RD_04.wav,62,1053,164,True
+afri_inverse,3009,corrected,RD_05.wav,88,117,73,True
+afri_inverse,3009,corrected,RD_06.wav,278,450,83,True
+afri_inverse,3009,corrected,file_423_487.wav,57,0,0,True
+afri_inverse,3009,corrected,file_97_113.wav,13,34,107,True
+afri_inverse,3009,corrected,pw1.wav,23,606,6,True
+afri_inverse,3009,corrected,pw10.wav,28,407,20,True
+afri_inverse,3009,corrected,pw11.wav,39,369,0,True
+afri_inverse,3009,corrected,pw12.wav,31,460,11,True
+afri_inverse,3009,corrected,pw13.wav,38,342,2,True
+afri_inverse,3009,corrected,pw14.wav,43,275,7,True
+afri_inverse,3009,corrected,pw15.wav,34,649,7,True
+afri_inverse,3009,corrected,pw2.wav,20,894,16,True
+afri_inverse,3009,corrected,pw3.wav,35,305,10,True
+afri_inverse,3009,corrected,pw4.wav,14,1363,30,True
+afri_inverse,3009,corrected,pw5.wav,26,1301,5,True
+afri_inverse,3009,corrected,pw6.wav,41,1343,0,True
+afri_inverse,3009,corrected,pw7.wav,35,380,6,True
+afri_inverse,3009,corrected,pw8.wav,49,400,1,True
+afri_inverse,3009,corrected,pw9.wav,29,373,24,True
