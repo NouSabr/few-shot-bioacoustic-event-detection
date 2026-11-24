@@ -1,0 +1,37 @@
+# Explicit registry consumed by tools/collect_sweep_predictions.py.
+# Paths may be absolute or relative to this YAML file. Copy this file to a
+# machine-local name (for example configs/sweep_artifacts.local.yaml), keep it
+# uncommitted or add it to .git/info/exclude, and fill in the actual run directories.
+
+sweep_id: three_seed_sweep
+
+# Optional. When present, the collector re-runs the official evaluator and
+# requires the selected CSV to reproduce the logged harmonic and arithmetic F.
+# This directory is the Validation_Set root containing HB, ME, PB, PB24, PW, RD.
+reference_dir: /path/to/Development_Set/Validation_Set
+
+expected_seeds: [1234, 2025, 5678]
+expected_configurations:
+  - baseline
+  - cife
+  - phase1_random
+  - slot_uniform
+  - phase2_energy
+  - phase3_activation
+  - afri_direct
+  - afri_inverse
+
+runs:
+  - configuration: baseline
+    seed: 1234
+    log: /path/to/logs/experiments/runs/baseline_seed1234/<timestamp>/stdout.log
+    run_dir: /path/to/logs/experiments/runs/baseline_seed1234/<timestamp>
+    git_commit: null
+
+  # Keep log-only entries explicit. The collector records the selected operating
+  # point and per-file counts, but reports that event-level artifacts are absent.
+  - configuration: phase3_activation
+    seed: 1234
+    log: /path/to/recovered/phase3_seed1234_output.log
+    run_dir: null
+    note: Original prediction directory was lost; recover checkpoint or rerun.

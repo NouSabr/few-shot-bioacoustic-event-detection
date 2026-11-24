@@ -1,0 +1,106 @@
+Sweep prediction collector
+==========================
+
+`tools/collect_sweep_predictions.py` turns the threshold directories produced by
+one ablation sweep into a portable archive of the prediction CSV actually chosen
+by the evaluation loop.
+
+The collector never chooses the newest run automatically. An explicit YAML
+registry identifies the log and Hydra run directory for every configuration and
+seed. This makes lost artifacts, reruns, and duplicate runs visible rather than
+silently substituting one for another.
+
+1. Create a registry
+--------------------
+
+Copy `configs/sweep_artifacts.example.yaml` to a machine-local file and fill in
+its paths. Relative paths are resolved from the registry's directory; `~` and
+environment variables are expanded.
+
+A run whose log exists but whose prediction directory was lost should remain in
+the registry with `run_dir: null`. It will be recorded as `log_only`, including
+its selected thresholds and printed per-file TP/FP/FN counts.
+
+2. Dry run
+----------
+
+From `baselines/dcase2024_task5`:
+
+```bash
+python tools/collect_sweep_predictions.py \
+  --registry configs/sweep_artifacts.local.yaml \
+  --output analysis/sweep_archive
+```
+
+No files are written without `--copy`. Review the recovered `k`, post-processing
+type, threshold, score, and any missing-artifact messages.
+
+3. Copy and verify
+------------------
+
+```bash
+python tools/collect_sweep_predictions.py \
+  --registry configs/sweep_artifacts.local.yaml \
+  --output analysis/sweep_archive \
+  --copy \
+  --strict
+```
+
+If `reference_dir` is present in the registry, the selected CSV is passed through
+the repository's official evaluator in a temporary directory. Both harmonic and
+arithmetic F must reproduce the log within 0.001. Without a reference directory,
+a complete run is marked `complete_unverified` rather than `complete_verified`.
+
+`--strict` exits nonzero when any expected configuration/seed is incomplete.
+Omit it while a sweep is still running or while Phase 3 seed 1234 remains
+log-only.
+
+Use `--all-raw` to additionally archive every available `<k>/Eval_raw.csv` for
+operating-point robustness analysis. Derived post-processing CSVs are not copied
+because they can be regenerated deterministically.
+
+Output
+------
+
+```text
+analysis/sweep_archive/
+  manifest.json
+  manifest.csv
+  missing_artifacts.csv
+  collection_report.txt
+  seed_1234/
+    baseline/
+      stdout.log
+      selected_raw.csv
+      selected_final.csv
+      selection.json
+    phase3_activation/
+      stdout.log
+      selection.json
+      # selected CSVs remain absent until predictions are recovered
+```
+
+`manifest.json` also stores the winning per-file counts from the log, source and
+archive paths, SHA-256 checksums, score verification, source commit when supplied
+by the registry, and collector commit/dirty state.
+
+The collector copies files; it never moves or deletes a run directory. Re-running
+is idempotent when archived content is unchanged. If a destination differs,
+collection stops for that run unless `--overwrite` is given.
+
+Rerunning a lost configuration
+--------------------------------
+
+Prefer regenerating predictions from the original best checkpoint. If Phase 3
+seed 1234 must be retrained, register the rerun's log and run directory together.
+Do not attach a new CSV to the recovered old log unless the CSV reproduces that
+old log exactly. A retrained seed-1234 run is a replacement artifact, not an
+additional independent seed.
+
+
+Single-recording counterfactual
+-------------------------------
+
+After collection, `tools/run_silencing_counterfactual.py` consumes the archive
+manifest and evaluates one-recording-at-a-time empty-output interventions. See
+`docs/SILENCING_COUNTERFACTUAL.txt`.
